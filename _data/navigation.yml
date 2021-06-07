@@ -1,9 +1,9 @@
 # main links
 main:
-  - title: "penetration testing"
+  - title: "Penetration Testing"
     url: /categories/#penetration-testing
-  - title: "Binary Exploitation"
-    url: /categories/#binary-exploitation
+  - title: "Red Teaming"
+    url: /categories/#Red-Teaming
   - title: "CTF Writeups"
     url: /categories/#ctf-writeups
   - title: "Tutorials"
