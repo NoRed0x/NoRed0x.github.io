@@ -1,9 +1,13 @@
 ---
-layout: post
 title:  "Cybertalents Injector Machine"
-date:   2021-01-14 00:10:35 +0200
-background: "/img/bg1.png"
+classes: wide
+header:
+  teaser: /assets/images/ctf-writeups/memlabs/logo.png
+ribbon: MidnightBlue
+categories:
+  - CTF Writeups
 ---
+
                                         بسم الله الرحمن الرحيم   
 
 #### Description
