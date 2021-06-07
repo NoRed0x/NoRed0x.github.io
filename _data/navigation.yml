@@ -1,7 +1,7 @@
 # main links
 main:
-  - title: "Malware Analysis"
-    url: /categories/#malware-analysis
+  - title: "penetration testing"
+    url: /categories/#penetration-testing
   - title: "Binary Exploitation"
     url: /categories/#binary-exploitation
   - title: "CTF Writeups"
