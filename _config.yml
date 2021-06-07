@@ -93,9 +93,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Abdallah Elshinbary"
+  name             : "Karim Habeeb"
   avatar           : /assets/images/site_data/avatar.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Malware Analysis & Reverse Engineering Adventures"
+  bio              : "penetration testing & Red teaming"
   location         : "Area 51"
   email            :
   links:
