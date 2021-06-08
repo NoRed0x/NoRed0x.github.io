@@ -1,5 +1,5 @@
 ---
-title:  "HTB Injector Machine "
+title:  "Cybertalents Injector Machine"
 classes: wide
 header:
   teaser: /assets/images/ctf-writeups/memlabs/logo.png
@@ -7,7 +7,7 @@ ribbon: MidnightBlue
 categories:
   - CTF Writeups
 ---
-
+        
                                         بسم الله الرحمن الرحيم   
 
 #### Description
