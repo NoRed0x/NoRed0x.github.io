@@ -1,5 +1,5 @@
 ---
-title:  "HTB Injector Machine"
+title:  "HTB Injector Machine "
 classes: wide
 header:
   teaser: /assets/images/ctf-writeups/memlabs/logo.png
