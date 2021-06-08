@@ -1,5 +1,3 @@
-
-
 ---
 title:  "Cybertalents Injector Machine"
 classes: wide
