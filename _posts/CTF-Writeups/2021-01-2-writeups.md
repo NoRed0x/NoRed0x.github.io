@@ -2,7 +2,7 @@
 title:  "Writeups Bug Bounty"
 classes: wide
 header:
-  teaser: /assets/images/ctf-writeups/memlabs/logo.png
+  teaser: /assets/images/ctf-writeups/
 ribbon: MidnightBlue
 categories:
   - CTF Writeups
