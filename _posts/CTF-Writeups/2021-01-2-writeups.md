@@ -1,10 +1,13 @@
 ---
-layout: post
-title:  "List of bug bounty Writeups"
-date:   2021-01-2 00:10:35 +0200
-background: "/img/bg1.png"
+title:  "Writeups Bug Bounty"
+classes: wide
+header:
+  teaser: /assets/images/ctf-writeups/memlabs/logo.png
+ribbon: MidnightBlue
+categories:
+  - CTF Writeups
 ---
-
+       
 * #### Information Disclosure
   * [`https://hackerone.com/reports/321249`](https://hackerone.com/reports/321249)
   * [`https://hackerone.com/reports/200079`](https://hackerone.com/reports/200079)
