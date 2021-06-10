@@ -22,8 +22,8 @@ Enumeration is the process of extracting information from the Active Directory (
 <img src="/img/adpart1/1.png" alt="Getting-gz" width="800" height="110"> 
 
 we notice that Powerview detected 
-disable protection
 
+disable protection
 ```
 Set-MpPreference -DisableRealtimeMonitoring $true
 ```
@@ -35,14 +35,14 @@ Get Current Domain
  Get-Domain
 ```
 
-<img src="/img/adpart1/2.PNG" alt="Getting-gz" width="800" height="150"> 
+<img src="/img/adpart1/2.PNG" alt="Getting-gz" width="600" height="150"> 
 
 Enumerate Other Domains
 ```
 Get-Domain -Domain <DomainName>
 ```
 
-<img src="/img/adpart1/3.PNG" alt="Getting-gz" width="800" height="150"> 
+<img src="/img/adpart1/3.PNG" alt="Getting-gz" width="600" height="150"> 
 
 Get Domain SID
 ```
