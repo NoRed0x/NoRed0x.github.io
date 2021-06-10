@@ -35,21 +35,21 @@ Get Current Domain
  Get-Domain
 ```
 
-<img src="/img/adpart1/2.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart1/2.PNG" alt="Getting-gz" width="800" height="150"> 
 
 Enumerate Other Domains
 ```
 Get-Domain -Domain <DomainName>
 ```
 
-<img src="/img/adpart1/3.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart1/3.PNG" alt="Getting-gz" width="800" height="150"> 
 
 Get Domain SID
 ```
 Get-DomainSID
 ```
 
-<img src="/img/adpart1/4.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart1/4.PNG" alt="Getting-gz" width="600" height="100"> 
 
 Get Domain Policy
 ```
