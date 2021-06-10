@@ -96,7 +96,7 @@ author:
   name             : "Karim Habeeb"
   avatar           : /img/redteampng.png # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "penetration testing & Red teaming"
-  location         : "Area 51"
+
   email            :
   links:
     - label: "Email"
