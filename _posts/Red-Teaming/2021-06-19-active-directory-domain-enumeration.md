@@ -9,19 +9,11 @@ categories:
 toc: true
 ---
 
-QBot can be delivered in various different ways including Malspam (Malicious Spam) or dropped by other malware families like Emotet.
+Enumeration is the process of extracting information from the Active Directory (users and groups)
 
-# Infection Flow
+# Install PowerView
 
-QBot can be delivered in various different ways including Malspam (Malicious Spam) or dropped by other malware families like Emotet.
-
-The infection flow for this campaign is as follows:
-
-The VBS file tries to download Qbot from different places:
-
-Notice the misleading URL, it looks like it's downloading a PNG image but the raw data says something else.
+  [`https://github.com/PowerShellEmpire/PowerTools/blob/master/PowerView/powerview.ps1`]('https://github.com/PowerShellEmpire/PowerTools/blob/master/PowerView/powerview.ps1')
 
 # Unpacking
 
-QBot is packed with a custom packer, but the unpacking process is really simple. It allocates memory for the unpacked code using `VirtualAlloc()` and changes memory protection using `VirtualProtect()`. So we just need 2 breakpoints at  `VirtualAlloc()`  and  `VirtualProtect()`.
-idc.set_cmt(ea, dec, 1)
