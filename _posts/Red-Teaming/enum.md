@@ -5,7 +5,7 @@ header:
   teaser: /assets/images/ctf-writeups/htb/htb.png
 ribbon: MidnightBlue
 categories:
-  - CTF Writeups
+  - Red Teaming
 ---
 
                                         بسم الله الرحمن الرحيم   
