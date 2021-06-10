@@ -147,12 +147,12 @@ groups are a collection of Active Directory objects. The group can include users
 
 * Get all groups in the current domain
 ```
- Get-NetGroup | select name
+Get-NetGroup | select name
 ```
 
 <img src="/img/adpart1/17.PNG" alt="Getting-gz" width="800" height="200">
 
-* Get all groups in the target domain
+Get all groups in the target domain
 ```
 Get-NetGroup -Domain <targetdomain> | select name
 ```
