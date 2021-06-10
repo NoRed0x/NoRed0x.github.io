@@ -8,10 +8,9 @@ categories:
   - Red Teaming
 ---
 
-                                        بسم الله الرحمن الرحيم   
 
 #### Description
 
-<img src="/img/omni/start.PNG" alt="Getting-gz" width="800" height="440">
+<img src="/img/omni/" alt="Getting-gz" width="800" height="440">
 
 #### Walkthrough
