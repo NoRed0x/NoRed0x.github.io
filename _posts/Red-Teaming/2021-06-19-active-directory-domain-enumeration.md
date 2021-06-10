@@ -56,7 +56,7 @@ Get Domain Policy
 Get-DomainPolicy
 ```
 
-<img src="/img/adpart1/5.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart1/5.PNG" alt="Getting-gz" width="800" height="300"> 
 
 
 policy configurations of the Domain about system access
@@ -64,7 +64,7 @@ policy configurations of the Domain about system access
 (Get-DomainPolicy)."SystemAccess"
 ```
 
-<img src="/img/adpart1/6.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart1/6.PNG" alt="Getting-gz" width="600" height="200"> 
 
 
 
@@ -73,7 +73,7 @@ policy configurations of the Domain about  kerberos
  (Get-DomainPolicy)."kerberospolicy"
 ```
 
-<img src="/img/adpart1/7.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart1/7.PNG" alt="Getting-gz" width="600" height="200"> 
 
 ## Domain Controllers
 A domain controller is a server that responds to authentication requests and verifies users on computer networks
@@ -81,7 +81,7 @@ A domain controller is a server that responds to authentication requests and ver
  Get-DomainController 
  ```
  
- <img src="/img/adpart1/8.PNG" alt="Getting-gz" width="800" height="200"> 
+ <img src="/img/adpart1/8.PNG" alt="Getting-gz" width="600" height="200"> 
  
  ```
   Get-DomainController -Domain <DomainName>
