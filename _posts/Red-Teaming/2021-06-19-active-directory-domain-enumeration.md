@@ -168,17 +168,61 @@ Get-NetGroup 'Domain Admins'
 <img src="/img/adpart1/19.PNG" alt="Getting-gz" width="800" height="200">
 
  grep any group contain admin
- ``` Get-NetGroup "*admin*"| select name 
+ ``` 
+ Get-NetGroup "*admin*"| select name 
  ```
  
  <img src="/img/adpart1/20.PNG" alt="Getting-gz" width="800" height="200">
 
+Local groups on the local (or remote) machine.Requires local admin rights on the remote machine
+Local Admin Rights:
+Giving a user Local Admin Rights means giving them full control over the local computer.  (Please note that this DOES NOT give them any extra rights to anything on the network). A user with Local Admin Rights can do the following:
+    Add and Remove Software,Printers,etc.
+    Change computer settings like network configuration, power settings, etc.
+```
+Get-NetLocalGroup | Select-Object GroupName
+```
+
+<img src="/img/adpart1/21.PNG" alt="Getting-gz" width="800" height="200">
+
+members of a specific local group on the local (or remote) machine. Also requires local admin rights on the remote machine
+```
+Get-NetLocalGroupMember -GroupName Administrators | Select-Object MemberName, IsGroup, IsDomain
+```
+
+<img src="/img/adpart1/22.PNG" alt="Getting-gz" width="800" height="200">
 
 
+Get all members of the domain admin group
+```
+Get-NetGroupMember -MemberName "domain admins" -Recurse | select MemberName
+```
+
+<img src="/img/adpart1/23.PNG" alt="Getting-gz" width="800" height="200">
 
 
+Get the group membership for a user
+```
+Get-NetGroup -UserName <"username">| select name
+```
+
+<img src="/img/adpart1/24.PNG" alt="Getting-gz" width="800" height="200">
 
 
+List all the local group on a machine
+```
+Get-NetLocalGroup 
+```
+
+<img src="/img/adpart1/25.PNG" alt="Getting-gz" width="800" height="200">
+
+
+List all the local group on a target machine
+```
+Get-NetLocalGroup -ComputerName <computername>
+```
+
+<img src="/img/adpart1/26.PNG" alt="Getting-gz" width="800" height="200">
 
 
 
