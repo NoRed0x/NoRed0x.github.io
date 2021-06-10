@@ -167,7 +167,7 @@ Get-NetGroup 'Domain Admins'
 
 <img src="/img/adpart1/19.PNG" alt="Getting-gz" width="800" height="200">
 
- ** grep any group contain admin
+  `grep any group contain admin`
  ```
   Get-NetGroup "*admin*"| select name
  ```
