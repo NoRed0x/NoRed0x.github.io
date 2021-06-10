@@ -224,7 +224,7 @@ Get-NetLocalGroup -ComputerName <computername>
 
 <img src="/img/adpart1/26.PNG" alt="Getting-gz" width="800" height="200">
 
-
+`I finished part 1 today waite me in the next part.`
 
 
 
