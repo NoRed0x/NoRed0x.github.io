@@ -35,28 +35,28 @@ Get Current Domain
  Get-Domain
 ```
 
-<img src="/img/adpart1/2.png" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart1/2.PNG" alt="Getting-gz" width="800" height="200"> 
 
 Enumerate Other Domains
 ```
 Get-Domain -Domain <DomainName>
 ```
 
-<img src="/img/adpart1/3.png" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart1/3.PNG" alt="Getting-gz" width="800" height="200"> 
 
 Get Domain SID
 ```
 Get-DomainSID
 ```
 
-<img src="/img/adpart1/4.png" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart1/4.PNG" alt="Getting-gz" width="800" height="200"> 
 
 Get Domain Policy
 ```
 Get-DomainPolicy
 ```
 
-<img src="/img/adpart1/5.png" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart1/5.PNG" alt="Getting-gz" width="800" height="200"> 
 
 
 policy configurations of the Domain about system access
@@ -64,7 +64,7 @@ policy configurations of the Domain about system access
 (Get-DomainPolicy)."SystemAccess"
 ```
 
-<img src="/img/adpart1/6.png" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart1/6.PNG" alt="Getting-gz" width="800" height="200"> 
 
 
 
@@ -73,7 +73,7 @@ policy configurations of the Domain about  kerberos
  (Get-DomainPolicy)."kerberospolicy"
 ```
 
-<img src="/img/adpart1/7.png" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart1/7.PNG" alt="Getting-gz" width="800" height="200"> 
 
 
 
