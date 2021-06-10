@@ -29,7 +29,7 @@ Set-MpPreference -DisableRealtimeMonitoring $true
 ```
 
 
-## Enumeration Domain
+## Domain
 Get Current Domain
 ```
  Get-Domain
@@ -75,6 +75,38 @@ policy configurations of the Domain about  kerberos
 
 <img src="/img/adpart1/7.PNG" alt="Getting-gz" width="800" height="200"> 
 
+## Domain Controllers
+A domain controller is a server that responds to authentication requests and verifies users on computer networks
+```
+ Get-DomainController 
+ ```
+ 
+ <img src="/img/adpart1/8.PNG" alt="Getting-gz" width="800" height="200"> 
+ 
+ ```
+  Get-DomainController -Domain <DomainName>
+  ```
+  
+  <img src="/img/adpart1/9.PNG" alt="Getting-gz" width="800" height="200"> 
+  
+  
+##  Domain Users
+A domain user is one whose username and password are stored on a domain controller rather than the computer the user is logging into. When you log in as a domain user, the computer asks the domain controller what privileges are assigned to you. When the computer receives an appropriate response from the domain controller, it logs you in with the proper permissions and restrictions.
+
+Get Domain User 
+```
+Get-DomainUser 
+```
+
+ <img src="/img/adpart1/10.PNG" alt="Getting-gz" width="800" height="200"> 
+
+```
+Get-DomainUser | select cn
+```
+
+<img src="/img/adpart1/11.PNG" alt="Getting-gz" width="800" height="200"> 
+
+list of all properities for users
 
 
 
