@@ -13,7 +13,7 @@ Enumeration is the process of extracting information from the Active Directory (
 
 # Install PowerView
 
-  [`https://github.com/PowerShellEmpire/PowerTools/blob/master/PowerView/powerview.ps1`]('https://github.com/PowerShellEmpire/PowerTools/blob/master/PowerView/powerview.ps1')
+  [https://github.com/PowerShellEmpire/PowerTools/blob/master/PowerView/powerview.ps1]('https://github.com/PowerShellEmpire/PowerTools/blob/master/PowerView/powerview.ps1')
 
 # Unpacking
 
