@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Karim Habeeb"
-  avatar           : /assets/images/site_data/avatar.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : /img/redteampng.png # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "penetration testing & Red teaming"
   location         : "Area 51"
   email            :
