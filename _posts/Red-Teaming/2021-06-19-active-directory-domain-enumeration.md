@@ -5,7 +5,7 @@ header:
   teaser: /img/redteampng.png
 ribbon: red
 categories:
-  - Red Teaming
+  - Red-Teaming
 ---
 
 
