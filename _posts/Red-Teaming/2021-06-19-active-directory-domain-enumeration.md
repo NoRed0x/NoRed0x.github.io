@@ -81,7 +81,7 @@ A domain controller is a server that responds to authentication requests and ver
  Get-DomainController 
  ```
  
- <img src="/img/adpart1/8.PNG" alt="Getting-gz" width="800" height="300"> 
+<img src="/img/adpart1/8.PNG" alt="Getting-gz" width="800" height="300"> 
  
 ```
 Get-DomainController -Domain <DomainName>
@@ -97,8 +97,8 @@ Get Domain User
 ```
 Get-DomainUser 
 ```
-
- <img src="/img/adpart1/10.PNG" alt="Getting-gz" width="800" height="200"> 
+ 
+<img src="/img/adpart1/10.PNG" alt="Getting-gz" width="800" height="200"> 
 
 ```
 Get-DomainUser | select cn
@@ -145,7 +145,7 @@ Get-NetComputer -OperatingSystem "*Server 2016*" | select name ,operatingsystem 
 ## Groups 
 groups are a collection of Active Directory objects. The group can include users, computers, other groups, and other AD objects
 
-* Get all groups in the current domain
+Get all groups in the current domain
 ```
 Get-NetGroup | select name
 ```
