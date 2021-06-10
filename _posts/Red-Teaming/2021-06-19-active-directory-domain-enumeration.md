@@ -8,9 +8,6 @@ categories:
   - Red-Teaming
 ---
 
-
-#### Description
-
 # Infection Flow
 
 QBot can be delivered in various different ways including Malspam (Malicious Spam) or dropped by other malware families like Emotet.
