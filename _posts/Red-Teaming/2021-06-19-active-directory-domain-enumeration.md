@@ -81,11 +81,11 @@ A domain controller is a server that responds to authentication requests and ver
  Get-DomainController 
  ```
  
- <img src="/img/adpart1/8.PNG" alt="Getting-gz" width="600" height="200"> 
+ <img src="/img/adpart1/8.PNG" alt="Getting-gz" width="800" height="300"> 
  
- ```
-  Get-DomainController -Domain <DomainName>
-  ```
+```
+Get-DomainController -Domain <DomainName>
+```
   
   <img src="/img/adpart1/9.PNG" alt="Getting-gz" width="800" height="200"> 
   
@@ -104,7 +104,7 @@ Get-DomainUser
 Get-DomainUser | select cn
 ```
 
-<img src="/img/adpart1/11.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart1/11.PNG" alt="Getting-gz" width="600" height="100"> 
 
 list of all properities for user
 ```
@@ -126,7 +126,7 @@ user logged on a machine
  Get-NetLoggedon -ComputerName <computer-name>
  ```
  
- <img src="/img/adpart1/14.PNG" alt="Getting-gz" width="800" height="200"> 
+ <img src="/img/adpart1/14.PNG" alt="Getting-gz" width="600" height="150"> 
 
 ## Domain Computers
 Get alist of computers in the current domain
@@ -134,7 +134,7 @@ Get alist of computers in the current domain
 Get-NetComputer| select name
 ```
 
-<img src="/img/adpart1/15.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart1/15.PNG" alt="Getting-gz" width="600" height="150"> 
 
 ```
 Get-NetComputer -OperatingSystem "*Server 2016*" | select name ,operatingsystem |Format-List
@@ -150,14 +150,14 @@ groups are a collection of Active Directory objects. The group can include users
 Get-NetGroup | select name
 ```
 
-<img src="/img/adpart1/17.PNG" alt="Getting-gz" width="800" height="200">
+<img src="/img/adpart1/17.PNG" alt="Getting-gz" width="600" height="200">
 
 Get all groups in the target domain
 ```
 Get-NetGroup -Domain <targetdomain> | select name
 ```
 
-<img src="/img/adpart1/18.PNG" alt="Getting-gz" width="800" height="200">
+<img src="/img/adpart1/18.PNG" alt="Getting-gz" width="600" height="200">
 
 
 All data about the specific group
