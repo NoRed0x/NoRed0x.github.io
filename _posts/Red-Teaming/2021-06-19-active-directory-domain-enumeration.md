@@ -1,5 +1,5 @@
 ---
-title:  "HTB omni Machine"
+title:  "Active Directory Domain Enumeration"
 classes: wide
 header:
   teaser: /img/redteampng.png
