@@ -106,7 +106,59 @@ Get-DomainUser | select cn
 
 <img src="/img/adpart1/11.PNG" alt="Getting-gz" width="800" height="200"> 
 
-list of all properities for users
+list of all properities for user
+```
+Get-DomainUser -Identity <username>
+```
+
+<img src="/img/adpart1/12.PNG" alt="Getting-gz" width="800" height="200"> 
+
+properties of a specific user
+```
+Get-DomainUser -Identity <username> -Properties DisplayName, MemberOf,objectsid,useraccountcontrol | Format-List
+```
+
+<img src="/img/adpart1/13.PNG" alt="Getting-gz" width="800" height="200"> 
+
+
+user logged on a machine
+ ```
+ Get-NetLoggedon -ComputerName <computer-name>
+ ```
+ 
+ <img src="/img/adpart1/14.PNG" alt="Getting-gz" width="800" height="200"> 
+
+## Domain Computers
+Get alist of computers in the current domain
+```
+Get-NetComputer| select name
+```
+
+<img src="/img/adpart1/15.PNG" alt="Getting-gz" width="800" height="200"> 
+
+```
+Get-NetComputer -OperatingSystem "*Server 2016*" | select name ,operatingsystem |Format-List
+```
+<img src="/img/adpart1/16.PNG" alt="Getting-gz" width="800" height="200"> 
+
+
+## Groups 
+groups are a collection of Active Directory objects. The group can include users, computers, other groups, and other AD objects
+
+* Get all groups in the current domain
+```
+ Get-NetGroup | select name
+```
+
+<img src="/img/adpart1/17.PNG" alt="Getting-gz" width="800" height="200">
+
+* Get all groups in the target domain
+```
+Get-NetGroup -Domain <targetdomain> | select name
+```
+
+<img src="/img/adpart1/18.PNG" alt="Getting-gz" width="800" height="200">
+
 
 
 
