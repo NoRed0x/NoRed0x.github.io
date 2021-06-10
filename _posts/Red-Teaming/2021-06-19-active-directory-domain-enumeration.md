@@ -11,9 +11,9 @@ toc: true
 
 Enumeration is the process of extracting information from the Active Directory (users and groups)
 
-# Install PowerView
+## Install PowerView
 
-  [https://github.com/PowerShellEmpire/PowerTools/blob/master/PowerView/powerview.ps1]('https://github.com/PowerShellEmpire/PowerTools/blob/master/PowerView/powerview.ps1')
+ - https://github.com/PowerShellEmpire/PowerTools/blob/master/PowerView/powerview.ps1
 
-# Unpacking
+## Unpacking
 
