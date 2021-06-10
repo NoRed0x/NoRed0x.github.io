@@ -51,6 +51,8 @@ Get-DomainSID
 
 <img src="/img/adpart1/4.PNG" alt="Getting-gz" width="600" height="100"> 
 
+A domain security policy :
+      is a security policy that is specifically applied to a given domain or set of computers or drives in a given system. System administrators use a domain security policy to       set security protocols for part of a network, including password protocols, access levels and much more
 Get Domain Policy
 ```
 Get-DomainPolicy
