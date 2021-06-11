@@ -12,6 +12,8 @@ toc: true
 Enumeration is the process of extracting information from the Active Directory (users and groups)
 
 ## Install PowerView
+  PowerView is a PowerShell tool to gain network situational awareness on Windows domains. It contains a set of pure-PowerShell replacements for various windows "net *"           commands, which utilize PowerShell AD hooks and underlying Win32 API functions to perform useful Windows domain functionality.
+  Several functions for the enumeration and abuse of domain trusts also exist
   Download script
  - https://github.com/PowerShellEmpire/PowerTools/blob/master/PowerView/powerview.ps1
 
@@ -30,6 +32,8 @@ Set-MpPreference -DisableRealtimeMonitoring $true
 
 
 ## Domain
+Domains are a hierarchical way of organizing users and computers that work together on the same network
+
 Get Current Domain
 ```
  Get-Domain
@@ -51,6 +55,7 @@ Get-DomainSID
 
 <img src="/img/adpart1/4.PNG" alt="Getting-gz" width="600" height="100"> 
 
+## Domain Policy
 A domain security policy :
       is a security policy that is specifically applied to a given domain or set of computers or drives in a given system. System administrators use a domain security policy to       set security protocols for part of a network, including password protocols, access levels and much more
 Get Domain Policy
@@ -78,7 +83,7 @@ policy configurations of the Domain about  kerberos
 <img src="/img/adpart1/7.PNG" alt="Getting-gz" width="600" height="200"> 
 
 ## Domain Controllers
-A domain controller is a server that responds to authentication requests and verifies users on computer networks
+A domain controller is a server that responds to authentication requests and verifies users on computer networks, keeps all of that data organized and secured
 ```
  Get-DomainController 
  ```
@@ -176,6 +181,7 @@ Get-NetGroup 'Domain Admins'
  
  <img src="/img/adpart1/20.PNG" alt="Getting-gz" width="800" height="200">
 
+## Local groups
 Local groups on the local (or remote) machine.Requires local admin rights on the remote machine
 Local Admin Rights:
 Giving a user Local Admin Rights means giving them full control over the local computer.  (Please note that this DOES NOT give them any extra rights to anything on the network). A user with Local Admin Rights can do the following:
