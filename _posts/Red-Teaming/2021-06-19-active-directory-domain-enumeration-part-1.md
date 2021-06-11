@@ -226,7 +226,7 @@ Get the group membership for a user
 Get-NetGroup -UserName <"username">| select name
 ```
 
-<img src="/img/adpart1/24.PNG" alt="Getting-gz" width="800" height="200">
+<img src="/img/adpart1/24.PNG" alt="Getting-gz" width="800" height="150">
 
 
 List all the local group on a machine
