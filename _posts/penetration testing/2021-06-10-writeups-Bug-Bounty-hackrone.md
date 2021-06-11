@@ -5,7 +5,7 @@ header:
   teaser: /img/h1.png
 ribbon: MidnightBlue
 categories:
-  - CTF Writeups
+  - Penetration Testing
 ---
        
 * #### Information Disclosure
