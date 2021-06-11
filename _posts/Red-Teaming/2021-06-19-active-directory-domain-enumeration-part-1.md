@@ -16,6 +16,7 @@ Enumeration is the process of extracting information from the Active Directory l
  * Used to manage Domains in a Windows Environment
  * Centralized Management of users and computers
  * Handles all authentication and authorization 
+
 used in
  * Enterprise environments use this to manage Windows based networks
  * Commonly used for users work stations and Windows servers
