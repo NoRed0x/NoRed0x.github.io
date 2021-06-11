@@ -11,6 +11,9 @@ toc: true
 
 Enumeration is the process of extracting information from the Active Directory like enumerating the users, groups, some interesting fields and resources.
 
+## Active Directory
+ is a hierarchical structure that stores information about objects on the network. A directory service, such as Active Directory Domain Services (AD DS), provides the methods for storing directory data and making this data available to network users and administrators
+
 ## Install PowerView
   PowerView is a PowerShell tool to gain network situational awareness on Windows domains. It contains a set of pure-PowerShell replacements for various windows "net *"           commands, which utilize PowerShell AD hooks and underlying Win32 API functions to perform useful Windows domain functionality.
   Several functions for the enumeration and abuse of domain trusts also exist
