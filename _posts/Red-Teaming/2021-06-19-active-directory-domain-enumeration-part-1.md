@@ -257,7 +257,7 @@ Get the last logged on the computer(need administrative right and remote registe
 Get-LastLoggedOn -ComputerName DomainAD.karim.net
 ```
 
-<img src="/img/adpart1/28.PNG" alt="Getting-gz" width="800" height="200">
+<img src="/img/adpart1/28.PNG" alt="Getting-gz" width="700" height="150">
 
 I finished part 1 today waite me in the next part.
 
