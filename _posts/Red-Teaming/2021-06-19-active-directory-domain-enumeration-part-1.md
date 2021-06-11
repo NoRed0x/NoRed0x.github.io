@@ -9,7 +9,7 @@ categories:
 toc: true
 ---
 
-Enumeration is the process of extracting information from the Active Directory (users and groups)
+Enumeration is the process of extracting information from the Active Directory like enumerating the users, groups, some interesting fields and resources.
 
 ## Install PowerView
   PowerView is a PowerShell tool to gain network situational awareness on Windows domains. It contains a set of pure-PowerShell replacements for various windows "net *"           commands, which utilize PowerShell AD hooks and underlying Win32 API functions to perform useful Windows domain functionality.
