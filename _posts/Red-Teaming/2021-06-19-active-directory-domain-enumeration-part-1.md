@@ -252,13 +252,12 @@ Get-NetLoggedon -ComputerName DomainAD.karim.net
  
 <img src="/img/adpart1/27.PNG" alt="Getting-gz" width="800" height="200">
 
-Get tha last logged on the computer (need administrative right and remote register on the target )
+Get the last logged on the computer(need administrative right and remote register on the target)
 ```
 Get-LastLoggedOn -ComputerName DomainAD.karim.net
 ```
 
 <img src="/img/adpart1/28.PNG" alt="Getting-gz" width="800" height="200">
-
 
 I finished part 1 today waite me in the next part.
 
