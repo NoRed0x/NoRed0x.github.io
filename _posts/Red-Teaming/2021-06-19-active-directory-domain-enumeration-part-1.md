@@ -244,6 +244,22 @@ Get-NetLocalGroup -ComputerName <computername>
 
 <img src="/img/adpart1/26.PNG" alt="Getting-gz" width="800" height="200">
 
+
+Get activity logged user on a computer (need local admin right)
+```
+Get-NetLoggedon -ComputerName DomainAD.karim.net
+ ```
+ 
+<img src="/img/adpart1/27.PNG" alt="Getting-gz" width="800" height="200">
+
+Get tha last logged on the computer (need administrative right and remote register on the target )
+```
+Get-LastLoggedOn -ComputerName DomainAD.karim.net
+```
+
+<img src="/img/adpart1/28.PNG" alt="Getting-gz" width="800" height="200">
+
+
 I finished part 1 today waite me in the next part.
 
 
