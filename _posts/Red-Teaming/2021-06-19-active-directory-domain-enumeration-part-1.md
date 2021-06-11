@@ -203,7 +203,7 @@ Giving a user Local Admin Rights means giving them full control over the local c
 Get-NetLocalGroup | Select-Object GroupName
 ```
 
-<img src="/img/adpart1/21.PNG" alt="Getting-gz" width="800" height="200">
+<img src="/img/adpart1/21.PNG" alt="Getting-gz" width="700" height="150">
 
 members of a specific local group on the local (or remote) machine. Also requires local admin rights on the remote machine
 ```
