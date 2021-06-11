@@ -250,7 +250,7 @@ Get activity logged user on a computer (need local admin right)
 Get-NetLoggedon -ComputerName DomainAD.karim.net
  ```
  
-<img src="/img/adpart1/27.PNG" alt="Getting-gz" width="800" height="200">
+<img src="/img/adpart1/27.PNG" alt="Getting-gz" width="600" height="150">
 
 Get the last logged on the computer(need administrative right and remote register on the target)
 ```
