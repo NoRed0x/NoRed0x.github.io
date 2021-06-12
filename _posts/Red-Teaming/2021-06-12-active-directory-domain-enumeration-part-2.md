@@ -57,7 +57,7 @@ Find sensitive files on computer in the domain
 Invoke-FileFinder
 ```
 
-<img src="/img/adpart1/9.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart2/2.PNG" alt="Getting-gz" width="800" height="200"> 
 
 Find-DomainShare -CheckShareAccess
 
