@@ -6,9 +6,8 @@ header:
 ribbon: MidnightBlue
 categories:
   - Penetration Testing 
-toc:true
+toc: true
 ---
-   
    
 ## Information Disclosure
   * [`https://hackerone.com/reports/321249`](https://hackerone.com/reports/321249)
