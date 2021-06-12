@@ -10,6 +10,7 @@ toc: true
 ---
    
 ## Information Disclosure
+
   * [`https://hackerone.com/reports/321249`](https://hackerone.com/reports/321249)
   * [`https://hackerone.com/reports/200079`](https://hackerone.com/reports/200079)
   * [`https://hackerone.com/reports/975047`](https://hackerone.com/reports/975047)
@@ -38,7 +39,7 @@ toc: true
   
   
   
- ## subdomain takeover
+## subdomain takeover
   * [`https://hackerone.com/reports/294201`](https://hackerone.com/reports/294201)
   * [`https://hackerone.com/reports/202767`](https://hackerone.com/reports/202767)
   * [`https://hackerone.com/reports/863551`](https://hackerone.com/reports/863551)
@@ -67,7 +68,7 @@ toc: true
   * [`https://hackerone.com/reports/57505`](https://hackerone.com/reports/57505)
   * [`https://hackerone.com/reports/398400`](https://hackerone.com/reports/398400)
   
- ## Host Header Injection
+## Host Header Injection
   * [`https://hackerone.com/reports/698416`](https://hackerone.com/reports/698416)
   * [`https://hackerone.com/reports/758380`](https://hackerone.com/reports/758380)
   * [`https://hackerone.com/reports/158019`](https://hackerone.com/reports/158019)
@@ -90,7 +91,7 @@ toc: true
   * [`https://hackerone.com/reports/167809`](https://hackerone.com/reports/167809)
   * [`https://hackerone.com/reports/283786`](https://hackerone.com/reports/283786)
   
- ## Open Redirect
+## Open Redirect
   * [`https://hackerone.com/reports/206591`](https://hackerone.com/reports/206591)
   * [`https://hackerone.com/reports/125791`](https://hackerone.com/reports/125791)
   * [`https://hackerone.com/reports/260744`](https://hackerone.com/reports/260744)
@@ -218,7 +219,7 @@ toc: true
   * [`https://hackerone.com/reports/159985`](https://hackerone.com/reports/159985)
   * [`https://hackerone.com/reports/413655`](https://hackerone.com/reports/413655)
   --->
- ## Server Side Template Injection
+## Server Side Template Injection
   * [`https://hackerone.com/reports/423541`](https://hackerone.com/reports/423541)
   * [`https://hackerone.com/reports/164224`](https://hackerone.com/reports/164224)
   * [`https://hackerone.com/reports/399462`](https://hackerone.com/reports/399462)
@@ -226,7 +227,7 @@ toc: true
   * [`https://hackerone.com/reports/944359`](https://hackerone.com/reports/944359)
   * [`https://hackerone.com/reports/125980`](https://hackerone.com/reports/125980)
 
- ## CORS 
+## CORS 
   * [`https://hackerone.com/reports/758785`](https://hackerone.com/reports/758785)
   * [`https://hackerone.com/reports/426165`](https://hackerone.com/reports/426165)
   * [`https://hackerone.com/reports/426147`](https://hackerone.com/reports/426147)
@@ -247,7 +248,7 @@ toc: true
   * [`https://hackerone.com/reports/163491`](https://hackerone.com/reports/163491)
   * [`https://hackerone.com/reports/317391`](https://hackerone.com/reports/317391)
   
- ## SQL 
+## SQL 
   * [`https://hackerone.com/reports/20279`](https://hackerone.com/reports/20279)
   * [`https://hackerone.com/reports/227102`](https://hackerone.com/reports/227102)
   * [`https://hackerone.com/reports/214798`](https://hackerone.com/reports/214798)
@@ -298,7 +299,7 @@ toc: true
   * [`https://hackerone.com/reports/246412 (Boolean)`](https://hackerone.com/reports/246412)
   * [`https://hackerone.com/reports/214798 (Boolean)`](https://hackerone.com/reports/214798)
   
- ## CRLF injection
+## CRLF injection
   * [`https://hackerone.com/reports/858650`](https://hackerone.com/reports/858650)
   * [`https://hackerone.com/reports/446271`](https://hackerone.com/reports/446271)
   * [`https://hackerone.com/reports/237357`](https://hackerone.com/reports/237357)
@@ -323,7 +324,7 @@ toc: true
   
   
   
- ## Command Injection
+## Command Injection
   * [`https://hackerone.com/reports/821962`](https://hackerone.com/reports/821962)
   * [`https://hackerone.com/reports/871071`](https://hackerone.com/reports/871071)
   * [`https://hackerone.com/reports/951249`](https://hackerone.com/reports/951249)
@@ -353,11 +354,11 @@ toc: true
   * [`https://hackerone.com/reports/212696`](https://hackerone.com/reports/212696)
   * [`https://hackerone.com/reports/508487`](https://hackerone.com/reports/508487) 
   
- ## XPath
+## XPath
   * [`https://hackerone.com/reports/824925`](https://hackerone.com/reports/824925)
   * [`https://hackerone.com/reports/852316`](https://hackerone.com/reports/852316)
   
- ## LDAP
+## LDAP
   * [`https://hackerone.com/reports/359290`](https://hackerone.com/reports/359290)
   * [`https://hackerone.com/reports/956295`](https://hackerone.com/reports/956295)
   * [`https://hackerone.com/reports/787113`](https://hackerone.com/reports/787113)
@@ -365,7 +366,7 @@ toc: true
   * [`https://hackerone.com/reports/907311`](https://hackerone.com/reports/907311)
   * [`https://hackerone.com/reports/1050706`](https://hackerone.com/reports/1050706)
   
- ## GraphQL injection
+## GraphQL injection
   * [`https://hackerone.com/reports/435066`](https://hackerone.com/reports/435066)
   * [`https://hackerone.com/reports/350964`](https://hackerone.com/reports/350964)
   * [`https://hackerone.com/reports/800231`](https://hackerone.com/reports/800231)
@@ -382,7 +383,7 @@ toc: true
   
  
   
- ## CSRF
+## CSRF
   * [`https://hackerone.com/reports/339352`](https://hackerone.com/reports/339352)
   * [`https://hackerone.com/reports/834366`](https://hackerone.com/reports/834366)
   * [`https://hackerone.com/reports/293016`](https://hackerone.com/reports/293016)
@@ -412,7 +413,7 @@ toc: true
   * [`https://hackerone.com/reports/2857`](https://hackerone.com/reports/2857)
   * [`https://hackerone.com/reports/2857`](https://hackerone.com/reports/2857)
   
- ## SSRF
+## SSRF
   * [`https://hackerone.com/reports/514224`](https://hackerone.com/reports/514224)
   * [`https://hackerone.com/reports/793704`](https://hackerone.com/reports/793704)
   * [`https://hackerone.com/reports/643622`](https://hackerone.com/reports/643622)
@@ -433,13 +434,13 @@ toc: true
   * [`https://hackerone.com/reports/815084`](https://hackerone.com/reports/815084)
   * [`https://hackerone.com/reports/816848`](https://hackerone.com/reports/816848)
   
- ## Remote File Inclusion
+## Remote File Inclusion
   * [`https://hackerone.com/reports/660565`](https://hackerone.com/reports/660565)
   * [`https://hackerone.com/reports/14092`](https://hackerone.com/reports/14092)
   * [`https://hackerone.com/reports/208481`](https://hackerone.com/reports/208481)
   * [`https://hackerone.com/reports/346575`](https://hackerone.com/reports/346575)
   
- ## Local File Inclusion
+## Local File Inclusion
   * [`https://hackerone.com/reports/492767`](https://hackerone.com/reports/492767)
   * [`https://hackerone.com/reports/59665`](https://hackerone.com/reports/59665)
   * [`https://hackerone.com/reports/1007799`](https://hackerone.com/reports/1007799)
@@ -452,7 +453,7 @@ toc: true
   * [`https://hackerone.com/reports/538771`](https://hackerone.com/reports/538771)
   * [`https://hackerone.com/reports/183978`](https://hackerone.com/reports/183978)
   
- ##  Path Traversal
+##  Path Traversal
   * [`https://hackerone.com/reports/579517`](https://hackerone.com/reports/579517)
   * [`https://hackerone.com/reports/820224`](https://hackerone.com/reports/820224)
   * [`https://hackerone.com/reports/820224`](https://hackerone.com/reports/820224)
@@ -484,9 +485,8 @@ toc: true
   * [`https://hackerone.com/reports/311216`](https://hackerone.com/reports/311216)
   * [`https://hackerone.com/reports/301862`](https://hackerone.com/reports/301862)
   
-  
-  
- ## XXE 
+    
+## XXE 
   * [`https://hackerone.com/reports/500515`](https://hackerone.com/reports/500515)
   * [`https://hackerone.com/reports/312543`](https://hackerone.com/reports/312543)
   * [`https://hackerone.com/reports/486732`](https://hackerone.com/reports/486732)
@@ -497,7 +497,7 @@ toc: true
   * [`https://hackerone.com/reports/483774`](https://hackerone.com/reports/483774)
   * [`https://hackerone.com/reports/836877`](https://hackerone.com/reports/836877)
   
- ## Session hijacking
+## Session hijacking
   * [`https://hackerone.com/reports/163381`](https://hackerone.com/reports/163381)
   * [`https://hackerone.com/reports/167460`](https://hackerone.com/reports/167460)
   * [`https://hackerone.com/reports/19640`](https://hackerone.com/reports/19640)
@@ -507,7 +507,7 @@ toc: true
   * [`https://hackerone.com/reports/263873`](https://hackerone.com/reports/263873)
   * [`https://hackerone.com/reports/745324`](https://hackerone.com/reports/745324)
   
- ## Session Fixation
+## Session Fixation
   * [`https://hackerone.com/reports/423136`](https://hackerone.com/reports/423136)
   * [`https://hackerone.com/reports/135797`](https://hackerone.com/reports/135797)
   * [`https://hackerone.com/reports/135797`](https://hackerone.com/reports/135797)
@@ -552,7 +552,7 @@ toc: true
   * [`https://hackerone.com/reports/766437`](https://hackerone.com/reports/766437)
   * [`https://hackerone.com/reports/762707`](https://hackerone.com/reports/762707)
   * [`https://hackerone.com/reports/265284`](https://hackerone.com/reports/265284)
- ## Authentication bypass
+## Authentication bypass
   * [`https://hackerone.com/reports/219205`](https://hackerone.com/reports/219205)
   * [`https://hackerone.com/reports/770504`](https://hackerone.com/reports/770504)
   * [`https://hackerone.com/reports/209008`](https://hackerone.com/reports/209008)
@@ -585,7 +585,7 @@ toc: true
   * [`https://hackerone.com/reports/322985`](https://hackerone.com/reports/322985)
   * [`https://hackerone.com/reports/791775`](https://hackerone.com/reports/791775)
 
- ## default credentials
+## default credentials
   * [`https://hackerone.com/reports/799898`](https://hackerone.com/reports/799898)
   * [`https://hackerone.com/reports/544334`](https://hackerone.com/reports/544334)
   * [`https://hackerone.com/reports/235216`](https://hackerone.com/reports/235216)
@@ -600,7 +600,7 @@ toc: true
   * [`https://hackerone.com/reports/221333`](https://hackerone.com/reports/221333)
   * [`https://hackerone.com/reports/195163`](https://hackerone.com/reports/195163)
 
- ## oauth
+## oauth
   * [`https://hackerone.com/reports/922456`](https://hackerone.com/reports/922456)
   * [`https://hackerone.com/reports/5314`](https://hackerone.com/reports/5314)
   * [`https://hackerone.com/reports/5786`](https://hackerone.com/reports/5786)
@@ -624,14 +624,14 @@ toc: true
   * [`https://hackerone.com/reports/55140`](https://hackerone.com/reports/55140)
   * [`https://hackerone.com/reports/7900`](https://hackerone.com/reports/7900)
   
- ## JWT
+## JWT
   * [`https://hackerone.com/reports/853145`](https://hackerone.com/reports/853145)
   * [`https://hackerone.com/reports/638635`](https://hackerone.com/reports/638635)
   * [`https://hackerone.com/reports/213437`](https://hackerone.com/reports/213437)
   * [`https://hackerone.com/reports/748214`](https://hackerone.com/reports/748214)
   * [`https://hackerone.com/reports/896649`](https://hackerone.com/reports/896649)
   
- ## SAML 
+## SAML 
   * [`https://hackerone.com/reports/812064`](https://hackerone.com/reports/812064)
   * [`https://hackerone.com/reports/888930`](https://hackerone.com/reports/888930)
   * [`https://hackerone.com/reports/223014`](https://hackerone.com/reports/223014)
@@ -642,7 +642,7 @@ toc: true
   * [`https://hackerone.com/reports/438306`](https://hackerone.com/reports/438306)
   * [`https://hackerone.com/reports/106865`](https://hackerone.com/reports/106865)
   
- ## 2FA
+## 2FA
   * [`https://hackerone.com/reports/701901`](https://hackerone.com/reports/701901)
   * [`https://hackerone.com/reports/783258`](https://hackerone.com/reports/783258)
   * [`https://hackerone.com/reports/418767`](https://hackerone.com/reports/418767)
@@ -658,7 +658,7 @@ toc: true
   * [`https://hackerone.com/reports/128777`](https://hackerone.com/reports/128777)
   
   
- ## Race Conditions
+## Race Conditions
   * [`https://hackerone.com/reports/146845`](https://hackerone.com/reports/146845)
   * [`https://hackerone.com/reports/604534`](https://hackerone.com/reports/604534)
   * [`https://hackerone.com/reports/429026`](https://hackerone.com/reports/429026)
@@ -695,11 +695,11 @@ toc: true
   * [`https://hackerone.com/reports/395351`](https://hackerone.com/reports/395351)
   * [`https://hackerone.com/reports/157996`](https://hackerone.com/reports/157996)
 
- ## Type Juggling
+## Type Juggling
   * [`https://hackerone.com/reports/86022`](https://hackerone.com/reports/86022)
   
   
- ## rate limiting
+## rate limiting
   * [`https://hackerone.com/reports/170310`](https://hackerone.com/reports/170310)
   * [`https://hackerone.com/reports/165727`](https://hackerone.com/reports/165727)
   * [`https://hackerone.com/reports/723974`](https://hackerone.com/reports/723974)
@@ -713,12 +713,12 @@ toc: true
   * [`https://hackerone.com/reports/157750`](https://hackerone.com/reports/157750)
   * [`https://hackerone.com/reports/905816`](https://hackerone.com/reports/905816)
   
- ## HTTP parameter pollution
+## HTTP parameter pollution
   * [`https://hackerone.com/reports/335339`](https://hackerone.com/reports/335339)
   * [`https://hackerone.com/reports/298265`](https://hackerone.com/reports/298265)
   * [`https://hackerone.com/reports/106024`](https://hackerone.com/reports/106024)
   * [`https://hackerone.com/reports/105953`](https://hackerone.com/reports/105953)
- ## Web cache poisoning
+## Web cache poisoning
   * [`https://hackerone.com/reports/492841`](https://hackerone.com/reports/492841)
   * [`https://hackerone.com/reports/429747`](https://hackerone.com/reports/429747)
   * [`https://hackerone.com/reports/622122`](https://hackerone.com/reports/622122)
@@ -737,7 +737,7 @@ toc: true
   * [`https://hackerone.com/reports/550266`](https://hackerone.com/reports/550266)
   * [`https://hackerone.com/reports/593712`](https://hackerone.com/reports/593712)
   
- ## Web cache deception
+## Web cache deception
   * [`https://hackerone.com/reports/439021`](https://hackerone.com/reports/439021)
   * [`https://hackerone.com/reports/537564`](https://hackerone.com/reports/537564)
   * [`https://hackerone.com/reports/537564`](https://hackerone.com/reports/537564)
@@ -748,7 +748,7 @@ toc: true
   * [`https://hackerone.com/reports/415168`](https://hackerone.com/reports/415168)
   * [`https://hackerone.com/reports/260697`](https://hackerone.com/reports/260697)
   
- ## HTTP request Smuggling
+## HTTP request Smuggling
   * [`https://hackerone.com/reports/867952`](https://hackerone.com/reports/867952)
   * [`https://hackerone.com/reports/866382`](https://hackerone.com/reports/866382)
   * [`https://hackerone.com/reports/726773`](https://hackerone.com/reports/726773)
@@ -770,7 +770,7 @@ toc: true
   * [`https://hackerone.com/reports/648434`](https://hackerone.com/reports/648434)
   * [`https://hackerone.com/reports/753939`](https://hackerone.com/reports/753939)
   
- ## RCE
+## RCE
   * [`https://hackerone.com/reports/591295`](https://hackerone.com/reports/591295)
   * [`https://hackerone.com/reports/470520`](https://hackerone.com/reports/470520)
   * [`https://hackerone.com/reports/181879`](https://hackerone.com/reports/181879)
@@ -807,7 +807,7 @@ toc: true
   * [`https://hackerone.com/reports/276031`](https://hackerone.com/reports/276031)
   * [`https://hackerone.com/reports/730121`](https://hackerone.com/reports/730121)
   
- ## Clickjacking
+## Clickjacking
   * [`https://hackerone.com/reports/776932`](https://hackerone.com/reports/776932)
   * [`https://hackerone.com/reports/832593`](https://hackerone.com/reports/832593)
   * [`https://hackerone.com/reports/163753`](https://hackerone.com/reports/163753)
@@ -832,7 +832,7 @@ toc: true
   * [`https://hackerone.com/reports/103178`](https://hackerone.com/reports/103178)
   * [`https://hackerone.com/reports/272387`](https://hackerone.com/reports/272387)
 
- ## Deserialization
+## Deserialization
   * [`https://hackerone.com/reports/153026(java) `](https://hackerone.com/reports/153026)
   * [`https://hackerone.com/reports/221294 (java)`](https://hackerone.com/reports/221294)
   * [`https://hackerone.com/reports/329399 (java)`](https://hackerone.com/reports/329399)
@@ -844,10 +844,10 @@ toc: true
   * [`https://hackerone.com/reports/413388 (ruby)`](https://hackerone.com/reports/413388)
   * [`https://hackerone.com/reports/473888 (ruby`](https://hackerone.com/reports/473888)
   
- ## Mass Assignment Vulnerability 
+## Mass Assignment Vulnerability 
   * [`https://hackerone.com/reports/99424`](https://hackerone.com/reports/99424)
   
- ## websocket 
+## websocket 
   * [`https://hackerone.com/reports/178990`](https://hackerone.com/reports/178990)
   * [`https://hackerone.com/reports/409850`](https://hackerone.com/reports/409850)
   * [`https://hackerone.com/reports/395729`](https://hackerone.com/reports/395729)
@@ -855,7 +855,7 @@ toc: true
   * [`https://hackerone.com/reports/512065`](https://hackerone.com/reports/512065)
   * [`https://hackerone.com/reports/1023669`](https://hackerone.com/reports/1023669)
 
- ## Account Takeover 
+## Account Takeover 
   * [`https://hackerone.com/reports/314808`](https://hackerone.com/reports/314808)
   * [`https://hackerone.com/reports/317476`](https://hackerone.com/reports/317476)
   * [`https://hackerone.com/reports/538800`](https://hackerone.com/reports/538800)
