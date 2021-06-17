@@ -66,38 +66,37 @@ Invoke-FileFinder
  Group policy preferences like startup/shutdown/log-on/logoff scripts settings and Software installation. 
  GPO can be abused for various attacks like privesc, backdoors, persistence etc
  
- get list of GPO in the current domain
+ Get list of GPO in the current domain
  ```
  Get-NetGPO
  ```
  
 <img src="/img/adpart2/gpo1.png" alt="Getting-gz" width="800" height="230"> 
  
- ```
- Get-NetGPO| select displayname
+```
+Get-NetGPO| select displayname
+```
  
- ```
- 
- <img src="/img/adpart2/gpo2.png" alt="Getting-gz" width="500" height="100"> 
+<img src="/img/adpart2/gpo2.png" alt="Getting-gz" width="500" height="100"> 
 
  
- get list of GPO in the target computer
+Get list of GPO in the target computer
 ```
 Get-NetGPO -ComputerName <ComputerName> | select displayname
 ```
  
- <img src="/img/adpart2/gpo3.png" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart2/gpo3.png" alt="Getting-gz" width="800" height="200"> 
 
  
- find users who have local admin rights over the machine
- ```
- Find-GPOComputerAdmin –Computername <ComputerName>
- ```
+Find users who have local admin rights over the machine
+```
+Find-GPOComputerAdmin –Computername <ComputerName>
+```
  
- get machines where the given user in member of a specific group 
- ```
- Find-GPOLocation -Identity <user> -Verbose
- ```
+Get machines where the given user in member of a specific group 
+```
+Find-GPOLocation -Identity <user> -Verbose
+```
  <img src="/img/adpart2/gpo4.png" alt="Getting-gz" width="800" height="250"> 
 
  
