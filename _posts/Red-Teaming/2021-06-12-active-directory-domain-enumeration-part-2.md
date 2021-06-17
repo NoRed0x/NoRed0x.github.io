@@ -33,13 +33,13 @@ Find all domain shares in the current domain.
 ```
 Find-DomainShare 
 ```
-<img src="/img/adpart2/ds.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart2/ds.png" alt="Getting-gz" width="800" height="200"> 
 
 Find all domain shares in the current domain that the current user has read access to.
 ```
 Find-DomainShare -CheckShareAccess
 ```
-<img src="/img/adpart2/dsc.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart2/dsc.png" alt="Getting-gz" width="800" height="200"> 
 
 
 Obtains the file server used by the current domain according to the SPN
@@ -47,7 +47,7 @@ Obtains the file server used by the current domain according to the SPN
  Get-NetFileServer -Verbose
  ```
  
- <img src="/img/adpart2/fs.PNG" alt="Getting-gz" width="800" height="200"> 
+ <img src="/img/adpart2/fs.png" alt="Getting-gz" width="800" height="200"> 
 
 ## files
 It will search for sensitive files such as the Credentials files and other files that can lead to a serious compromise
@@ -73,14 +73,14 @@ Find-DomainShare -CheckShareAccess
  
  ```
  
- <img src="/img/adpart2/gpo1.PNG" alt="Getting-gz" width="800" height="200"> 
+ <img src="/img/adpart2/gpo1.png" alt="Getting-gz" width="800" height="230"> 
  
  ```
  Get-NetGPO| select displayname
  
  ```
  
-<img src="/img/adpart2/gpo2.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart2/gpo2.png" alt="Getting-gz" width="600" height="150"> 
 
  
  get list of GPO in the target computer
@@ -88,7 +88,7 @@ Find-DomainShare -CheckShareAccess
 Get-NetGPO -ComputerName <ComputerName> | select displayname
 ```
  
- <img src="/img/adpart2/gpo3.PNG" alt="Getting-gz" width="800" height="200"> 
+ <img src="/img/adpart2/gpo3.png" alt="Getting-gz" width="800" height="200"> 
 
  
  find users who have local admin rights over the machine
@@ -100,7 +100,7 @@ Get-NetGPO -ComputerName <ComputerName> | select displayname
  ```
  Find-GPOLocation -Identity <user> -Verbose
  ```
- <img src="/img/adpart2/gpo4.PNG" alt="Getting-gz" width="800" height="200"> 
+ <img src="/img/adpart2/gpo4.png" alt="Getting-gz" width="800" height="250"> 
 
  
 ## OUs
@@ -111,9 +111,9 @@ Get all the OUs in the current domain
 Get-NetOU
 ```
 
-<img src="/img/adpart2/ou1.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart2/ou1.png" alt="Getting-gz" width="800" height="200"> 
 
-<img src="/img/adpart2/ou2.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart2/ou2.png" alt="Getting-gz" width="600" height="130"> 
 
 ## ACLs
 
