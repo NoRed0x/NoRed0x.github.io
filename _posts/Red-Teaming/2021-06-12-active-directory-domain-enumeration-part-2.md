@@ -69,17 +69,16 @@ Invoke-FileFinder
  get list of GPO in the current domain
  ```
  Get-NetGPO
- 
  ```
  
- <img src="/img/adpart2/gpo1.png" alt="Getting-gz" width="800" height="230"> 
+<img src="/img/adpart2/gpo1.png" alt="Getting-gz" width="800" height="230"> 
  
  ```
  Get-NetGPO| select displayname
  
  ```
  
-<img src="/img/adpart2/gpo2.png" alt="Getting-gz" width="500" height="100"> 
+ <img src="/img/adpart2/gpo2.png" alt="Getting-gz" width="500" height="100"> 
 
  
  get list of GPO in the target computer
