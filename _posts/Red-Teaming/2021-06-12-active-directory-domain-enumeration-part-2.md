@@ -59,7 +59,6 @@ Invoke-FileFinder
 
 <img src="/img/adpart2/2.PNG" alt="Getting-gz" width="800" height="200"> 
 
-Find-DomainShare -CheckShareAccess
 
 ## Group Policies
  Group Policy provides the ability to manage configuration and changes easily and centrally in AD Allows configuration of Security settings,Registry-based policy settings. 
@@ -80,7 +79,7 @@ Find-DomainShare -CheckShareAccess
  
  ```
  
-<img src="/img/adpart2/gpo2.png" alt="Getting-gz" width="600" height="150"> 
+<img src="/img/adpart2/gpo2.png" alt="Getting-gz" width="500" height="100"> 
 
  
  get list of GPO in the target computer
