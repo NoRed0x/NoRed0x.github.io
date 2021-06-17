@@ -104,9 +104,14 @@ Get-NetGPO -ComputerName <ComputerName> | select displayname
 
  
 ## OUs
-OUs are the smallest unit in the Active Directory system. OU is abbreviated from is Organizational Unit. OUs are containers for users, groups, and computers, and they exist within a domain. OUs are useful when an administrator wants to deploy Group Policy settings to a subset of users, groups, and computers within your domain. OUs also allows Administrators to delegate admin tasks to users/groups without having to make him/her an administrator of the directory
+OUs are the smallest unit in the Active Directory system
+OU is abbreviated from is Organizational Unit
+OUs are containers for users, groups, and computers, and they exist within a domain
+OUs are useful when an administrator wants to deploy Group Policy settings to a subset of users, groups, and computers within your domain
+OUs also allows Administrators to delegate admin tasks to users/groups without having to make him/her an administrator of the directory
 
 Get all the OUs in the current domain
+
 ```
 Get-NetOU
 ```
