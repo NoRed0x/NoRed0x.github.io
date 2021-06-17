@@ -62,7 +62,7 @@ Invoke-FileFinder
 Find-DomainShare -CheckShareAccess
 
 ## Group Policies
- Group Policy provides the ability to manage configuration and changes easily and centrally in AD ,Allows configuration of Security settings,Registry-based policy settings. 
+ Group Policy provides the ability to manage configuration and changes easily and centrally in AD Allows configuration of Security settings,Registry-based policy settings. 
  
  Group policy preferences like startup/shutdown/log-on/logoff scripts settings and Software installation. 
  GPO can be abused for various attacks like privesc, backdoors, persistence etc
@@ -113,7 +113,7 @@ Get-NetOU
 
 <img src="/img/adpart2/ou1.png" alt="Getting-gz" width="800" height="200"> 
 
-<img src="/img/adpart2/ou2.png" alt="Getting-gz" width="600" height="130"> 
+<img src="/img/adpart2/ou2.png" alt="Getting-gz" width="500" height="100"> 
 
 ## ACLs
 
