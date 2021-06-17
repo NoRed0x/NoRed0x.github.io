@@ -62,9 +62,77 @@ Invoke-FileFinder
 Find-DomainShare -CheckShareAccess
 
 ## Group Policies
-ldv;,wlevv
-ewvwv
-## OUs
+ Group Policy provides the ability to manage configuration and changes easily and centrally in AD ,Allows configuration of Security settings,Registry-based policy settings. 
+ 
+ Group policy preferences like startup/shutdown/log-on/logoff scripts settings and Software installation. 
+ GPO can be abused for various attacks like privesc, backdoors, persistence etc
+ 
+ get list of GPO in the current domain
+ ```
+ Get-NetGPO
+ 
+ ```
+ 
+ <img src="/img/adpart2/gpo1.PNG" alt="Getting-gz" width="800" height="200"> 
+ 
+ ```
+ Get-NetGPO| select displayname
+ 
+ ```
+ 
+<img src="/img/adpart2/gpo2.PNG" alt="Getting-gz" width="800" height="200"> 
 
+ 
+ get list of GPO in the target computer
+```
+Get-NetGPO -ComputerName <ComputerName> | select displayname
+```
+ 
+ <img src="/img/adpart2/gpo3.PNG" alt="Getting-gz" width="800" height="200"> 
+
+ 
+ find users who have local admin rights over the machine
+ ```
+ Find-GPOComputerAdmin –Computername <ComputerName>
+ ```
+ 
+ get machines where the given user in member of a specific group 
+ ```
+ Find-GPOLocation -Identity <user> -Verbose
+ ```
+ <img src="/img/adpart2/gpo4.PNG" alt="Getting-gz" width="800" height="200"> 
+
+ 
+## OUs
+OUs are the smallest unit in the Active Directory system. OU is abbreviated from is Organizational Unit. OUs are containers for users, groups, and computers, and they exist within a domain. OUs are useful when an administrator wants to deploy Group Policy settings to a subset of users, groups, and computers within your domain. OUs also allows Administrators to delegate admin tasks to users/groups without having to make him/her an administrator of the directory
+
+Get all the OUs in the current domain
+```
+Get-NetOU
+```
+
+<img src="/img/adpart2/ou1.PNG" alt="Getting-gz" width="800" height="200"> 
+
+<img src="/img/adpart2/ou2.PNG" alt="Getting-gz" width="800" height="200"> 
 
 ## ACLs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
