@@ -123,7 +123,8 @@ An Access Control List (ACL) is a list of access control entries (ACE). Each ACE
 The security descriptor for a securable object can contain two types of ACLs: a DACL and a SACL.
  * DACL(Discretionary access control list): Defines the permissions trustees (a user or group) have on an object.
  * SACL(System access control list): Logs success and failure audit messages when an object is accessed.
-the ACL is like asking: who has permission and what can be done on an object?
+
+* the ACL is like asking: who has permission and what can be done on an object?
 * Most of the system administrators are wrongly configuring the ACL (such as granting a normal user to important permissions). So as attackers, we are interested in enumerating   the ACL in order to find interesting ACLs!
 
 
