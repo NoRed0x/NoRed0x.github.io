@@ -163,3 +163,5 @@ Get-PathAcl -Path "\\10.0.0.2\Users"
 
 <img src="/img/adpart2/5ac.PNG" alt="Getting-gz" width="600" height="150"> 
 
+ * I finished part 2 today waite me in the next part.
+
