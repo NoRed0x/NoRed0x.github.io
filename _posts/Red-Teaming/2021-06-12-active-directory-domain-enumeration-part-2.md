@@ -133,7 +133,7 @@ The security descriptor for a securable object can contain two types of ACLs: a 
  Get-ObjectAcl -SamAccountName "users" -ResolveGUIDs
  ```
 
-<img src="/img/adpart2/ac1.PNG" alt="Getting-gz" width="500" height="100"> 
+<img src="/img/adpart2/ac1.PNG" alt="Getting-gz" width="700" height="200"> 
 
 see if there is any user has a modification rights to a GPO
 ```
