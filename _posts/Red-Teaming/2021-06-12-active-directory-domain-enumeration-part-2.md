@@ -140,14 +140,14 @@ see if there is any user has a modification rights to a GPO
 Get-NetGPO | %{Get-ObjectAcl -ResolveGUIDs -Name $_.Name}
 ```
 
-<img src="/img/adpart2/2ac.PNG" alt="Getting-gz" width="700" height="200"> 
+<img src="/img/adpart2/2ac.PNG" alt="Getting-gz" width="800" height="200"> 
 
 search for interesting ACE
 ```
 Invoke-ACLScanner -ResolveGUIDs
 ```
   
-<img src="/img/adpart2/3ac.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/adpart2/3ac.PNG" alt="Getting-gz" width="800" height="250"> 
 
 Returns the ACLs associated with the specified account
 ```
