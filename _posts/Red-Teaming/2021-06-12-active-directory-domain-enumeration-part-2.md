@@ -133,27 +133,27 @@ The security descriptor for a securable object can contain two types of ACLs: a 
  Get-ObjectAcl -SamAccountName "users" -ResolveGUIDs
  ```
 
-<img src="/img/adpart2/ac1.png" alt="Getting-gz" width="500" height="100"> 
+<img src="/img/adpart2/ac1.PNG" alt="Getting-gz" width="500" height="100"> 
 
 see if there is any user has a modification rights to a GPO
 ```
 Get-NetGPO | %{Get-ObjectAcl -ResolveGUIDs -Name $_.Name}
 ```
 
-<img src="/img/adpart2/2ac.png" alt="Getting-gz" width="500" height="100"> 
+<img src="/img/adpart2/2ac.PNG" alt="Getting-gz" width="500" height="100"> 
 
 search for interesting ACE
 ```
 Invoke-ACLScanner -ResolveGUIDs
 ```
   
-<img src="/img/adpart2/3ac.png" alt="Getting-gz" width="500" height="100"> 
+<img src="/img/adpart2/3ac.PNG" alt="Getting-gz" width="500" height="100"> 
 
 Returns the ACLs associated with the specified account
 ```
 Get-DomainObjectAcl -Identity <user> -ResolveGUIDs
 ```
-<img src="/img/adpart2/4ac.png" alt="Getting-gz" width="500" height="100"> 
+<img src="/img/adpart2/4ac.PNG" alt="Getting-gz" width="500" height="100"> 
 
  
 Get the ACL associated with the specific path
@@ -161,5 +161,5 @@ Get the ACL associated with the specific path
 Get-PathAcl -Path "\\10.0.0.2\Users"
 ```
 
-<img src="/img/adpart2/5ac.png" alt="Getting-gz" width="500" height="100"> 
+<img src="/img/adpart2/5ac.PNG" alt="Getting-gz" width="500" height="100"> 
 
