@@ -153,7 +153,7 @@ Returns the ACLs associated with the specified account
 ```
 Get-DomainObjectAcl -Identity <user> -ResolveGUIDs
 ```
-<img src="/img/adpart2/4ac.PNG" alt="Getting-gz" width="500" height="100"> 
+<img src="/img/adpart2/4ac.PNG" alt="Getting-gz" width="700" height="200"> 
 
  
 Get the ACL associated with the specific path
@@ -161,5 +161,5 @@ Get the ACL associated with the specific path
 Get-PathAcl -Path "\\10.0.0.2\Users"
 ```
 
-<img src="/img/adpart2/5ac.PNG" alt="Getting-gz" width="500" height="100"> 
+<img src="/img/adpart2/5ac.PNG" alt="Getting-gz" width="600" height="150"> 
 
