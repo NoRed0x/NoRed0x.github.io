@@ -1,5 +1,5 @@
 ---
-title:  "Active Directory Trust Enumeration"
+title:  "Active Directory Domain Trust Enumeration"
 classes: wide
 header:
   teaser: /img/redteampng.png
