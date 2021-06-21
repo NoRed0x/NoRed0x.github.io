@@ -23,12 +23,11 @@ trust is a relationship between two domains or forests which allows users of one
 In simplest terms, it is the process of extending the security boundary of an AD domain or forest to include another AD domain or forest.
 
 ## Trust Direction 
-  1-One-way trust(Unidirectional):Users in the trusted domain can access resources in the trusting domain but the reverse is not true. 
+ * One-way trust(Unidirectional):Users in the trusted domain can access resources in the trusting domain but the reverse is not true. 
   
   <img src="/img/ad3/1.PNG" alt="Getting-gz" width="800" height="200"> 
 
-
-  2-Two-way trust(Bidirectional):Users of both domains can access resources in the other domain
+ * Two-way trust(Bidirectional):Users of both domains can access resources in the other domain
   
   <img src="/img/ad3/2.PNG" alt="Getting-gz" width="800" height="200"> 
   
