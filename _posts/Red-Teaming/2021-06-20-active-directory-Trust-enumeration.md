@@ -34,11 +34,11 @@ In simplest terms, it is the process of extending the security boundary of an AD
   
 
 ## Trust Transitivity 
-   1-Transitive 
+ Transitive 
  * Can be extended to establish trust relationships with other domains.
  * All the default intra-forest trust relationships (Tree-root, Parent-Child) between domains within a same forest are transitive two-way trusts
             
-   2-Nontransitive 
+ Nontransitive 
  * Cannot be extended to other domains in the forest. Can be two-way or one-way.
  * This is the default trust (called external trust) between two domains in different forests when forests do not have a trust relationship. 
 
