@@ -76,3 +76,60 @@ In simplest terms, it is the process of extending the security boundary of an AD
   External Trust 
  * An external trust is a one-way, non-transitive trust that is manually created to establish a trust relationship between AD DS domains that are in different forests, or between an AD DS domain and Windows NT 4.0 domain.
  *  External trusts allow you to provide users access to resources in a domain outside of the forest that is not already trusted by a Forest trust.
+
+
+
+
+Get list of all domain trust for the currrent domain
+```
+Get-NetDomainTrust
+Get-NetDomainTrust -Domain <domain>
+Get-DomainTrustMapping
+```
+
+## forest
+
+get details about the current forest
+```
+Get-NetForest
+```
+
+<img src="/img/ad3/f1.PNG" alt="Getting-gz" width="800" height="200"> 
+
+Get details about the other forest
+
+```
+Get-NetForest -Forest <forest>
+```
+
+<img src="/img/ad3/f2.PNG" alt="Getting-gz" width="800" height="200"> 
+
+get all domain in the current forest
+```
+Get-NetForestDomain
+```
+
+<img src="/img/ad3/f3.PNG" alt="Getting-gz" width="800" height="200"> 
+
+```
+ Get-NetForestDomain -Forest karim.net
+ ```
+<img src="/img/ad3/f4.PNG" alt="Getting-gz" width="800" height="200"> 
+
+
+## global catalog 
+ is a feature of Active Directory  domain controllers that allows for a domain controller to provide information on any object in the forest, regardless of whether the object is a member of the domain controller’s domain.
+
+Get all global catalogs for the current forest
+```
+Get-NetForestCatalog 
+```
+<img src="/img/ad3/f5.PNG" alt="Getting-gz" width="800" height="200"> 
+
+```
+ Get-NetForestCatalog -Forest <forest>
+   ```
+
+<img src="/img/ad3/f6.PNG" alt="Getting-gz" width="800" height="200"> 
+
+
