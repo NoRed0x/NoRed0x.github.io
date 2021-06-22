@@ -77,8 +77,6 @@ In simplest terms, it is the process of extending the security boundary of an AD
  *  External trusts allow you to provide users access to resources in a domain outside of the forest that is not already trusted by a Forest trust.
 
 
-
-
 Get list of all domain trust for the currrent domain
 ```
 Get-NetDomainTrust
@@ -88,7 +86,7 @@ Get-DomainTrustMapping
 
 ## forest
 
-get details about the current forest
+Get details about the current forest
 ```
 Get-NetForest
 ```
@@ -103,7 +101,7 @@ Get-NetForest -Forest <forest>
 
 <img src="/img/ad3/f2.png" alt="Getting-gz" width="800" height="200"> 
 
-get all domain in the current forest
+Get all domain in the current forest
 ```
 Get-NetForestDomain
 ```
@@ -111,8 +109,8 @@ Get-NetForestDomain
 <img src="/img/ad3/f3.png" alt="Getting-gz" width="800" height="200"> 
 
 ```
- Get-NetForestDomain -Forest karim.net
- ```
+Get-NetForestDomain -Forest karim.net
+```
 <img src="/img/ad3/f4.png" alt="Getting-gz" width="800" height="200"> 
 
 
