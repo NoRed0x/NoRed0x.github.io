@@ -41,8 +41,7 @@ In simplest terms, it is the process of extending the security boundary of an AD
  * Cannot be extended to other domains in the forest. Can be two-way or one-way.
  * This is the default trust (called external trust) between two domains in different forests when forests do not have a trust relationship. 
 
-
-<img src="/img/adpart2/.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/ad3/3.PNG" alt="Getting-gz" width="800" height="200"> 
 
 ## relationship trust
 
