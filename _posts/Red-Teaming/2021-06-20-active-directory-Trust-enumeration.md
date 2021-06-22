@@ -1,10 +1,10 @@
 ---
-title:  "Active Directory Domain Trust and forest Enumeration"
+title:  "Active Directory Domain Trust and forest Enumeration Part-3 With Powerview"
 classes: wide
 header:
   teaser: /img/redteampng.png
 ribbon: red
-description: "enumerating Domain Trust and forest  in Active Directory "
+description: "Active Directory Domain Trust and forest Enumeration"
 categories:
   - Red-Teaming
 toc: true
@@ -43,7 +43,7 @@ In simplest terms, it is the process of extending the security boundary of an AD
 
 <img src="/img/ad3/3.PNG" alt="Getting-gz" width="800" height="200"> 
 
-## relationship trust
+## Relationship Trust
 
   <img src="/img/ad3/type.PNG" alt="Getting-gz" width="800" height="200"> 
 
@@ -84,7 +84,7 @@ Get-NetDomainTrust -Domain <domain>
 Get-DomainTrustMapping
 ```
 
-## forest
+## Forest
 
 Get details about the current forest
 ```
@@ -114,7 +114,7 @@ Get-NetForestDomain -Forest karim.net
 <img src="/img/ad3/f4.png" alt="Getting-gz" width="800" height="200"> 
 
 
-## global catalog 
+## Global Catalog 
  is a feature of Active Directory  domain controllers that allows for a domain controller to provide information on any object in the forest, regardless of whether the object is a member of the domain controller’s domain.
 
 Get all global catalogs for the current forest
@@ -128,5 +128,7 @@ Get-NetForestCatalog
    ```
 
 <img src="/img/ad3/f6.png" alt="Getting-gz" width="800" height="200"> 
+
+I finished part 3 today waite me in the next part.
 
 
