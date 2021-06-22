@@ -94,7 +94,7 @@ get details about the current forest
 Get-NetForest
 ```
 
-<img src="/img/ad3/f1.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/ad3/f1.png" alt="Getting-gz" width="800" height="200"> 
 
 Get details about the other forest
 
@@ -102,19 +102,19 @@ Get details about the other forest
 Get-NetForest -Forest <forest>
 ```
 
-<img src="/img/ad3/f2.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/ad3/f2.png" alt="Getting-gz" width="800" height="200"> 
 
 get all domain in the current forest
 ```
 Get-NetForestDomain
 ```
 
-<img src="/img/ad3/f3.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/ad3/f3.png" alt="Getting-gz" width="800" height="200"> 
 
 ```
  Get-NetForestDomain -Forest karim.net
  ```
-<img src="/img/ad3/f4.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/ad3/f4.png" alt="Getting-gz" width="800" height="200"> 
 
 
 ## global catalog 
@@ -124,12 +124,12 @@ Get all global catalogs for the current forest
 ```
 Get-NetForestCatalog 
 ```
-<img src="/img/ad3/f5.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/ad3/f5.png" alt="Getting-gz" width="800" height="200"> 
 
 ```
  Get-NetForestCatalog -Forest <forest>
    ```
 
-<img src="/img/ad3/f6.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/ad3/f6.png" alt="Getting-gz" width="800" height="200"> 
 
 
