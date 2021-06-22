@@ -50,10 +50,13 @@ In simplest terms, it is the process of extending the security boundary of an AD
 
 
   Parent/Child Trust 
-  A transitive, two-way parent-child trust relationship automatically created and establishes a relationship between a parent domain and a child domain whenever a new child domain is created using the AD DS installation process process within a domain tree. They can only exist between two domains in the same tree with the same contiguous namespace. The parent domain is always trusted by the child domain. You cannot manually create a Parent-Child trust.
+ * A transitive, two-way parent-child trust relationship automatically created and establishes a relationship between a parent domain and a child domain whenever a new child domain is created using the AD DS installation process process within a domain tree. 
+ * They can only exist between two domains in the same tree with the same contiguous namespace. 
+ * The parent domain is always trusted by the child domain. You cannot manually create a Parent-Child trust.
   
   Tree/Root Trust
-  A transitive, two-way tree-root trust relationship automatically created and establishes a relationship between the forest root domain and a new tree, when you run the AD DS installation process to add a new tree to the forest. A tree-root trust can only be established between the roots of two trees in the same forest and are always transitive. You cannot manually create a tree-root trust
+ * A transitive, two-way tree-root trust relationship automatically created and establishes a relationship between the forest root domain and a new tree, when you run the AD DS installation process to add a new tree to the forest. 
+ * A tree-root trust can only be established between the roots of two trees in the same forest and are always transitive. You cannot manually create a tree-root trust
   
   Shortcut Trust
  * Shortcut trusts are manually created, one-way, transitive trusts.
@@ -61,14 +64,15 @@ In simplest terms, it is the process of extending the security boundary of an AD
  * They are created to optimize the authentication process shortening the trust path. 
  * The trust path is the series of domain trust relationships that the authentication process must traverse between two domains in a forest that are not directly trusted by each other. Shortcut trusts shorten the trust path
 
-Forest Trust 
-* Forest trusts are manually created, one-way transitive, or two-way transitive trusts that allow you to provide access to resources between multiple forests. 
-* Forest trusts uses both Kerberos v5 and NTLM authentication across forests where users can use their Universal Principal Name (UPN)
-* 
-Realm Trust 
-  Trust Relationships with Other Operating Systems that also Support Kerberos Protocol 
-  One-Way Transitive or One-Way Non-Transitive Use Kerberos Authentication Only 
-  A Realm trust can be established to provide resource access and cross-platform inter-operability between an AD DS domain and non-Windows Kerberos v5 Realm.
+  Forest Trust 
+ * Forest trusts are manually created, one-way transitive, or two-way transitive trusts that allow you to provide access to resources between multiple forests. 
+ * Forest trusts uses both Kerberos v5 and NTLM authentication across forests where users can use their Universal Principal Name (UPN)
+ 
+  Realm Trust 
+ * Trust Relationships with Other Operating Systems that also Support Kerberos Protocol 
+ * One-Way Transitive or One-Way Non-Transitive Use Kerberos Authentication Only 
+ * A Realm trust can be established to provide resource access and cross-platform inter-operability between an AD DS domain and non-Windows Kerberos v5 Realm.
 
-External Trust 
-* An external trust is a one-way, non-transitive trust that is manually created to establish a trust relationship between AD DS domains that are in different forests, or between an AD DS domain and Windows NT 4.0 domain. External trusts allow you to provide users access to resources in a domain outside of the forest that is not already trusted by a Forest trust.
+  External Trust 
+ * An external trust is a one-way, non-transitive trust that is manually created to establish a trust relationship between AD DS domains that are in different forests, or between an AD DS domain and Windows NT 4.0 domain.
+ *  External trusts allow you to provide users access to resources in a domain outside of the forest that is not already trusted by a Forest trust.
