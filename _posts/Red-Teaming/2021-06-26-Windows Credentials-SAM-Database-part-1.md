@@ -10,7 +10,6 @@ categories:
 toc: true
 ---
 
-## Overview
-
+## Introduction to SAM 
   
   <img src="/img/ad3/.PNG" alt="Getting-gz" width="800" height="200"> 
