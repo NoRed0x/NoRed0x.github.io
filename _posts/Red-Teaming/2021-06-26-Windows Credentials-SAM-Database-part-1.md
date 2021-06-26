@@ -138,6 +138,8 @@ lsadump::sam
 <img src="/img/cred1/z2.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 ## Metasploit Framework: HashDump
+The hashdump post module will dump the contents of the SAM database.
+
 ```
 hashdump
 ```
@@ -154,6 +156,7 @@ exploit
 <img src="/img/cred1/collect.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 ## Metasploit Framework: load kiwi
+Kiwi extension to perform various types of credential-oriented operations, such as dumping passwords and hashes, dumping passwords in memory, generating golden tickets, and much more
 ```
 load kiwi
 lsa_dump_sam
