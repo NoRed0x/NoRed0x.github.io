@@ -104,12 +104,9 @@ pwdump7.exe
 
 ## Invoke-PowerDump.ps1
 ```
-download:https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-PowerDump.ps1
-```
-```
+ download:https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-PowerDump.ps1
 Import-Module .\Invoke-PowerDump.ps1
 Invoke-PowerDump
-https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-PowerDump.ps1
 ```
 <img src="/img/cred1/pd.PNG" alt="Getting-gz" width="1000" height="200"> 
 
