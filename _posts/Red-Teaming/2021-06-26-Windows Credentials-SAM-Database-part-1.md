@@ -38,7 +38,7 @@ Creating a shadow volume
 ```
  wmic shadowcopy call create Volume='C:\'
  ```
- <img src="/img/cred1/2.PNG" alt="Getting-gz" width="1000" height="200"> 
+ <img src="/img/cred1/2.PNG" alt="Getting-gz" width="1000" height="100"> 
 
 
 Listing shadow volumes
