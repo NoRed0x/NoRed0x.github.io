@@ -113,7 +113,15 @@ Invoke-PowerDump
 
 ## creddump7
 ```
-sudo apt install python-crypto
+sudo apt install python-crypto #if didn't work | error in kali2021
+wget https://ftp.dlitz.net/pub/dlitz/crypto/pycrypto/pycrypto-2.6.1.tar.gz
+tar -xvzf pycrypto-2.6.1.tar.gz
+cd pycrypto-2.6.1
+python setup.py build
+sudo python setup.py build instal
+```
+
+```
 sudo git clone https://github.com/Neohapsis/creddump7
 python pwdump.py /home/kali/system /home/kali/sam
 ```
