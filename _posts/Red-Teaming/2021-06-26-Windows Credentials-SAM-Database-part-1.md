@@ -40,11 +40,13 @@ Creating a shadow volume
  ```
  <img src="/img/cred1/2.PNG" alt="Getting-gz" width="1000" height="200"> 
 
-To verify this
- ```
-- Listing shadow volumes
- ```
-  <img src="/img/cred1/3.png" alt="Getting-gz" width="1000" height="100"> 
+
+Listing shadow volumes
+```
+vssadmin list shadows
+```
+
+<img src="/img/cred1/3.PNG" alt="Getting-gz" width="1000" height="100"> 
 
 
 
