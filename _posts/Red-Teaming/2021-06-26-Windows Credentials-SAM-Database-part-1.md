@@ -88,8 +88,9 @@ samdump2 SYSTEM SAM
 
 ## pwdump7
  This tool extracts the SAM file from the system and dumps its credentials
-
+```
 download :https://www.tarasco.org/security/pwdump_7/pwdump7.zip
+```
 windws7
 ```
 pwdump7.exe 
