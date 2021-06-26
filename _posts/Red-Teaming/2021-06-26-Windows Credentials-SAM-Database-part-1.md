@@ -180,5 +180,5 @@ sudo john hash -w=/usr/share/wordlists/rockyou.txt --format=NT
 ```
 <img src="/img/cred1/john.PNG" alt="Getting-gz" width="1000" height="200"> 
 
-I finished part 4 in AD  today waite me in the next part.
+I finished part 1 in Windows Credentials today waite me in the next part.
 
