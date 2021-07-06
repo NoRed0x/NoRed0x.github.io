@@ -9,8 +9,43 @@ categories:
   - Red-Teaming
 toc: true
 ---
+## Goal
+Crack weak service passwords
+## SPN
+The Service Principal Name (SPN) is a unique identifier for a service instance. 
+Active Directory Domain Services and Windows provide support for Service Principal Names (SPNs), which are key components of the Kerberos mechanism through which a client authenticates a service.
+used to associate a service on a specific server to a service account in AD
+An SPN must be unique in the forest
+
+## SPN Format
+
+```
+serviceclass/host:port servicename
+MSSQLSvc/domainAD.karim.net:1443 karim\mssqlserver
+```
+serviceclass:
+  * identifies the general class of service  for example, "SqlServer".There are well-known service class names such as "www" for a Web service or "ldap" for a directory service
+
+HOST:
+  * The name of the computer on which the service is running
+
+port:	
+  * An optional TCP or UDP port number to differentiate between multiple instances of the same service class on a single host computer
+servicename
+  * The distinguished name or objectGUID of an object in Active Directory Domain Services, such as a service connection point (SCP).
+  * The DNS name of the domain for a service that provides a specified service for a domain as a whole.
 
 ## Kerbroasting
+Kerberoasting is a technique that allows an attacker to steal the KRB_TGS ticket, to brute force application services hash to extract its password.
+
+If you got a valid domain user, you may just ask the KDC to issue you a valid TGS for any service.
+Knowing the fact that SPN attributes can be set to a specific username, and that the TGS is encrypted using service’s key
+
+We can issue a TGS ticket on our own machine, dump the ticket and start an offline bruteforce attack against it to retrieve the plaintext password for that user (service account)
+
+Any domain user can request tickets for any service
+  * No high privileges required
+  * Service must not be active
 
 
 
