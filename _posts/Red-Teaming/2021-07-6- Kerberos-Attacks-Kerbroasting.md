@@ -95,12 +95,13 @@ Kerberos::list  ## for SPN discovery.
 
 <img src="/img/kerberosting/m2.PNG" alt="Getting-gz" width="1000" height="200"> 
 
+<img src="/img/kerberosting/m2.PNG" alt="Getting-gz" width="1000" height="200"> 
+
+
 Dump TGS ticket
 ```
 kerberos::list /export
 ```
-
-<img src="/img/kerberosting/m2.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 <img src="/img/kerberosting/m3.PNG" alt="Getting-gz" width="1000" height="200"> 
 
