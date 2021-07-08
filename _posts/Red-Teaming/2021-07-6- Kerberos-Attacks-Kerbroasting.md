@@ -1,10 +1,10 @@
 ---
-title:  "Kerberos attacks 1-Kerbroasting"
+title:  "Kerberos attacks 1-Kerberoasting "
 classes: wide
 header:
   teaser: /img/redteampng.png
 ribbon: red
-description: "Kerberos attacks 1-Kerbroasting -Offline cracking of service account passwords"
+description: "Kerberos attacks 1-Kerberoasting  -Offline cracking of service account passwords"
 categories:
   - Red-Teaming
 toc: true
@@ -39,7 +39,7 @@ Spn account
 
 <img src="/img/kerberosting/spn.PNG" alt="Getting-gz" width="1000" height="200"> 
 
-## Kerbroasting
+## Kerberoasting 
 Kerberoasting is a technique that allows an attacker to steal the KRB_TGS ticket, to brute force application services hash to extract its password.
 
 If you got a valid domain user, you may just ask the KDC to issue you a valid TGS for any service.
