@@ -58,8 +58,9 @@ Import-Module .\Find-PotentiallyCrackableAccounts.ps1
 Find-PotentiallyCrackableAccounts -FullData -Verbose
 ```
 
-<img src="/img/kerberosting/11.PNG" alt="Getting-gz" width="800" height="200"> 
-<img src="/img/kerberosting/12.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/kerberosting/11.png" alt="Getting-gz" width="800" height="200"> 
+
+<img src="/img/kerberosting/12.png" alt="Getting-gz" width="800" height="200"> 
 
 
 ## GetUserSPNs.ps1
@@ -71,7 +72,7 @@ download script: https://raw.githubusercontent.com/nidem/kerberoast/master/GetUs
 ```
 
 
-<img src="/img/kerberosting/13.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/kerberosting/13.png" alt="Getting-gz" width="800" height="200"> 
 
 
 ## TGSCipher.ps1
