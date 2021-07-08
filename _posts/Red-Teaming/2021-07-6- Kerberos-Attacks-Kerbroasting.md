@@ -85,10 +85,10 @@ download script:https://raw.githubusercontent.com/cyberark/RiskySPN/master/Get-T
 <img src="/img/kerberosting/14.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 ## 3-Mimikatz
-SPN discovery
 
 <img src="/img/kerberosting/m1.PNG" alt="Getting-gz" width="1000" height="200"> 
 
+SPN discovery
 ```
 Kerberos::list  ## for SPN discovery.
 ```
