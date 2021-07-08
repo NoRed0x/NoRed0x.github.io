@@ -1,16 +1,16 @@
 ---
-title:  "Kerberos attacks Kerbroasting"
+title:  "Kerberos attacks 1-Kerbroasting"
 classes: wide
 header:
   teaser: /img/redteampng.png
 ribbon: red
-description: "Kerberos attacks Kerbroasting -Offline cracking of service account passwords"
+description: "Kerberos attacks 1-Kerbroasting -Offline cracking of service account passwords"
 categories:
   - Red-Teaming
 toc: true
 ---
 ## Goal
-Crack weak service passwords
+Offline cracking of service account passwords
 ## SPN
 The Service Principal Name (SPN) is a unique identifier for a service instance. 
 Active Directory Domain Services and Windows provide support for Service Principal Names (SPNs), which are key components of the Kerberos mechanism through which a client authenticates a service.
