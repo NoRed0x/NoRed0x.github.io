@@ -35,6 +35,10 @@ servicename :
   * The distinguished name or objectGUID of an object in Active Directory Domain Services, such as a service connection point (SCP).
   * The DNS name of the domain for a service that provides a specified service for a domain as a whole.
 
+Spn account
+
+<img src="/img/kerberosting/spn.PNG" alt="Getting-gz" width="1000" height="200"> 
+
 ## Kerbroasting
 Kerberoasting is a technique that allows an attacker to steal the KRB_TGS ticket, to brute force application services hash to extract its password.
 
@@ -104,6 +108,9 @@ kerberos::list /export
 ```
 
 <img src="/img/kerberosting/m3.PNG" alt="Getting-gz" width="1000" height="200"> 
+
+
+<img src="/img/kerberosting/m4.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 
 ## kirbi2john.py
