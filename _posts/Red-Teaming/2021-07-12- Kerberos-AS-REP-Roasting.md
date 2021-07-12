@@ -65,11 +65,6 @@ Rubeus.exe asreproast /format:john /outfile:hash.txt
 
 <img src="/img/asrep/save.PNG" alt="Getting-gz" width="1000" height="200"> 
 
-## ASREP Roasting with ASREPRoast PowerShell Script
-
-
-
-
 ## ASREP Roasting with  GetUserSPNs.py
 
 ```
