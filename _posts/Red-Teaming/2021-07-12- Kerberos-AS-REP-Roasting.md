@@ -14,6 +14,8 @@ toc: true
  * If an Active Directory user has pre-authentication disabled, a vulnerability is exposed which can allow an attacker to perform an offline bruteforce attack against that user’s password.
  * This attack is commonly known as AS-REP Roasting in reference to Authentication Service Requests, a part of the process of authentication with Kerberos.
  * An attacker who is able to find a user with pre-authentication disabled can request an AS-REP ticket for that user and this will contain data encrypted with the user’s password.
+ * Timestamp encrypted with the NTLM hash of user and sent to the KDC (AS-req) which is the Pre-Auth data.
+ * (Only valid user can use the timestamp) If Pre-Auth is not enabled. we can grab the encrypted part from AS-REP and brute-force it offline
 
 <img src="/img/asrep/1.PNG" alt="Getting-gz" width="600" height="200"> 
 
