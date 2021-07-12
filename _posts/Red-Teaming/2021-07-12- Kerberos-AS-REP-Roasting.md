@@ -24,6 +24,7 @@ toc: true
  * 4-Request a Kerberos  (TGT) from the KDC in the name of a target account. The KDC will respond with the TGT for the account, without requiring the account password as a pre-authentication.
  * 5-Using a tool like Wireshark, extract the user’s password hash from the AS-REP packet. It can be found in the enc-part section of the packet.
  * 6-Use a tool like HashCat or John the Ripper to extract a plaintext password from the captured hash.
+
 ## Terminology
 ```
 KDC: Key Distribution Center # The trusted 3rd party / the Domain Controller
@@ -36,12 +37,14 @@ SPN: Service Principal Name  #The name of a service on the network
 
 ##  enumerate User account with "Do not require pre-authentication"
 ```
+Import-Module .\Microsoft.ActiveDirectory.Management.dll
 Get-ADUser -Filter 'useraccountcontrol -band 4194304' -Properties useraccountcontrol | Format-Table name
 ```
 
 <img src="/img/asrep/enum.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 ```
+Import-Module .\powerview.ps1
 Get-DomainUser -PreauthNotRequired -verbose| select name
 ```
 
