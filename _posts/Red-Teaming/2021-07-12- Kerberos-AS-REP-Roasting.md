@@ -15,7 +15,7 @@ toc: true
  * This attack is commonly known as AS-REP Roasting in reference to Authentication Service Requests, a part of the process of authentication with Kerberos.
  * An attacker who is able to find a user with pre-authentication disabled can request an AS-REP ticket for that user and this will contain data encrypted with the user’s password.
 
-<img src="/img/asrep/1.PNG" alt="Getting-gz" width="1000" height="200"> 
+<img src="/img/asrep/1.PNG" alt="Getting-gz" width="600" height="200"> 
 
 ## AS-REP roasting attack consists of the following steps:
  * 1-Obtain access to a domain as an authenticated user.
