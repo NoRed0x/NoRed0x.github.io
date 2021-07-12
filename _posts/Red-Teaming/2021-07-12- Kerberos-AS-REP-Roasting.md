@@ -71,7 +71,7 @@ Get Domain User
 Import-Module .\powerview.ps1
 Get-DomainUser | select name
 ```
-<img src="/img/asrep/users.PNG" alt="Getting-gz" width="1000" height="200"> 
+<img src="/img/asrep/users.PNG" alt="Getting-gz" width="800" height="200"> 
 
 saved users in the text file
 
