@@ -1,11 +1,12 @@
 ---
-title:  "Kerberos attacks 1-Kerberoasting "
+title:  "Kerberos attacks 1-AS-REP Roasting "
 classes: wide
 header:
   teaser: /img/redteampng.png
 ribbon: red
-description: "Kerberos attacks 1-Kerberoasting  -Offline cracking of service account passwords"
+description: "Kerberos attacks 1-AS-REP Roasting"
 categories:
   - Red-Teaming
 toc: true
 ---
+<img src="/img/kerberosting/13.png" alt="Getting-gz" width="1000" height="200"> 
