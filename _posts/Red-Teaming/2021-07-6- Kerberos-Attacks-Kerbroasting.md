@@ -162,11 +162,11 @@ john --wordlist=/usr/share/wordlists/rockyou.txt tgs
 <img src="/img/kerberosting/john.PNG" alt="Getting-gz" width="1000" height="300"> 
   
 ## Kerberoasting Mitigation
-» Set long and complex passwords for service accounts
-» (Group) Managed Service Accounts
-» Limit privileges of service accounts
-» Service accounts should NOT be part of the domain admin group!
-» Use AES encryption instead of RC4 encryption
+* Set long and complex passwords for service accounts
+* (Group) Managed Service Accounts
+* Limit privileges of service accounts
+* Service accounts should NOT be part of the domain admin group!
+* Use AES encryption instead of RC4 encryption
 
 
 I finished part 1 in Kerberos attacks today waite me in the next part.
