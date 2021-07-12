@@ -9,6 +9,5 @@ categories:
   - Red-Teaming
 toc: true
 ---
-## Goal
 
 <img src="/img/kerberosting/11.png" alt="Getting-gz" width="1000" height="200"> 
