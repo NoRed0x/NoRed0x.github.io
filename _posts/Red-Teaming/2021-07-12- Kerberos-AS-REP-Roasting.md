@@ -15,6 +15,8 @@ toc: true
  * This attack is commonly known as AS-REP Roasting in reference to Authentication Service Requests, a part of the process of authentication with Kerberos.
  * An attacker who is able to find a user with pre-authentication disabled can request an AS-REP ticket for that user and this will contain data encrypted with the user’s password.
 
+<img src="/img/asrep/1.png" alt="Getting-gz" width="1000" height="200"> 
+
 ## AS-REP roasting attack consists of the following steps:
  * 1-Obtain access to a domain as an authenticated user.
  * 2-Use an LDAP filter or tools like PowerView’s Get-DomainUser feature to crawl the domain and identify user accounts with the Do not require Kerberos preauthentication  Property  enabled.
