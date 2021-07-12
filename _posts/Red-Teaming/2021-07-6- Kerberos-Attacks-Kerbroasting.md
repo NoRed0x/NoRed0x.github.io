@@ -165,7 +165,7 @@ john --wordlist=/usr/share/wordlists/rockyou.txt tgs
 * Set long and complex passwords for service accounts
 * (Group) Managed Service Accounts
 * Limit privileges of service accounts
-* Service accounts should NOT be part of the domain admin group!
+* Service accounts should NOT be part of the domain admin group
 * Use AES encryption instead of RC4 encryption
 
 
