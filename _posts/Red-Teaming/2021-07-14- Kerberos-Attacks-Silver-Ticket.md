@@ -59,7 +59,7 @@ kerberos::golden     ##Name of the module (there is no Silver module)
  ```
  
 
- ## group identifier
+## group identifier
 ```
 512 ##Domain Admins
 513 ##Domain Users
@@ -109,3 +109,9 @@ kerberos::ptt  ticket.kirbi
 dir \\domainAD.karim.net\c$
 ```
 <img src="/img/silver/da.PNG" alt="Getting-gz" width="1000" height="200"> 
+
+## Detect
+
+## Mitigate
+
+## Respond
