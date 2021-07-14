@@ -134,3 +134,7 @@ several mitigations exist that can make it harder for an adversary to compromise
 If a silver ticket is detected, several response actions can be taken:
 * Activate the incident response process and alert the incident response team.
 * Reset the password of the compromised service account.
+
+I finished part 3 in Kerberos attacks today waite me in the next part.
+
+
