@@ -111,7 +111,25 @@ dir \\domainAD.karim.net\c$
 <img src="/img/silver/da.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 ## Detect
-
+* The normal process of obtaining a TGS ticket involves asking a domain controller to generate one. 
+* After the client proves their identity, the domain controller with reply with a TGS encrypted with the service account password. 
+* detecting silver tickets is only possible on the endpoint and involves examining TGS tickets for subtle signs of manipulation, such as: usernames that don’t exist, modified group memberships (added or removed)
+* The Account Domain field is blank when it should be DOMAIN
+* The Account Domain field is DOMAIN FQDN when it should be DOMAIN.
+* Events:
+   * 4624 Account Logon
+   * 4634 Account Logoff
+   * 4672 Admin Logon
 ## Mitigate
+several mitigations exist that can make it harder for an adversary to compromise service account password hashes.
+* Protect assets (especially the domain controller)
+* Same mitigations as for kerberoastig apply
+* Reduce administrative access to member workstations and servers to the least required.
+* Remove end-user administrative privileges on member workstations.
+* Adopt strong password hygiene practices for service accounts.
+* Do not allow users to possess administrative privileges across security boundaries.
 
 ## Respond
+If a silver ticket is detected, several response actions can be taken:
+* Activate the incident response process and alert the incident response team.
+* Reset the password of the compromised service account.
