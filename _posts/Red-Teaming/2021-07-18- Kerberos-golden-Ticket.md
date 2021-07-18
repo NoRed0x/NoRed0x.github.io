@@ -11,7 +11,7 @@ toc: true
 ---
 
 ## golden Ticket
-<img src="/img/silver/sid.PNG" alt="Getting-gz" width="800" height="150"> 
+<img src="/img/golden/sid.PNG" alt="Getting-gz" width="800" height="150"> 
 
 ## Create the silver ticket
 
