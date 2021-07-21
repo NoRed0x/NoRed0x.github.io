@@ -130,6 +130,6 @@ PsExec64.exe \\10.0.0.1 cmd.exe
 * Perform the reset of the krbtgt account (twice) in accordance with your password reset policies, or quarterly.
 * Enable Windows Defender Credential Guard on applicable systems (Windows 10 and Server 2016 and above). Do not use on domain controllers.
 
-* I finished part 4 in Kerberos attacks today waite me in the next part.
+I finished part 4 in Kerberos attacks today waite me in the next part.
 
 
