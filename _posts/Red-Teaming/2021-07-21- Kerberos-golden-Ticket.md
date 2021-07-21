@@ -11,15 +11,24 @@ toc: true
 ---
 
 ## golden Ticket
+* is a famous technique of impersonating users on an AD domain by abusing Kerberos authentication
+* A Golden Ticket is a type of attack in which an adversary gains control over an Active Directory Key Distribution Service Account (KRBTGT), and uses that account to forge valid Kerberos Ticket Granting Tickets (TGTs). This gives the attacker access to any resource on an Active Directory Domain
+* Golden Ticket give attackers unrestricted access to networked resources and the ability to forge new tickets, allowing them to reside on networks indefinitely by being disguised as credentialed administrator-level users.
+
+
+
+
+
 <img src="/img/golden/sid.PNG" alt="Getting-gz" width="800" height="150"> 
 
 ## Forging Kerberos Tickets
 
-##  requirements for forging TG
-  Domain Name
-SID
-Domain KRBTGT Account NTLM password hash
-Impersonate user
+## requirements for forging TGT
+ * Domain Name
+ * SID
+ * Domain KRBTGT Account NTLM password hash
+ * Impersonate user
+ * 
 ```
 kerberos::golden  ## Name of the module  
 /user:Administrator  ## username of which the TGT is generated
