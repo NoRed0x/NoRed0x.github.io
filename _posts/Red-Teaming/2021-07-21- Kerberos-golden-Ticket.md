@@ -98,9 +98,9 @@ misc::cmd
 
 <img src="/img/golden/connect1.PNG" alt="Getting-gz" width="1000" height="200"> 
 
-* get a new cmd prompt which will allow to connect with domain server using PsExec.exe
-access the service.
+get a new cmd prompt which will allow to connect with domain server using PsExec.exe
 
+access the service.
 ```
 PsExec64.exe \\10.0.0.1 cmd.exe
 ```
