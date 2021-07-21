@@ -80,3 +80,18 @@ sudo python3 ticketConverter.py admin.ccache ticket.kirbi
  whenever you want to access the Domain server service you can use the ticket.kirbi file
 
 ## golden ticket with Rubeus.exe
+## Detection
+ * detecting a golden ticket attack depends on the method used. If the Mimikatz tool was dropped in your environment, antivirus might identify and block it. That said, Mimikatz itself is very simple to modify, changing its hash and invalidating any hash-based detection. 
+ *  detection will ultimately rely on watching for unusual behavior. This could look like accounts accessing systems they would not normally access or accounts authenticating with different accounts. It could also be SIDs that do not match the username or generic usernames in use that do not exist in the environment.
+ * it is important to audit your user and service accounts on a regular basis. If you don’t know what is usual, detecting unusual activity is virtually impossible.
+ 
+## Mitigation
+* Limit Domain Admins from logging on to any other computers other than Domain Controllers and a handful of Admin servers (don’t let other admins log on to these servers) Delegate all other rights to custom admin groups. This greatly reduces the ability of an attacker to gain access to a Domain Controller’s Active Directory database
+* Install endpoint protection to block attackers from loading modules like mimikatz & powershell scripts
+* Limit privilege for Admin and Domain Administrator access.
+* Alert on known behaviours that indicates Golden Ticket or other similar attacks.
+* Implement multi-factor authentication (MFA) on all external authentication points, including VPN.
+* Don’t have RDP open to the internet. Seriously.  Get RDP behind a VPN, and implement MFA on it.
+* Fake credentials can be injected into the LSAS cache, which would be tempting to hackers. Seeing these “honeycreds” used would clearly indicate an issue.
+* Perform the reset of the krbtgt account (twice) in accordance with your password reset policies, or quarterly.
+* Enable Windows Defender Credential Guard on applicable systems (Windows 10 and Server 2016 and above). Do not use on domain controllers.
