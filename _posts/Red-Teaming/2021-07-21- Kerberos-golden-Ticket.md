@@ -105,7 +105,7 @@ access the service.
 PsExec64.exe \\10.0.0.1 cmd.exe
 ```
 
-<img src="/img/golden/hh.PNG" alt="Getting-gz "width="1000" height="200"> 
+<img src="/img/golden/hh.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 ## Detection
  * detecting a golden ticket attack depends on the method used. If the Mimikatz tool was dropped in your environment, antivirus might identify and block it. That said, Mimikatz itself is very simple to modify, changing its hash and invalidating any hash-based detection. 
