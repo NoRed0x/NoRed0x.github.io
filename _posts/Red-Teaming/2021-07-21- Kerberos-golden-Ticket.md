@@ -100,6 +100,7 @@ misc::cmd
 
 * get a new cmd prompt which will allow to connect with domain server using PsExec.exe
 access the service.
+
 ```
 PsExec64.exe \\10.0.0.1 cmd.exe
 ```
