@@ -93,18 +93,20 @@ misc::cmd
 ```
 
 <img src="/img/golden/connect1.PNG" alt="Getting-gz" width="1000" height="200"> 
+
 * get a new cmd prompt which will allow to connect with domain server using PsExec.exe
 access the service.
 ```
 PsExec64.exe \\10.0.0.1 cmd.exe
 ```
 
-<img src="/img/golden/hh.PNG" alt="Getting-gz"width="1000" height="200"> 
+<img src="/img/golden/hh.PNG" alt="Getting-gz "width="1000" height="200"> 
 
 ## Detection
  * detecting a golden ticket attack depends on the method used. If the Mimikatz tool was dropped in your environment, antivirus might identify and block it. That said, Mimikatz itself is very simple to modify, changing its hash and invalidating any hash-based detection. 
  *  detection will ultimately rely on watching for unusual behavior. This could look like accounts accessing systems they would not normally access or accounts authenticating with different accounts. It could also be SIDs that do not match the username or generic usernames in use that do not exist in the environment.
  * it is important to audit your user and service accounts on a regular basis. If you don’t know what is usual, detecting unusual activity is virtually impossible.
+ 
  
 ## Mitigation
 * Limit Domain Admins from logging on to any other computers other than Domain Controllers and a handful of Admin servers (don’t let other admins log on to these servers) Delegate all other rights to custom admin groups. This greatly reduces the ability of an attacker to gain access to a Domain Controller’s Active Directory database
