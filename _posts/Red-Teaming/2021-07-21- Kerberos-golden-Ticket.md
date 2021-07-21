@@ -15,6 +15,12 @@ toc: true
 * A Golden Ticket is a type of attack in which an adversary gains control over an Active Directory Key Distribution Service Account (KRBTGT), and uses that account to forge valid Kerberos Ticket Granting Tickets (TGTs). This gives the attacker access to any resource on an Active Directory Domain
 * Golden Ticket give attackers unrestricted access to networked resources and the ability to forge new tickets, allowing them to reside on networks indefinitely by being disguised as credentialed administrator-level users.
 
+The TGT is encrypted using the KRBTGT account, KDC will decrypt this and issue the service ticket with the same group memberships and validation info found in the TGT.
+
+if you have the KRBTGT hash, you can forge your own TGT which includes the PAC data with any group membership you want! including domain admins
+
+sending this to the KDC will result in a service ticket with a domain admin group membership inside
+
 
 ## Forging Kerberos Tickets
 * Forging Kerberos tickets depends on the password hash available to the attacker
