@@ -2,7 +2,7 @@
 title:  "sql server setup for penetration testing "
 classes: wide
 header:
-  teaser: /img/redteampng.png
+  teaser: /img/sqlserver.jpg
 ribbon: red
 description: "sql server setup for penetration testing"
 categories:
