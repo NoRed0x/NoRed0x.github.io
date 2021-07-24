@@ -23,7 +23,7 @@ https://download.microsoft.com/download/f/e/b/feb0e6be-21ce-4f98-abee-d74065e32d
 ## Configure SQL express setup
 Click on installation >> New SQL Server standalone installation
 
-<img src="/img/sqlserver/1.png" alt="Getting-gz" width="600" height="200"> 
+<img src="/img/sqlserver/1.png" alt="Getting-gz" width="800" height="200"> 
 
  accept the license terms 
  
