@@ -9,7 +9,7 @@ categories:
   - Red-Teaming
 toc: true
 ---
-
+how to install and configure MS SQL server in windows server
 ## Requirement
 ## Download setup file SQLEXPR_x64_ENU.exe
 ```
