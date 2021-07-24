@@ -11,11 +11,11 @@ toc: true
 ---
 
 ## Requirement
-Download setup file SQLEXPR_x64_ENU.exe
+## Download setup file SQLEXPR_x64_ENU.exe
 ```
 https://download.microsoft.com/download/4/1/A/41AD6EDE-9794-44E3-B3D5-A1AF62CD7A6F/sql16_sp2_dlc/en-us/SQLEXPR_x64_ENU.exe
 ```
-Download setup file SQLManagementStudio_x86_ENU.exe
+## Download setup file SQLManagementStudio_x86_ENU.exe
 ```
 https://download.microsoft.com/download/f/e/b/feb0e6be-21ce-4f98-abee-d74065e32d0a/SSMS-Setup-ENU.exe
 ```
@@ -87,7 +87,7 @@ Now login in to SQL Server using admin credential
 
 <img src="/img/sqlserver/14.PNG" alt="Getting-gz" width="1000" height="200"> 
 
- Right Click on SQLEXPRESS( SQL Server) and go to Facets
+Right Click on SQLEXPRESS( SQL Server) and go to Facets
  
 <img src="/img/sqlserver/15.PNG" alt="Getting-gz" width="1000" height="200"> 
 
@@ -95,7 +95,7 @@ go to General tab left side, then on the right side explore the Facet and select
 
 <img src="/img/sqlserver/16.PNG" alt="Getting-gz" width="1000" height="200"> 
 
- select True on XPCmdShellEnabled
+select True on XPCmdShellEnabled
  
 <img src="/img/sqlserver/17.PNG" alt="Getting-gz" width="1000" height="200"> 
 
@@ -103,22 +103,22 @@ new login account for other users.
 
 <img src="/img/sqlserver/18.PNG" alt="Getting-gz" width="1000" height="200"> 
 
- choosing SQL server authentication for this user
+choosing SQL server authentication for this user
  
 <img src="/img/sqlserver/19.PNG" alt="Getting-gz" width="1000" height="200"> 
 
-Connect to server from windows 10
+## Connect to server from windows 10
 ```
 ip :192.168.128.145
 user :nored0x
 password:p@ssw0rd
 port:1433
 ```
-HeidiSQL 
+## HeidiSQL 
   * is a useful and reliable tool designed for web developers using the popular MySQL server, Microsoft SQL databases, and PostgreSQL
   * It enables you to browse and edit data, create and edit tables, views, procedures, triggers, and scheduled events.
 
-download HeidiSQL
+## download HeidiSQL
 ```
 https://www.heidisql.com/download.php
 ```
