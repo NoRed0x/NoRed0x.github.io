@@ -27,7 +27,7 @@ Click on installation >> New SQL Server standalone installation
 
  accept the license terms 
  
-<img src="/img/sqlserver/2.PNG" alt="Getting-gz" width="1000" height="200"> 
+<img src="/img/sqlserver/2.PNG" alt="Getting-gz" width="800" height="200"> 
 
 <img src="/img/sqlserver/3.PNG" alt="Getting-gz" width="1000" height="200"> 
 
