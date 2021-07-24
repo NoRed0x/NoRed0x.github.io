@@ -81,15 +81,15 @@ Under IP Addresses specify TCP port 1433 tab, Click on Apply and Enable the TCP/
 ## Configure SQL Management Studio setup
  open 2nd downloaded application for SQL server management setup >>install it
 
-<img src="/img/sqlserver/13.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/sqlserver/13.PNG" alt="Getting-gz" width="600" height="200"> 
 
 Now login in to SQL Server using admin credential 
 
-<img src="/img/sqlserver/14.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/sqlserver/14.PNG" alt="Getting-gz" width="600" height="200"> 
 
 Right Click on SQLEXPRESS( SQL Server) and go to Facets
  
-<img src="/img/sqlserver/15.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/sqlserver/15.PNG" alt="Getting-gz" width="600" height="200"> 
 
 go to General tab left side, then on the right side explore the Facet and select Surface Area Configuration
 
