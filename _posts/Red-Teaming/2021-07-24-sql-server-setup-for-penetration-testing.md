@@ -62,14 +62,14 @@ SQL server 2016 installation completed successfully
 
 <img src="/img/sqlserver/9.PNG" alt="Getting-gz" width="800" height="200"> 
 
+  
+<img src="/img/sqlserver/10.PNG" alt="Getting-gz" width="800" height="200"> 
+
 ## SQL server configuration manager 
 open the SQL server configuration manager 
   * SQL server network configuration
   * protocol for SQL Express
   * tcp/ip
-  
-<img src="/img/sqlserver/10.PNG" alt="Getting-gz" width="800" height="200"> 
-
 
 <img src="/img/sqlserver/11.PNG" alt="Getting-gz" width="800" height="200"> 
 
