@@ -11,8 +11,8 @@ toc: true
 ---
 
 ## Requirement
+Download setup file SQLEXPR_x64_ENU.exe
 ```
-down;
 https://download.microsoft.com/download/4/1/A/41AD6EDE-9794-44E3-B3D5-A1AF62CD7A6F/sql16_sp2_dlc/en-us/SQLEXPR_x64_ENU.exe
 ```
 
