@@ -1,10 +1,10 @@
 ---
-title:  Constrained Delegation
+title: Kerberos attacks 5-Constrained Delegation
 classes: wide
 header:
   teaser: /img/redteampng.png
 ribbon: red
-description: "Constrained Delegation"
+description: Kerberos attacks 5-Constrained Delegation
 categories:
   - Red-Teaming
 toc: true
