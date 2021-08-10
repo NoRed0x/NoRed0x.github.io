@@ -1,15 +1,15 @@
 ---
-title:  "Windows Credentials part-2 NTDS.dit"
+title:  Constrained Delegation
 classes: wide
 header:
   teaser: /img/redteampng.png
 ribbon: red
-description: "Windows Credentials-NTDS.dit part-1"
+description: "Constrained Delegation"
 categories:
   - Red-Teaming
 toc: true
 ---
-
+## Constrained Delegation
 
 copy c:\Windows\System32\config\sam C:\Users\nored0x\Downloads\sam
 ```
