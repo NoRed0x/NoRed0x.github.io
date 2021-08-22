@@ -78,6 +78,31 @@ netstat
 
 
 ## firewall configuration
+```
+netsh advfirewall show currentprofile
+```
+
+<img src="/img/win_enum/f1.PNG" alt="Getting-gz" width="800" height="300"> 
+
+```
+netsh advfirewall firewall show rule name=all
+```
+ 
+<img src="/img/win_enum/f2.PNG" alt="Getting-gz" width="800" height="300"> 
+
+```
+sc query windefend
+```
+
+<img src="/img/win_enum/f3.PNG" alt="Getting-gz" width="800" height="300"> 
+
+## running process
+```
+tasklist /SVC
+```
+
+<img src="/img/win_enum/2020.PNG" alt="Getting-gz" width="800" height="300"> 
+
 
 ## Is the machine on a domain?
 
