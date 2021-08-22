@@ -152,7 +152,7 @@ reg query HKCU /f password /t REG_SZ /s
  wmic product get name, version, vendor
  ```
 
-<img src="/img/win_enum/i1.PNG" alt="Getting-gz" width="800" height="300"> 
+<img src="/img/win_enum/i1.PNG" alt="Getting-gz" width="1000" height="300"> 
 
 
 ```
@@ -161,13 +161,13 @@ reg query HKCU /f password /t REG_SZ /s
 
 
 
-<img src="/img/win_enum/i2.PNG" alt="Getting-gz" width="800" height="300"> 
+<img src="/img/win_enum/i2.PNG" alt="Getting-gz" width="1000" height="300"> 
 
 ```
 wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr /i /v "c:\windows"
 ```
 
-<img src="/img/win_enum/i3.PNG" alt="Getting-gz" width="800" height="300"> 
+<img src="/img/win_enum/i3.PNG" alt="Getting-gz" width="1000" height="300"> 
 
 
 
