@@ -33,13 +33,20 @@ systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
 ```
 hostname
 whoami
+set computername
 ```
 
 <img src="/img/win_enum/3.PNG" alt="Getting-gz" width="800" height="300"> 
 
 
 ## Network
+```
+ipconfig /allcompartments /all
+```
 
+<img src="/img/win_enum/4.PNG" alt="Getting-gz" width="800" height="300"> 
+ 
+ 
 ## firewall configuration
 
 ## Is the machine on a domain?
