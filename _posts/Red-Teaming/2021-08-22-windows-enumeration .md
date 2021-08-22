@@ -263,7 +263,7 @@ Get-WmiObject Win32_PnPSignedDriver | Select-Object DeviceName, DriverVersion, M
 
 <img src="/img/win_enum/p1.PNG" alt="Getting-gz" width="1000" height="300"> 
 
-## Cleartext Passwords
+## Search for Cleartext Passwords
 ```
 findstr /si password *.txt
 findstr /si password *.xml
