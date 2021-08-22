@@ -38,7 +38,7 @@ whoami
 set computername
 ```
 
-<img src="/img/win_enum/3.PNG" alt="Getting-gz" width="1000" height="200"> 
+<img src="/img/win_enum/3.PNG" alt="Getting-gz" width="600" height="200"> 
 
 
 ## Network
@@ -49,7 +49,6 @@ ipconfig
 
 <img src="/img/win_enum/n2.PNG" alt="Getting-gz" width="800" height="300"> 
 
-
 If you add a /all to the ipconfig command it will give you a more detailed output which includes the DHCP and DNS server that the PC is connected to.
 ```
 ipconfig /all
@@ -57,21 +56,17 @@ ipconfig /all
 
 <img src="/img/win_enum/n3.PNG" alt="Getting-gz" width="800" height="300"> 
 
-
-
-
 ```
 ipconfig /allcompartments /all
 ```
 
 <img src="/img/win_enum/4.PNG" alt="Getting-gz" width="800" height="300"> 
  
- 
- ```
+  ```
  wmic nicconfig get description,IPAddress,MACaddress
  ```
  
- <img src="/img/win_enum/5.PNG" alt="Getting-gz" width="800" height="300"> 
+<img src="/img/win_enum/5.PNG" alt="Getting-gz" width="800" height="300"> 
 
 route print command displays the routing table of the current windows PC your connected to
 ```
@@ -91,6 +86,7 @@ arp -a
 netstat is a command-line network utility that displays network connections for Transmission Control Protocol, routing tables, and a number of network interface and network protocol
 ```
 netstat
+netstat -ano
 ```
 
 <img src="/img/win_enum/8.PNG" alt="Getting-gz" width="800" height="300"> 
@@ -113,12 +109,6 @@ netsh advfirewall firewall show rule name=all
 <img src="/img/win_enum/f2.PNG" alt="Getting-gz" width="800" height="300"> 
 
 ```
-sc query windefend
-```
-
-<img src="/img/win_enum/f3.PNG" alt="Getting-gz" width="800" height="300"> 
-
-```
 netsh firewall show state
 ```
 
@@ -130,6 +120,12 @@ netsh firewall show config
 
 <img src="/img/win_enum/f5.PNG" alt="Getting-gz" width="800" height="300"> 
 
+## windows defender
+```
+sc query windefend
+```
+
+<img src="/img/win_enum/f3.PNG" alt="Getting-gz" width="800" height="300"> 
 
 ## running processes
 Tasklist displays a list of currently running processes on a PC.
@@ -139,9 +135,7 @@ tasklist /SVC
 
 <img src="/img/win_enum/2020.PNG" alt="Getting-gz" width="800" height="300"> 
 
-
 ## Is the machine on a domain?
-
 ```
 set userdomain
 ```
@@ -149,15 +143,23 @@ set userdomain
 <img src="/img/win_enum/9.PNG" alt="Getting-gz" width="600" height="200"> 
 
 
-## Software
-
-## User Info
 
 ## Registry
+Windows autologin
+```
+reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon"
+```
+
+<img src="/img/win_enum/reg1.PNG" alt="Getting-gz" width="600" height="200"> 
+
+SNMP Paramters
+```
+reg query "HKLM\SYSTEM\Current\ControlSet\Services\SNMP"
+```
+
 ```
 reg query "HKLM\Software\Microsoft\Windows NT\Currentversion\Winlogon" /v LastUsedUsername
 ```
-
 
 <img src="/img/win_enum/10.PNG" alt="Getting-gz" width="800" height="300"> 
 
