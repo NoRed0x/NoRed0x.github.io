@@ -204,17 +204,15 @@ wmic qfe
 ## install app
 
 ```
- wmic product get name, version, vendor
- ```
+wmic product get name, version, vendor
+```
 
 <img src="/img/win_enum/i1.PNG" alt="Getting-gz" width="1000" height="300"> 
 
 
 ```
- wmic qfe get Caption, Description, HotFixID, InstalledOn
- ```
-
-
+wmic qfe get Caption, Description, HotFixID, InstalledOn
+```
 
 <img src="/img/win_enum/i2.PNG" alt="Getting-gz" width="1000" height="300"> 
 
@@ -223,7 +221,6 @@ wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr
 ```
 
 <img src="/img/win_enum/i3.PNG" alt="Getting-gz" width="1000" height="300"> 
-
 
 ## Unquoted Service Paths
 Find Services With Unquoted Paths
@@ -249,20 +246,14 @@ Driverquery
 
 <img src="/img/win_enum/dq.PNG" alt="Getting-gz" width="1000" height="300"> 
 
-
-
-
 ## scheduled tasks
 Schtasks allows you to manage scheduled tasks running on a local or remote machine
 
 ```
 Schtasks /query /fo LIST /v
 ```
-st
+
 <img src="/img/win_enum/st.PNG" alt="Getting-gz" width="1000" height="300"> 
-
-
-
 
 ## device&kernal
 
