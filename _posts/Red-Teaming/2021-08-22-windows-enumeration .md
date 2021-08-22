@@ -150,7 +150,7 @@ Windows autologin
 reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon"
 ```
 
-<img src="/img/win_enum/reg1.PNG" alt="Getting-gz" width="600" height="200"> 
+<img src="/img/win_enum/req1.PNG" alt="Getting-gz" width="600" height="200"> 
 
 ```
 reg query "HKLM\Software\Microsoft\Windows NT\Currentversion\Winlogon" /v LastUsedUsername
