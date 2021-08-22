@@ -122,7 +122,23 @@ set userdomain
 reg query "HKLM\Software\Microsoft\Windows NT\Currentversion\Winlogon" /v LastUsedUsername
 ```
 
+
 <img src="/img/win_enum/10.PNG" alt="Getting-gz" width="800" height="300"> 
+
+# Search for password in registry
+```
+reg query HKLM /f password /t REG_SZ /s
+
+```
+
+<img src="/img/win_enum/r1.PNG" alt="Getting-gz" width="800" height="300"> 
+
+```
+reg query HKCU /f password /t REG_SZ /s
+```
+
+<img src="/img/win_enum/r2.PNG" alt="Getting-gz" width="800" height="200"> 
+
 
 
 # Hardware Information
