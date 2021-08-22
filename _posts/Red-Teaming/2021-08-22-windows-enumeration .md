@@ -178,7 +178,31 @@ reg query HKCU /f password /t REG_SZ /s
 
 
 # Hardware Information
+```
+wmic bios
+```
+<img src="/img/win_enum/h1.PNG" alt="Getting-gz" width="1000" height="200"> 
 
+```
+wmic baseboard get manufacturer
+```
+
+<img src="/img/win_enum/222.PNG" alt="Getting-gz" width="1000" height="200"> 
+
+
+```
+wmic cpu list full
+```
+<img src="/img/win_enum/h2.PNG" alt="Getting-gz" width="1000" height="200"> 
+
+## patches are installed
+qfe to the wmic command you get a list of all the installed hotfixes installed on a windows PC.
+What patches are installed?
+```
+wmic qfe
+```
+
+<img src="/img/win_enum/pa.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 
 
