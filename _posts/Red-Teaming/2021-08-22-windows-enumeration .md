@@ -152,11 +152,6 @@ reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon"
 
 <img src="/img/win_enum/reg1.PNG" alt="Getting-gz" width="600" height="200"> 
 
-SNMP Paramters
-```
-reg query "HKLM\SYSTEM\Current\ControlSet\Services\SNMP"
-```
-
 ```
 reg query "HKLM\Software\Microsoft\Windows NT\Currentversion\Winlogon" /v LastUsedUsername
 ```
@@ -166,7 +161,6 @@ reg query "HKLM\Software\Microsoft\Windows NT\Currentversion\Winlogon" /v LastUs
 # Search for password in registry
 ```
 reg query HKLM /f password /t REG_SZ /s
-
 ```
 
 <img src="/img/win_enum/r1.PNG" alt="Getting-gz" width="800" height="300"> 
@@ -176,8 +170,6 @@ reg query HKCU /f password /t REG_SZ /s
 ```
 
 <img src="/img/win_enum/r2.PNG" alt="Getting-gz" width="800" height="200"> 
-
-
 
 # Hardware Information
 ```
@@ -190,7 +182,6 @@ wmic baseboard get manufacturer
 ```
 
 <img src="/img/win_enum/222.PNG" alt="Getting-gz" width="1000" height="200"> 
-
 
 ```
 wmic cpu list full
