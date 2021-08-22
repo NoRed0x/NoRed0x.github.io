@@ -146,14 +146,30 @@ reg query HKCU /f password /t REG_SZ /s
 
 
 
+## install app
+
+```
+ wmic product get name, version, vendor
+ ```
+
+<img src="/img/win_enum/i1.PNG" alt="Getting-gz" width="600" height="200"> 
+
+
+```
+ wmic qfe get Caption, Description, HotFixID, InstalledOn
+ ```
 
 
 
+<img src="/img/win_enum/i2.PNG" alt="Getting-gz" width="600" height="200"> 
 
+```
+wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr /i /v "c:\windows"
+```
 
+<img src="/img/win_enum/i3.PNG" alt="Getting-gz" width="600" height="200"> 
 
-
-
+<img src="/img/win_enum/9.PNG" alt="Getting-gz" width="600" height="200"> 
 
 
 
