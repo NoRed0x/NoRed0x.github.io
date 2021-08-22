@@ -287,3 +287,6 @@ dir /s *pass* == *cred* == *vnc* == *.config*
 findstr /spin "password" *.*
 findstr /spin "password" *.*
 ```
+
+I finished this part about windows enumeration today waiting me in the next part.
+
