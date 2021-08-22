@@ -1,5 +1,5 @@
 ---
-title:  "Windows Enumeration Part-1 "
+title:  "Windows Enumeration "
 classes: wide
 header:
   teaser: /img/redteampng.png
@@ -38,7 +38,7 @@ whoami
 set computername
 ```
 
-<img src="/img/win_enum/3.PNG" alt="Getting-gz" width="600" height="200"> 
+<img src="/img/win_enum/3.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 
 ## Network
