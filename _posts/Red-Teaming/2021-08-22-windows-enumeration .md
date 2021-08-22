@@ -18,8 +18,7 @@ ver
 wmic os get osarchitecture
 ```
 
-<img src="/img/win_enum/1.PNG" alt="Getting-gz" width="800" height="300"> 
-<img src="/img/win_enum/1.png" alt="g-gz" width="800" height="300"> 
+<img src="/img/win_enum/1.PNG" alt="Getting-gz" width="600" height="200"> 
 
 os version
 ```
@@ -37,7 +36,7 @@ whoami
 set computername
 ```
 
-<img src="/img/win_enum/3.PNG" alt="Getting-gz" width="800" height="300"> 
+<img src="/img/win_enum/3.PNG" alt="Getting-gz" width="600" height="200"> 
 
 
 ## Network
@@ -111,7 +110,7 @@ tasklist /SVC
 set userdomain
 ```
 
-<img src="/img/win_enum/9.PNG" alt="Getting-gz" width="800" height="300"> 
+<img src="/img/win_enum/9.PNG" alt="Getting-gz" width="600" height="200"> 
 
 
 ## Software
