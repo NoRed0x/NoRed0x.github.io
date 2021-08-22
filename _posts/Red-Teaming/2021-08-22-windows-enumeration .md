@@ -11,6 +11,26 @@ toc: true
 ---
 
 
+## Operating System
+
+
+## Hostname
+
+## Network
+
+## firewall configuration
+
+## Is the machine on a domain?
+
+## Software
+
+## User Info
+
+## Registry
+
+
+# Hardware Information
+
 
 
 
