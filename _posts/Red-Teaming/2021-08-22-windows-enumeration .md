@@ -10,6 +10,8 @@ categories:
 toc: true
 ---
 
+if you are interested in network penetration tester or red teaming 
+I collected most of the commands used in windows enumeration,enjoy 
 
 ## Operating System
 What version of windows is running? Is it 32 or 64-bit?
