@@ -270,11 +270,28 @@ st
 
 
 
+## device&kernal
 
+```
+Get-WmiObject Win32_PnPSignedDriver | Select-Object DeviceName, DriverVersion, Manufacturer | Where-Object {$_.DeviceName -like "*VMware*"}
+```
 
+<img src="/img/win_enum/p1.PNG" alt="Getting-gz" width="1000" height="300"> 
 
+## Cleartext Passwords
+```
+findstr /si password *.txt
+findstr /si password *.xml
+findstr /si password *.ini
+```
 
+## Find all those strings in config files.
+```
+dir /s *pass* == *cred* == *vnc* == *.config*
+```
 
-
-
-
+## Find all passwords in all files.
+```
+findstr /spin "password" *.*
+findstr /spin "password" *.*
+```
