@@ -218,8 +218,7 @@ allows you to manage services running on the PC
 net start
 ```
 
-<img src="/img/win_enum/n1.PNG" alt="Getting-gz" width="1000" height="300"> 
-
+<img src="/img/win_enum/n1.PNG" alt="Getting-gz" width="800" height="200"> 
 
 
 ## device drivers
