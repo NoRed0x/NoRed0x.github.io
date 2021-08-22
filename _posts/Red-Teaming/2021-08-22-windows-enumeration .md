@@ -29,10 +29,11 @@ systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
 
 
 ## Hostname
-
+Hostname prints the name of the PC you are currently connected to.
+whoami:tells you the domain and the username of the user currently connected as
 ```
 hostname
-whoami
+whoami 
 set computername
 ```
 
@@ -40,6 +41,24 @@ set computername
 
 
 ## Network
+Ipconfig displays all the networking information of the current PC your connected to.
+```
+ipconfig
+```
+
+<img src="/img/win_enum/n2.PNG" alt="Getting-gz" width="800" height="300"> 
+
+
+If you add a /all to the ipconfig command it will give you a more detailed output which includes the DHCP and DNS server that the PC is connected to.
+```
+ipconfig /all
+```
+
+<img src="/img/win_enum/n3.PNG" alt="Getting-gz" width="800" height="300"> 
+
+
+
+
 ```
 ipconfig /allcompartments /all
 ```
@@ -53,6 +72,7 @@ ipconfig /allcompartments /all
  
  <img src="/img/win_enum/5.PNG" alt="Getting-gz" width="800" height="300"> 
 
+route print command displays the routing table of the current windows PC your connected to
 ```
 route PRINT
 ```
@@ -60,7 +80,7 @@ route PRINT
 <img src="/img/win_enum/6.PNG" alt="Getting-gz" width="800" height="300"> 
 
 
-arp is a command-line network utility that  manipulates the System's ARP cache. It also allows a complete dump of the ARP cache
+The arp -a command displays the IP to physical address translation used by the address resolution protocol.
 ```
 arp -a
 ```
@@ -78,6 +98,7 @@ netstat
 
 
 ## firewall configuration
+netsh firewall gives you options to control the windows firewall
 ```
 netsh advfirewall show currentprofile
 ```
@@ -96,7 +117,21 @@ sc query windefend
 
 <img src="/img/win_enum/f3.PNG" alt="Getting-gz" width="800" height="300"> 
 
-## running process
+```
+netsh firewall show state
+```
+
+<img src="/img/win_enum/f4.PNG" alt="Getting-gz" width="800" height="300"> 
+
+```
+netsh firewall show config
+```
+
+<img src="/img/win_enum/f5.PNG" alt="Getting-gz" width="800" height="300"> 
+
+
+## running processes
+Tasklist displays a list of currently running processes on a PC.
 ```
 tasklist /SVC
 ```
@@ -170,11 +205,30 @@ wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr
 <img src="/img/win_enum/i3.PNG" alt="Getting-gz" width="1000" height="300"> 
 
 
+## Unquoted Service Paths
+Find Services With Unquoted Paths
+
+```
+wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr /i /v "c:\windows\\" |findstr /i /v """
+```
+
+## Net Start
+allows you to manage services running on the PC
+```
+net start
+```
+
+<img src="/img/win_enum/n1.PNG" alt="Getting-gz" width="1000" height="300"> 
 
 
 
+## device drivers
+Driverquery quickly displays all the device drivers of the Pc your connected to.
+```
+Driverquery
+```
 
-
+<img src="/img/win_enum/dq.PNG" alt="Getting-gz" width="1000" height="300"> 
 
 
 
