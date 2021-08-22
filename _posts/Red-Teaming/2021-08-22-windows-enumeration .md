@@ -254,8 +254,7 @@ Driverquery
 Schtasks allows you to manage scheduled tasks running on a local or remote machine
 
 ```
-![image](https://user-images.githubusercontent.com/54756171/130360251-ae71b0d3-56af-4528-bfe7-a772d9b82817.png)
-
+Schtasks /query /fo LIST /v
 ```
 st
 <img src="/img/win_enum/st.PNG" alt="Getting-gz" width="1000" height="300"> 
