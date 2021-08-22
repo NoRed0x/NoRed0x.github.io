@@ -19,6 +19,7 @@ wmic os get osarchitecture
 ```
 
 <img src="/img/win_enum/1.PNG" alt="Getting-gz" width="800" height="300"> 
+<img src="/img/win_enum/1.png" alt="g-gz" width="800" height="300"> 
 
 os version
 ```
