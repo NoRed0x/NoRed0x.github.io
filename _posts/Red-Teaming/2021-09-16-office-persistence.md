@@ -11,6 +11,9 @@ toc: true
 ---
 
 
+## Persistence
+Persistence consists of techniques that adversaries use to keep access to systems across restarts, changed credentials, and other interruptions that could cut off their access. Techniques used for persistence include any access, action, or configuration changes that let them maintain their fotthold on systems, such as replacing or hijacking legitimate code or adding startup code
+
 ## What is a WLL file?
 A WLL file is an add-in used by Microsoft Word, a word processing application. It contains a software component that adds new features to the program, similar to a plugin.
 WLL "Add-Ins" for Word
