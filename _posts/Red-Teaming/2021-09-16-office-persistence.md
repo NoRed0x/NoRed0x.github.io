@@ -26,6 +26,7 @@ reg query x64 HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Word\Security\Tru
 
 <img src="/img/p/office1.PNG" alt="Getting-gz" width="800" height="110"> 
 
+%APPDATA% is often redirected with roaming profiles meaning add-ins can persist in VDI environments 
 
 ## navigate to this folder with the command
 ```
@@ -78,7 +79,7 @@ powerpick New-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Office\14.0\Word" -Na
 reg query x64 HKCU\SOFTWARE\Microsoft\Office\16.0\Word
 ```
 
-<img src="/img/p/5.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/p/5.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 ## officetemp.cpp
 ```
@@ -167,7 +168,6 @@ strip update.wll
 <img src="/img/p/7.PNG" alt="Getting-gz" width="800" height="150"> 
 
 
-<img src="/img/p/8.PNG" alt="Getting-gz" width="800" height="110"> 
 
 
 
@@ -175,6 +175,9 @@ strip update.wll
 ```
 upload /home/user/update.wll
 ```
+
+<img src="/img/p/8.PNG" alt="Getting-gz" width="800" height="110"> 
+
 
 ## Spawn word
 
