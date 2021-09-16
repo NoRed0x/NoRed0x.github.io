@@ -196,3 +196,6 @@ shell taskkill /F /IM winword.exe
 ```
 
 <img src="/img/p/x.PNG" alt="Getting-gz" width="800" height="150"> 
+
+I finished this part about persistence today waiting me in the next part.
+
