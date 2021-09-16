@@ -70,15 +70,19 @@ strip update.wll
 
 
 ## Spawn word
+
 ```
 shell "C:\Program Files (x86)\Microsoft Office\Office14\winword.exe"
 ```
 
-<img src="/img/p/x-1.PNG" alt="Getting-gz" width="600" height="150"> 
+<img src="/img/p/spawn.PNG" alt="Getting-gz" width="1000" height="200"> 
+
+
+<img src="/img/p/x-1.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 ## If needed to kill winword
 ```
 shell taskkill /F /IM winword.exe
 ```
 
-<img src="/img/p/x.PNG" alt="Getting-gz" width="600" height="150"> 
+<img src="/img/p/x.PNG" alt="Getting-gz" width="800" height="200"> 
