@@ -12,7 +12,8 @@ toc: true
 
 
 ## What is a WLL file?
-A WLL file is an add-in used by Microsoft Word, a word processing application. It contains a software component that adds new features to the program, similar to a plugin. 
+A WLL file is an add-in used by Microsoft Word, a word processing application. It contains a software component that adds new features to the program, similar to a plugin.
+WLL "Add-Ins" for Word
 
 ## Registry query for trusted location path
 find the trusted location by querying the register
@@ -46,7 +47,7 @@ if __name__ == '__main__':
 ## Commands for updating registry with Cobalt Strike payload
 Generate payload.bin by cobalt
 ```
-1-tap attacks >> packages >>payload generator >> select listener  +select  output >> Raw
+1- attacks >> packages >>payload generator >> select listener  +select  output >> Raw
 save payload.bin
 ```
 
