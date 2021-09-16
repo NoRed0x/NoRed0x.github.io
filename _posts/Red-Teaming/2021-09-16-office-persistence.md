@@ -76,7 +76,7 @@ powerpick New-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Office\14.0\Word" -Na
 
 ## verify that your value has been added
 ```
-reg query x64 HKCU\SOFTWARE\Microsoft\Office\16.0\Word
+reg query x64 HKCU\SOFTWARE\Microsoft\Office\14.0\Word
 ```
 
 <img src="/img/p/5.PNG" alt="Getting-gz" width="1000" height="200"> 
