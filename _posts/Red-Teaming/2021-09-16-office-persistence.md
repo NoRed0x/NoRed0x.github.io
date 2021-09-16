@@ -73,7 +73,7 @@ powerpick New-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Office\14.0\Word" -Na
 reg query x64 HKCU\SOFTWARE\Microsoft\Office\16.0\Word
 ```
 
-<img src="/img/p/5.PNG" alt="Getting-gz" width="600" height="150"> 
+<img src="/img/p/5.PNG" alt="Getting-gz" width="800" height="200"> 
 
 
 ##  Compiling WLL
