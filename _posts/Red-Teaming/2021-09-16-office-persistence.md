@@ -173,7 +173,7 @@ strip update.wll
 
 ## Upload the WLL to the Word Startup folder  using the beacon command 
 ```
-upload /home/user/update.wll
+upload /home/user/updateconnection.wll
 ```
 
 <img src="/img/p/8.PNG" alt="Getting-gz" width="800" height="110"> 
