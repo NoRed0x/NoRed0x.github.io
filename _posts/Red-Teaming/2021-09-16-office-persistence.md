@@ -56,7 +56,7 @@ save payload.bin
 python shellcode2ascii.py payload.bin
 ```
 
-<img src="/img/p/shell.PNG" alt="Getting-gz" width="800" height="110"> 
+<img src="/img/p/shell.PNG" alt="Getting-gz" width="1000" height="200"> 
 
 
 
@@ -101,4 +101,4 @@ shell "C:\Program Files (x86)\Microsoft Office\Office14\winword.exe"
 shell taskkill /F /IM winword.exe
 ```
 
-<img src="/img/p/x.PNG" alt="Getting-gz" width="800" height="200"> 
+<img src="/img/p/x.PNG" alt="Getting-gz" width="800" height="150"> 
