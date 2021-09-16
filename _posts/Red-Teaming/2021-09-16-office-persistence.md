@@ -91,7 +91,7 @@ void GetRegistry(LPCSTR StringName, LPCSTR &valueBuffer, DWORD value_length)
 {
 	DWORD dwType = REG_SZ;
 	HKEY hKey = 0;
-	LPCSTR subkey = "SOFTWARE\\Microsoft\\Office\\16.0\\Word";
+	LPCSTR subkey = "SOFTWARE\\Microsoft\\Office\\14.0\\Word";
 	RegOpenKeyA(HKEY_CURRENT_USER,subkey,&hKey);
 	RegQueryValueExA(hKey, StringName, NULL, &dwType, (LPBYTE)valueBuffer, &value_length);
 
