@@ -21,6 +21,7 @@ reg query x64 HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Word\Security\Tru
 cd C:\Users\NoRed0x\AppData\Roaming\Microsoft\Word\Startup
 ```
 <img src="/img/p/office.PNG" alt="Getting-gz" width="800" height="110"> 
+
 <img src="/img/p/office1.PNG" alt="Getting-gz" width="800" height="110"> 
 
 
