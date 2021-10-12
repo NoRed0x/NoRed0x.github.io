@@ -44,6 +44,7 @@ impacket-smbserver -debug -smb2support share /home/nored0x/Desktop/HTB/driver
 ```
 <img src="/img/fci/listner.PNG" alt="Getting-gz" width="800" height="200"> 
 
+When the user will browse the share a connection will established automatically from his system to the UNC path that is contained inside the SCF file. Windows will try to authenticate to that share with the username and the password of the user. During that authentication process a random 8 byte challenge key is sent from the server to the client and the hashed NTLM/LANMAN password is encrypted again with this challenge key
 
 <img src="/img/fci/hash.PNG" alt="Getting-gz" width="1000" height="300"> 
 
