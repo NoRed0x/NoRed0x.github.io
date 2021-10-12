@@ -44,12 +44,13 @@ impacket-smbserver -debug -smb2support share /home/nored0x/Desktop/HTB/driver
 ```
 <img src="/img/fci/listner.PNG" alt="Getting-gz" width="800" height="200"> 
 
+
+<img src="/img/fci/hash.PNG" alt="Getting-gz" width="1000" height="300"> 
+
 ## crack hash 
 ```
 john hash -w=/usr/share/wordlists/rockyou.txt
 ```
-<img src="/img/fci/hash.PNG" alt="Getting-gz" width="800" height="200"> 
-
 
 <img src="/img/fci/john.PNG" alt="Getting-gz" width="800" height="200"> 
 
