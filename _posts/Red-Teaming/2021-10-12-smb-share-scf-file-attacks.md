@@ -33,6 +33,11 @@ Replace with your IP address of where you have Responder listening.
 
 <img src="/img/fci/pay.PNG" alt="Getting-gz" width="800" height="200"> 
 
+Next upload the file into the Desktop within the Public Folders.
+The Public/Desktop folder is accessed every time any users logs in.
+Therefore when the user logs in, the icon is requested from our attackers box, 
+a challenge request is requested by the attacker, a challenger response is then returned to use with the NetNTLMv2.
+
 ## set listener 
 ```
 impacket-smbserver -debug -smb2support share /home/nored0x/Desktop/HTB/driver     
