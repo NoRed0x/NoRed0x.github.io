@@ -39,6 +39,7 @@ Therefore when the user logs in, the icon is requested from our attackers box,
 a challenge request is requested by the attacker, a challenger response is then returned to use with the NetNTLMv2.
 
 ## set listener 
+set listener  to capture the hashes of the users that will browse the share
 ```
 impacket-smbserver -debug -smb2support share /home/nored0x/Desktop/HTB/driver     
 ```
@@ -46,7 +47,7 @@ impacket-smbserver -debug -smb2support share /home/nored0x/Desktop/HTB/driver
 
 When the user will browse the share a connection will established automatically from his system to the UNC path that is contained inside the SCF file. Windows will try to authenticate to that share with the username and the password of the user. During that authentication process a random 8 byte challenge key is sent from the server to the client and the hashed NTLM/LANMAN password is encrypted again with this challenge key
 
-<img src="/img/fci/hash.PNG" alt="Getting-gz" width="1000" height="300"> 
+<img src="/img/fci/hash.PNG" alt="Getting-gz" width="1000" height="400"> 
 
 ## crack hash 
 ```
@@ -63,6 +64,6 @@ download tool:https://github.com/Hackplayers/evil-winrm
 ``` 
  
 <img src="/img/fci/connect.PNG" alt="Getting-gz" width="800" height="200"> 
+                     
+I finished this part waiting me in the next part.
 
-  
-                       
