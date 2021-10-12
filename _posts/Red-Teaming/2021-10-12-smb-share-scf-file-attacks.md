@@ -1,5 +1,5 @@
 ---
-title:  "using-a-scf-file-to-gather-hashes"
+title:  "using a scf file to gather hashes"
 classes: wide
 header:
   teaser: /img/redteampng.png
