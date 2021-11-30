@@ -212,10 +212,10 @@ https://www.exploit-db.com/exploits/39575
 ```
 
 
-<img src="/img/backdoor/pocv.PNG" alt="Getting-gz" width="800" height="440">
+<img src="/img/backdoor/pocv.PNG" alt="Getting-gz" width="1000" height="400">
 
 download wp-config.php
-<img src="/img/backdoor/wp-config.PNG" alt="Getting-gz" width="800" height="440">
+<img src="/img/backdoor/wp-config.PNG" alt="Getting-gz" width="1000" height="400">
 
 i found DB password in the configuration  file and try to log in to the admin user with the database password but password incorrect
 ```
