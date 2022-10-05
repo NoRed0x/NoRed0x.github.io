@@ -2,7 +2,7 @@
 title:  "Writeckerone"
 classes: wide
 header:
-  teaser: /img/h1.png
+  teaser: /img/h1s.png
 ribbon: MidnightBlue
 categories:
   - Penetration Testing 
