@@ -37,7 +37,6 @@ cd mimipenguin/
 ./mimipenguin.sh 
 ```
 
-<img src="/img/2linux.PNG" alt="Getting-gz" width="800" height="200"> 
+ <img src="/img/2linux.PNG" alt="Getting-gz" width="800" height="200"> 
 
 
-<img src="/img/ad3/f2.png" alt="Getting-gz" width="800" height="200"> 
