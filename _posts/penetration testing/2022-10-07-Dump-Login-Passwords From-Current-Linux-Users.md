@@ -1,4 +1,3 @@
-
 ---
 title:  "Dump Login Passwords From Current Linux Users"
 classes: wide
