@@ -68,7 +68,9 @@ If you want to search for web entered email (GET/POST) you can use:
 
 `strings <swap_device> | grep -i 'email=' | grep @ | uniq`
 
-## swap_digger.sh
+## automate swap digging
+
+swap_digger.sh
 
 swap_digger is a bash script used to automate Linux swap analysis for post-exploitation or forensics purpose. It automates swap extraction and searches for Linux user credentials, Web form credentials, Web form emails, HTTP basic authentication, WiFi SSID and keys, etc.
 
