@@ -48,7 +48,7 @@ The partition or “file” defined as the swap file can be found with the follo
 
 `swapon -s`
 
- <img src="/img/0d.png" alt="Getting-gz" width="800" height="150"> 
+ <img src="/img/0d.PNG" alt="Getting-gz" width="800" height="150"> 
 
 
 we can see that our swap partition is at /dev/sda5
@@ -58,7 +58,7 @@ command to the “/proc/swaps” file:
 
 `cat /proc/swaps`
 
- <img src="/img/1d.png" alt="Getting-gz" width="800" height="150"> 
+ <img src="/img/1d.PNG" alt="Getting-gz" width="800" height="150"> 
 
 
 
