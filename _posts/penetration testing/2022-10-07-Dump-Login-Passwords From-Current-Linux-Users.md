@@ -9,10 +9,10 @@ categories:
 toc: true
 ---
 
-
 Dump Login Passwords From Current Linux Users
 
 ## mimipenguin 
+
 MimiPenguin works similarly to the well-known "mimikatz" for Windows, but is designed for Linux and attempts to dump cleartext credentials from memory from the following applications
 
 * Apache2 (Active HTTP Basic Auth Sessions)
@@ -23,8 +23,6 @@ MimiPenguin works similarly to the well-known "mimikatz" for Windows, but is des
 
 
 Takes advantage of cleartext credentials in memory by dumping the process and extracting lines that have a high probability of containing cleartext passwords. Will attempt to calculate each word's probability by checking hashes in /etc/shadow, hashes in memory, and regex searches 
-
-
 
 
 ## install mimipenguin
@@ -64,8 +62,11 @@ command to the “/proc/swaps” file:
 
 We can use the strings command against the /dev/sda5 
 
-`strings /dev/sda5 |grep "password=" `
+`strings <swap_device> |grep "password=" `
 
+If you want to search for web entered email (GET/POST) you can use:
+
+`strings <swap_device> | grep -i 'email=' | grep @ | uniq`
 
 ## swap_digger.sh
 
