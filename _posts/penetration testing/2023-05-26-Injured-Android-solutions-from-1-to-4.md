@@ -1,15 +1,15 @@
 ---
-title:  "Dump Login Passwords From Current Linux Users"
+title:  "Injured Android solutions "
 classes: wide
 header:
-  teaser: /img/linux.jpg
+  teaser: /img/lala.PNG
 ribbon: MidnightBlue
 categories:
   - Penetration Testing 
 toc: true
 ---
 
-Dump Login Passwords From Current Linux Users
+Injured Android solutions
 
 ## mimipenguin 
 
